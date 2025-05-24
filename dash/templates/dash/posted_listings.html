@@ -1,0 +1,224 @@
+{% extends 'dash/main.html' %}
+{% load static %}
+
+{% block main %}
+
+
+
+<!-- My Listings Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-secondary text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Posted Listings</h6>
+            <!--<a href="">Add New</a>-->
+            <div>
+                <button class="btn btn-dark" type="button" data-toggle="modal" data-target="#newListingModal" title="Create a single listing.">New Listing</button>
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="" title="Create multiple listings using a csv file.">Bulk Upload</button>
+            </div>
+        </div>
+        {% if listings %}
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-white">
+                        <th scope="col"></th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Units</th>
+                        <th scope="col">Rent</th>
+                        <th scope="col">Created</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for l in listings %}
+                    <tr>
+                        <td><input class="form-check-input" type="checkbox"></td>
+                        <td>{{ l.title|title }}</td>
+                        <td>{{ l.location|title }}</td>
+                        <td>{{ l.units }}</td>
+                        <td>{{ l.rent }}</td>
+                        <td>{{ l.time_created }}</td>
+                        <td class="d-flex" style="gap: 3px;">
+                            <button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#detailsModal{{ l.id }}" title="View and edit listing details.">Details</button>
+                            <form method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="action" value="post_listing">
+                                <input type="hidden" name="id" value="{{ l.id }}">
+                                <button class="btn btn-sm btn-success" type="submit">Set Full</button>
+                            </form>
+                            <form method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="action" value="post_listing">
+                                <input type="hidden" name="id" value="{{ l.id }}">
+                                <button class="btn btn-sm btn-warning" type="submit">Remove</button>
+                            </form>
+                            <a class="btn btn-sm btn-danger" href="">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+</div>
+<!-- Recent Sales End -->
+
+
+
+<div class="modal fade" id="newListingModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content bg-secondary">
+      <div class="modal-header">
+        <h5 class="modal-title">Listing Form</h5>
+        <button type="button" class="close btn btn-primary" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post">
+            {% csrf_token %}
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Fill in all the details below.</h6>
+                <div class="form-floating mb-3">
+                    <input type="text" name="title" class="form-control" required>
+                    <label>Listing Title/Property Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select name="category" class="form-select" required>
+                        <option selected disabled>-----------------------------</option>
+                        {% for c in categories %}
+                        <option value="{{ c.id }}">{{ c.category|title }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="floatingSelect">Category</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" name="location" class="form-control" required>
+                    <label>Location</label>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <div class="form-floating">
+                        <input type="number" name="units" class="form-control" required>
+                        <label>Total Units</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="number" name="rent" class="form-control" required>
+                        <label>Monthly Rent</label>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea name="description" class="form-control" style="height: 200px;" required></textarea>
+                    <label for="floatingTextarea">Property Description</label>
+                </div>
+                <input type="hidden" name="action" value="new_listing">
+                <div>
+                    <button class="btn btn-success" type="submit">Create Listing</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% for l in listings %}
+<div class="modal fade" id="detailsModal{{ l.id }}" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content bg-secondary">
+      <div class="modal-header">
+        <h5 class="modal-title">Listing Form</h5>
+        <button type="button" class="close btn btn-primary" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Fill in all the details below.</h6>
+                <div class="form-floating mb-3">
+                    <input type="text" name="title" class="form-control" value="{{ l.title|title }}" required>
+                    <label>Listing Title/Property Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select name="category" class="form-select" required>
+                        {% for c in categories %}
+                        <option value="{{ c.id }}" {% if l.id == c.id %} selected {% endif %}>{{ c.category|title }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="floatingSelect">Category</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" name="location" class="form-control" value="{{ l.location|title }}" required>
+                    <label>Location</label>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <div class="form-floating">
+                        <input type="number" name="units" class="form-control" value="{{ l.units }}" required>
+                        <label>Total Units</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="number" name="rent" class="form-control" value="{{ l.rent }}" required>
+                        <label>Monthly Rent</label>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea name="description" class="form-control" style="height: 200px;" required>{{ l.description|capfirst }}</textarea>
+                    <label for="floatingTextarea">Property Description</label>
+                </div>
+                <p class="mb-3">Display Images</p>
+                <div class="mb-3">
+                    <p>Image1: <span id="avatar1-name">{{ l.avatar1 }}</span></p>
+                    <p>Image2: <span id="avatar2-name">{{ l.avatar2 }}</span></p>
+                    <p>Image3: <span id="avatar3-name">{{ l.avatar3 }}</span></p>
+                    <p>Image4: <span id="avatar4-name">{{ l.avatar4 }}</span></p>
+                    <p>Image5: <span id="avatar5-name">{{ l.avatar5 }}</span></p>
+                </div>
+                  <div class="d-flex justify-content-evenly mb-5">
+                    <label class="btn btn-sm btn-primary" title="Change display picture.">
+                        <input type="file" name="avatar1" class="d-none" onchange="displayFileName('avatar1')">
+                        Image 1
+                    </label>
+                    <label class="btn btn-sm btn-primary" title="Change display picture.">
+                        <input type="file" name="avatar2" class="d-none" onchange="displayFileName('avatar2')">
+                        Image 2
+                    </label>
+                    <label class="btn btn-sm btn-primary" title="Change display picture.">
+                        <input type="file" name="avatar3" class="d-none" onchange="displayFileName('avatar3')">
+                        Image 3
+                    </label>
+                    <label class="btn btn-sm btn-primary" title="Change display picture.">
+                        <input type="file" name="avatar4" class="d-none" onchange="displayFileName('avatar4')">
+                        Image 4
+                    </label>
+                    <label class="btn btn-sm btn-primary" title="Change display picture.">
+                        <input type="file" name="avatar5" class="d-none" onchange="displayFileName('avatar5')">
+                        Image 5
+                    </label>
+                </div>
+                <input type="hidden" name="action" value="update_listing">
+                <input type="hidden" name="id" value="{{ l.id }}">
+                <div>
+                    <button class="btn btn-success" type="submit">Update Listing</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+<script type="text/javascript">
+    function displayFileName(inputName) {
+    var input = document.querySelector(`input[name="${inputName}"]`);
+    var fileName = input.files.length > 0 ? input.files[0].name : "No file chosen";
+    document.getElementById(`${inputName}-name`).textContent = fileName;
+  }
+</script>
+
+{% endblock %}

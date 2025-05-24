@@ -1,0 +1,1683 @@
+2025-05-19 20:55:16,289 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 21:07:17,682 INFO autoreload /home/pluto/jango/CribHunter/main/urls.py changed, reloading.
+2025-05-19 21:07:18,151 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 21:12:09,533 ERROR log Internal Server Error: /sign-up/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/CribHunter/main/views.py", line 11, in signup_view
+    return render(request, 'main/signup.html', context)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'crispy'
+2025-05-19 21:17:30,652 INFO autoreload /home/pluto/jango/CribHunter/CribHunter/settings.py changed, reloading.
+2025-05-19 21:17:31,095 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 21:17:44,505 ERROR log Internal Server Error: /sign-up/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/CribHunter/main/views.py", line 11, in signup_view
+    return render(request, 'main/signup.html', context)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'crispy'
+2025-05-19 21:22:34,660 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-19 21:22:35,107 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 21:28:05,140 DEBUG views signed up user: AnonymousUser
+2025-05-19 21:38:28,356 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-19 21:38:28,812 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 21:43:20,623 ERROR log Internal Server Error: /sign-in/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'end'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/CribHunter/main/views.py", line 57, in signin_view
+    return render(request, 'main/signin.html', context)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 82: 'end', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+2025-05-19 22:08:57,913 ERROR log Internal Server Error: /sign-in/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/CribHunter/main/views.py", line 52, in signin_view
+    return redirect("sign_in")
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'sign_in' not found. 'sign_in' is not a valid view function or pattern name.
+2025-05-19 22:08:58,004 WARNING log Not Found: /favicon.ico
+2025-05-19 22:09:18,055 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-19 22:09:18,540 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 22:10:01,594 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-19 22:10:02,046 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 22:10:43,299 INFO views Authenticatd user: titanium35
+2025-05-19 22:10:43,590 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:10:43,609 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:10:43,614 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:10:43,633 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:10:43,647 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:10:43,676 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:10:43,691 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:10:43,701 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:10:43,706 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:12:19,179 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:12:19,187 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:12:19,222 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:12:19,228 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:12:19,261 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:12:19,267 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:12:19,268 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:12:19,270 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:12:19,288 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:33:23,504 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:33:23,515 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:33:23,526 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:33:23,545 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:33:23,550 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:33:23,575 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:33:23,611 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:33:23,612 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:33:23,616 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:36:22,730 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:36:22,743 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:36:22,769 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:36:22,772 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:36:22,787 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:36:22,800 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:36:22,802 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:36:22,819 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:36:22,836 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:37:03,673 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:37:03,680 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:37:03,696 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:37:03,714 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:37:03,720 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:37:03,722 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:37:03,741 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:37:03,751 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:37:03,761 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:38:45,125 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:38:45,128 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:38:45,142 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:38:45,152 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:38:45,159 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:38:45,167 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:38:45,180 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:38:45,189 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:38:45,202 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:42:10,497 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:42:10,501 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:42:10,514 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:42:10,535 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:42:10,550 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:42:10,556 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:42:10,564 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:42:10,570 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:42:10,582 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:47:19,866 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:47:19,890 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:47:19,893 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:47:19,895 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:47:19,905 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:47:19,911 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:47:19,927 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:47:19,929 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:47:19,944 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:48:43,143 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:48:43,178 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:48:43,190 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:48:43,193 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:48:43,192 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:48:43,196 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:48:43,208 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:48:43,227 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:48:43,231 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:51:16,480 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:51:16,498 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:51:16,513 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:51:16,540 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:51:16,540 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:51:16,546 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:51:16,572 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:51:16,556 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:51:16,582 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:51:47,840 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:51:47,855 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:51:47,870 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:51:47,871 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:51:47,875 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:51:47,880 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:51:47,903 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:51:47,908 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:51:47,915 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:52:56,366 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:52:56,377 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:52:56,380 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:52:56,392 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:52:56,400 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:52:56,411 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:52:56,422 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:52:56,435 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:52:56,446 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:53:38,965 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:53:38,978 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:53:38,992 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:53:38,995 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:53:39,001 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:53:39,009 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:53:39,020 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:53:39,033 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:53:39,042 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:54:10,401 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:54:10,405 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:54:10,441 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:54:10,441 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:54:10,442 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:54:10,443 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:54:10,454 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:54:10,468 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:54:10,486 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:54:32,810 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:54:32,820 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:54:32,827 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:54:32,847 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:54:32,849 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:54:32,858 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:54:32,867 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:54:32,877 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:54:32,884 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:55:30,417 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:55:30,425 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:55:30,442 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:55:30,453 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:55:30,461 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:55:30,474 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:55:30,476 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:55:30,491 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:55:30,504 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:59:04,006 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:59:04,022 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:59:04,063 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:59:04,064 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:59:04,074 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:59:04,076 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:59:04,082 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:59:04,103 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:59:04,108 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 22:59:20,109 WARNING log Not Found: /dash/
+2025-05-19 22:59:20,224 WARNING log Not Found: /favicon.ico
+2025-05-19 22:59:25,060 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 22:59:25,066 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 22:59:25,083 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 22:59:25,094 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 22:59:25,110 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 22:59:25,116 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 22:59:25,162 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 22:59:25,184 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 22:59:25,186 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 23:00:00,297 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 23:00:00,298 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 23:00:00,330 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 23:00:00,338 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 23:00:00,340 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 23:00:00,345 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 23:00:00,351 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 23:00:00,378 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 23:00:00,382 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 23:00:53,306 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 23:00:53,324 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 23:00:53,325 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 23:00:53,345 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 23:00:53,358 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 23:00:53,364 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 23:00:53,377 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 23:00:53,389 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 23:00:53,394 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 23:01:02,618 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 23:01:02,634 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 23:01:02,667 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 23:01:02,668 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 23:01:02,676 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 23:01:02,678 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 23:01:02,685 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 23:01:02,705 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 23:01:02,714 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 23:01:51,850 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 23:01:51,863 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 23:01:51,883 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 23:01:51,905 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 23:01:51,908 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 23:01:51,925 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 23:01:51,926 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 23:01:51,931 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 23:01:51,945 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 23:02:53,963 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 23:02:53,997 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 23:02:54,001 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 23:02:54,012 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 23:02:54,013 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 23:02:54,015 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 23:02:54,022 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 23:02:54,030 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 23:02:54,038 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 23:03:16,170 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 23:03:16,203 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 23:03:16,214 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 23:03:16,232 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 23:03:16,234 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 23:03:16,234 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 23:03:16,240 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 23:03:16,253 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 23:03:16,264 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 23:04:05,858 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 23:04:05,868 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 23:04:05,878 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 23:04:05,893 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 23:04:05,906 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 23:04:05,918 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 23:04:05,923 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 23:04:05,943 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 23:04:05,942 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 23:07:08,188 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-19 23:07:08,665 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 23:08:07,983 INFO autoreload /home/pluto/jango/CribHunter/main/urls.py changed, reloading.
+2025-05-19 23:08:08,473 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 23:08:43,953 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 23:08:43,977 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 23:08:43,982 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 23:08:43,995 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 23:08:44,010 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 23:08:44,031 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 23:08:44,036 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 23:08:44,059 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 23:08:44,062 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 23:09:01,970 INFO views Logged out: titanium35
+2025-05-19 23:09:02,171 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 23:09:02,198 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 23:09:02,208 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 23:09:02,222 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 23:09:02,226 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 23:09:02,235 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 23:09:02,248 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 23:09:02,255 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 23:09:02,267 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 23:09:17,186 INFO views Authenticatd user: titanium35
+2025-05-19 23:09:17,433 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 23:09:17,434 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 23:09:17,439 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 23:09:17,444 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 23:09:17,452 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 23:09:17,468 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 23:09:17,481 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 23:09:17,489 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 23:09:17,500 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 23:33:01,260 INFO autoreload /home/pluto/jango/CribHunter/CribHunter/urls.py changed, reloading.
+2025-05-19 23:33:01,729 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 23:33:26,357 INFO autoreload /home/pluto/jango/CribHunter/dash/urls.py changed, reloading.
+2025-05-19 23:33:26,806 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 23:33:44,193 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-19 23:33:44,197 WARNING log Not Found: /img/webp/people1.webp
+2025-05-19 23:33:44,208 WARNING log Not Found: /img/webp/people2.webp
+2025-05-19 23:33:44,226 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-19 23:33:44,268 WARNING log Not Found: /img/webp/people23.webp
+2025-05-19 23:33:44,272 WARNING log Not Found: /img/webp/people4.webp
+2025-05-19 23:33:44,275 WARNING log Not Found: /img/webp/person11.webp
+2025-05-19 23:33:44,276 WARNING log Not Found: /img/webp/people15.webp
+2025-05-19 23:33:44,290 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-19 23:33:49,906 WARNING log Not Found: /dash/
+2025-05-19 23:34:33,365 INFO autoreload /home/pluto/jango/CribHunter/dash/urls.py changed, reloading.
+2025-05-19 23:34:33,844 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 23:34:39,263 ERROR log Internal Server Error: /dash/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/CribHunter/dash/views.py", line 12, in index_view
+    return render(request, "dash/index.html", context)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: dash/index.html
+2025-05-19 23:35:45,548 INFO autoreload /home/pluto/jango/CribHunter/CribHunter/settings.py changed, reloading.
+2025-05-19 23:35:46,010 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 23:35:51,421 WARNING log Not Found: /dash/img/user.jpg
+2025-05-19 23:35:51,568 WARNING log Not Found: /dash/img/favicon.ico
+2025-05-19 23:36:38,085 WARNING log Not Found: /dash/chart.html
+2025-05-19 23:37:27,783 INFO autoreload /home/pluto/jango/CribHunter/CribHunter/settings.py changed, reloading.
+2025-05-19 23:37:28,261 INFO autoreload Watching for file changes with StatReloader
+2025-05-19 23:38:31,343 WARNING log Not Found: /dash/img/user.jpg
+2025-05-19 23:38:33,353 WARNING log Not Found: /dash/img/user.jpg
+2025-05-19 23:38:57,394 WARNING log Not Found: /dash/img/user.jpg
+2025-05-19 23:40:22,617 WARNING log Not Found: /dash/img/user.jpg
+2025-05-19 23:40:39,095 WARNING log Not Found: /dash/img/user.jpg
+2025-05-19 23:42:59,136 WARNING log Not Found: /dash/img/user.jpg
+2025-05-19 23:43:02,118 WARNING log Not Found: /dash/img/user.jpg
+2025-05-19 23:48:49,883 WARNING log Not Found: /dash/img/user.jpg
+2025-05-19 23:48:56,025 WARNING log Not Found: /dash/img/user.jpg
+2025-05-19 23:52:17,869 WARNING log Not Found: /dash/img/user.jpg
+2025-05-19 23:55:05,194 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 00:01:51,704 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 00:02:06,982 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 00:04:08,352 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 00:05:00,268 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 00:05:21,413 WARNING log Not Found: /dash/index.html
+2025-05-20 00:06:18,173 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 00:08:57,112 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 00:21:15,168 INFO autoreload /home/pluto/jango/CribHunter/main/models.py changed, reloading.
+2025-05-20 00:21:15,627 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 00:22:40,628 INFO autoreload /home/pluto/jango/CribHunter/main/models.py changed, reloading.
+2025-05-20 00:22:41,098 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 00:31:06,419 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-20 00:31:06,930 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 00:31:35,690 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-20 00:31:36,165 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 00:31:49,401 INFO views Logged out: titanium35
+2025-05-20 00:31:49,683 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 00:31:49,710 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 00:31:49,718 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 00:31:49,719 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 00:31:49,720 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 00:31:49,731 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 00:31:49,776 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 00:31:49,797 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 00:31:49,798 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 00:32:36,815 DEBUG views crybaby667
+2025-05-20 00:32:36,845 ERROR log Internal Server Error: /sign-up/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/CribHunter/main/views.py", line 28, in signup_view
+    Profile.objects.create(user=dd)
+    ^^^^^^^
+NameError: name 'Profile' is not defined
+2025-05-20 00:34:31,299 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-20 00:34:31,772 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 00:38:11,759 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-20 00:38:12,247 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 00:41:18,022 INFO views Authenticatd user: crib33
+2025-05-20 00:41:18,279 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 00:41:18,296 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 00:41:18,297 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 00:41:18,307 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 00:41:18,339 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 00:41:18,341 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 00:41:18,373 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 00:41:18,378 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 00:41:18,389 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 00:41:53,452 INFO autoreload /home/pluto/jango/CribHunter/main/models.py changed, reloading.
+2025-05-20 00:41:53,901 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 00:44:51,348 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 00:44:51,370 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 00:44:51,396 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 00:44:51,396 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 00:44:51,401 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 00:44:51,409 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 00:44:51,417 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 00:44:51,439 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 00:44:51,439 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 00:49:20,603 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 00:49:20,629 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 00:49:20,636 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 00:49:20,662 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 00:49:20,668 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 00:49:20,692 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 00:49:20,694 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 00:49:20,701 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 00:49:20,713 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 00:50:29,346 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 00:50:29,355 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 00:50:29,385 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 00:50:29,394 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 00:50:29,399 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 00:50:29,402 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 00:50:29,416 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 00:50:29,428 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 00:50:29,438 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 00:50:47,163 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 00:50:47,211 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 00:50:47,213 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 00:50:47,220 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 00:50:47,221 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 00:50:47,235 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 00:50:47,248 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 00:50:47,261 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 00:50:47,269 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 00:51:33,098 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 00:51:33,127 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 00:51:33,132 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 00:51:33,153 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 00:51:33,157 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 00:51:33,159 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 00:51:33,170 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 00:51:33,177 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 00:51:33,193 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 00:51:38,703 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 00:59:02,710 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 00:59:02,717 WARNING log Not Found: /media/user.jpg
+2025-05-20 00:59:12,929 WARNING log Not Found: /media/user.jpg
+2025-05-20 00:59:12,939 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 01:08:19,258 WARNING log Not Found: /media/user.jpg
+2025-05-20 01:08:19,275 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 01:08:39,645 WARNING log Not Found: /media/user.jpg
+2025-05-20 01:08:39,654 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 01:11:10,133 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-20 01:11:10,607 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 01:13:08,312 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 01:13:08,797 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 01:14:56,262 INFO autoreload /home/pluto/jango/CribHunter/dash/urls.py changed, reloading.
+2025-05-20 01:14:56,708 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 01:15:15,053 INFO autoreload /home/pluto/jango/CribHunter/dash/urls.py changed, reloading.
+2025-05-20 01:15:15,522 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 01:15:49,366 INFO autoreload /home/pluto/jango/CribHunter/dash/urls.py changed, reloading.
+2025-05-20 01:15:49,868 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 01:19:25,118 WARNING log Not Found: /media/user.jpg
+2025-05-20 01:19:25,112 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 01:19:39,592 WARNING log Not Found: /my_listings
+2025-05-20 01:20:01,110 WARNING log Not Found: /media/user.jpg
+2025-05-20 01:20:01,118 WARNING log Not Found: /dash/my_listings/img/user.jpg
+2025-05-20 01:31:48,058 WARNING log Not Found: /media/user.jpg
+2025-05-20 01:31:48,070 WARNING log Not Found: /dash/my_listings/img/user.jpg
+2025-05-20 01:34:33,485 WARNING log Not Found: /media/user.jpg
+2025-05-20 01:34:33,495 WARNING log Not Found: /dash/my_listings/img/user.jpg
+2025-05-20 01:35:54,414 WARNING log Not Found: /media/user.jpg
+2025-05-20 01:35:54,424 WARNING log Not Found: /dash/my_listings/img/user.jpg
+2025-05-20 01:37:26,091 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 01:37:26,572 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 01:37:50,216 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 01:37:50,693 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 01:42:06,316 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 01:42:06,788 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 01:42:22,231 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 01:42:22,722 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 01:43:58,409 WARNING log Not Found: /media/user.jpg
+2025-05-20 01:43:58,414 WARNING log Not Found: /dash/my_listings/img/user.jpg
+2025-05-20 01:44:42,421 WARNING log Not Found: /media/user.jpg
+2025-05-20 01:44:42,426 WARNING log Not Found: /dash/my_listings/img/user.jpg
+2025-05-20 01:46:19,690 WARNING log Not Found: /media/user.jpg
+2025-05-20 01:46:19,692 WARNING log Not Found: /dash/my_listings/img/user.jpg
+2025-05-20 01:49:59,192 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 01:49:59,682 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 01:50:40,721 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 01:50:41,217 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 01:54:35,391 WARNING log Not Found: /media/user.jpg
+2025-05-20 01:54:35,403 WARNING log Not Found: /dash/my_listings/img/user.jpg
+2025-05-20 01:58:03,852 WARNING log Not Found: /media/user.jpg
+2025-05-20 01:58:03,869 WARNING log Not Found: /dash/my_listings/img/user.jpg
+2025-05-20 01:58:35,190 WARNING log Not Found: /media/user.jpg
+2025-05-20 01:58:35,203 WARNING log Not Found: /dash/my_listings/img/user.jpg
+2025-05-20 02:00:12,156 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:00:12,169 WARNING log Not Found: /dash/my_listings/img/user.jpg
+2025-05-20 02:00:17,714 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:00:17,729 WARNING log Not Found: /dash/my_listings/img/user.jpg
+2025-05-20 02:08:47,968 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:08:47,980 WARNING log Not Found: /dash/my_listings/img/user.jpg
+2025-05-20 02:09:56,885 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 02:09:57,399 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:10:34,344 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 02:10:34,818 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:15:30,523 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 02:15:31,013 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:16:30,495 INFO autoreload /home/pluto/jango/CribHunter/CribHunter/settings.py changed, reloading.
+2025-05-20 02:16:30,966 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:16:34,204 INFO autoreload /home/pluto/jango/CribHunter/CribHunter/settings.py changed, reloading.
+2025-05-20 02:16:34,665 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:17:55,616 INFO autoreload /home/pluto/jango/CribHunter/CribHunter/urls.py changed, reloading.
+2025-05-20 02:17:56,121 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:19:00,115 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:20:40,522 INFO autoreload /home/pluto/jango/CribHunter/master/admin.py changed, reloading.
+2025-05-20 02:20:41,036 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:20:53,441 INFO autoreload /home/pluto/jango/CribHunter/master/models.py changed, reloading.
+2025-05-20 02:20:53,925 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:25:19,320 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 02:25:19,333 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 02:25:19,365 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 02:25:19,369 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 02:25:19,388 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 02:25:19,390 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 02:25:19,411 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 02:25:19,451 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 02:25:19,463 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 02:25:30,833 INFO views Authenticatd user: crib33
+2025-05-20 02:25:31,058 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 02:25:31,080 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 02:25:31,102 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 02:25:31,107 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 02:25:31,110 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 02:25:31,128 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 02:25:31,141 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 02:25:31,151 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 02:25:31,164 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 02:25:36,392 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 02:25:36,393 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:25:44,358 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:25:44,366 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 02:27:40,290 INFO autoreload /home/pluto/jango/CribHunter/dash/urls.py changed, reloading.
+2025-05-20 02:27:40,767 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:28:30,695 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 02:28:31,139 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:29:11,331 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:29:11,340 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 02:29:16,390 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:29:16,402 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 02:32:56,377 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 02:32:56,874 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:35:16,574 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:35:16,584 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 02:49:40,254 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 02:49:40,746 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:49:48,158 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:49:48,186 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 02:53:37,554 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:53:37,565 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 02:53:45,847 WARNING log Forbidden (CSRF token missing.): /dash/pending_listings/
+2025-05-20 02:54:08,713 WARNING log Forbidden (CSRF token missing.): /dash/pending_listings/
+2025-05-20 02:54:19,557 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 02:54:19,561 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:54:37,780 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:54:37,791 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 02:54:56,137 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:54:56,147 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 02:56:39,777 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 02:56:39,805 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 02:56:39,812 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 02:56:39,816 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 02:56:39,842 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 02:56:39,848 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 02:56:39,861 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 02:56:39,878 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 02:56:39,892 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 02:56:48,015 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 02:56:48,019 WARNING log Not Found: /media/user.jpg
+2025-05-20 02:57:00,062 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 02:57:00,075 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 02:57:00,109 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 02:57:00,110 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 02:57:00,123 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 02:57:00,126 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 02:57:00,139 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 02:57:00,147 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 02:57:00,157 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 02:57:44,387 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 02:57:44,891 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 02:58:32,056 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 02:58:32,553 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 03:03:35,707 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 03:03:41,739 WARNING log Not Found: /favicon.ico
+2025-05-20 03:03:54,692 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:03:54,697 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:03:54,706 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:03:54,728 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:03:54,762 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:03:54,765 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:03:54,781 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:03:54,798 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:03:54,799 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:04:17,119 INFO views Authenticatd user: crib33
+2025-05-20 03:04:17,335 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:04:17,361 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:04:17,366 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:04:17,385 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:04:17,389 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:04:17,404 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:04:17,409 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:04:17,428 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:04:17,437 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:07:52,809 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:07:52,824 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:07:52,861 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:07:52,870 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:07:52,871 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:07:52,878 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:07:52,894 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:07:52,904 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:07:52,913 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:11:13,541 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:11:13,556 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:11:13,579 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:11:13,599 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:11:13,634 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:11:13,631 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:11:13,603 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:11:13,638 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:11:13,646 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:11:53,538 WARNING log Not Found: /media/user.jpg
+2025-05-20 03:11:53,543 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 03:11:58,250 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:11:58,269 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:11:58,305 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:11:58,321 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:11:58,323 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:11:58,327 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:11:58,374 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:11:58,375 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:11:58,383 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:12:17,933 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:12:17,957 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:12:17,960 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:12:17,965 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:12:17,975 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:12:17,981 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:12:17,993 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:12:18,008 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:12:18,017 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:13:36,665 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:13:36,702 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:13:36,716 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:13:36,717 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:13:36,734 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:13:36,739 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:13:36,744 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:13:36,755 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:13:36,767 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:13:46,545 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:13:46,584 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:13:46,586 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:13:46,586 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:13:46,590 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:13:46,601 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:13:46,607 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:13:46,618 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:13:46,631 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:14:21,586 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:14:21,597 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:14:21,633 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:14:21,638 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:14:21,640 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:14:21,641 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:14:21,652 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:14:21,665 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:14:21,677 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:19:52,557 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:19:52,596 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:19:52,603 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:19:52,620 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:19:52,624 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:19:52,627 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:19:52,630 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:19:52,650 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:19:52,663 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:20:10,398 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:20:10,413 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:20:10,444 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:20:10,448 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:20:10,450 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:20:10,451 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:20:10,461 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:20:10,475 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:20:10,487 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:24:56,709 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:24:56,725 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:24:56,733 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:24:56,753 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:24:56,769 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:24:56,773 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:24:56,779 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:24:56,791 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:24:56,799 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:25:14,007 INFO views Logged out: crib33
+2025-05-20 03:25:14,205 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:25:14,237 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:25:14,251 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:25:14,250 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:25:14,263 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:25:14,266 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:25:14,278 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:25:14,286 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:25:14,298 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:25:31,503 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:25:31,530 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:25:31,554 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:25:31,543 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:25:31,561 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:25:31,578 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:25:31,567 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:25:31,580 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:25:31,597 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:25:34,897 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:25:34,937 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:25:34,944 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:25:34,945 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:25:34,947 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:25:34,955 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:25:34,962 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:25:34,973 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:25:34,981 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:26:36,813 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:26:36,853 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:26:36,860 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:26:36,861 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:26:36,865 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:26:36,871 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:26:36,885 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:26:36,895 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:26:36,904 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:26:45,428 INFO views Authenticatd user: crib33
+2025-05-20 03:26:45,634 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:26:45,657 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:26:45,683 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:26:45,700 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:26:45,676 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:26:45,707 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:26:45,714 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:26:45,734 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:26:45,730 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:26:54,588 WARNING log Not Found: /media/user.jpg
+2025-05-20 03:26:54,601 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 03:32:53,771 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 03:32:54,264 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 03:34:33,622 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 03:34:34,109 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 03:40:45,874 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 03:40:45,896 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 03:40:45,915 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 03:40:45,938 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 03:40:45,952 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 03:40:45,961 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 03:40:45,969 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 03:40:45,975 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 03:40:45,980 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 03:40:50,726 WARNING log Not Found: /media/user.jpg
+2025-05-20 03:40:50,730 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 03:40:58,190 ERROR log Internal Server Error: /dash/pending_listings/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/CribHunter/dash/views.py", line 50, in pending_listings_view
+    return render(request, "dash/pending_listings.html", context)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 47: 'endif', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+2025-05-20 03:41:19,178 WARNING log Not Found: /media/user.jpg
+2025-05-20 03:41:19,186 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 03:42:46,606 WARNING log Not Found: /media/user.jpg
+2025-05-20 03:42:46,618 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 03:43:13,998 WARNING log Not Found: /media/user.jpg
+2025-05-20 03:43:14,009 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 03:45:50,269 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 03:45:50,774 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 03:46:04,204 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 03:46:04,702 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 03:58:31,299 WARNING log Not Found: /media/user.jpg
+2025-05-20 03:58:31,315 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 03:58:33,471 WARNING log Not Found: /media/user.jpg
+2025-05-20 03:58:33,473 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 03:58:37,376 WARNING log Not Found: /media/user.jpg
+2025-05-20 03:58:37,387 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 03:59:59,334 WARNING log Not Found: /media/user.jpg
+2025-05-20 03:59:59,344 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 04:00:43,126 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:00:43,138 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 04:05:29,581 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:05:29,596 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 04:05:37,434 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:05:37,446 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:06:55,447 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:06:55,456 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:07:00,766 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:07:00,770 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:07:54,027 ERROR log Internal Server Error: /dash/pending_listings/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2123, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/CribHunter/dash/views.py", line 20, in pending_listings_view
+    listings = Listing.objects.filter(user=request.user, status="pending", is_deleted=False)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1555, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1385, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2125, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7a6ef77a16a0>>.
+2025-05-20 04:07:54,133 WARNING log Not Found: /favicon.ico
+2025-05-20 04:08:53,008 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 04:08:53,478 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 04:09:48,864 INFO autoreload /home/pluto/jango/CribHunter/dash/admin.py changed, reloading.
+2025-05-20 04:09:49,346 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 04:10:07,702 INFO autoreload /home/pluto/jango/CribHunter/dash/admin.py changed, reloading.
+2025-05-20 04:10:08,181 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 04:12:21,665 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:12:21,674 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:12:57,037 ERROR log Internal Server Error: /dash/pending_listings/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/CribHunter/dash/views.py", line 35, in pending_listings_view
+    Listing.objects.create(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        user=request.user,
+        ^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        rent=rent,
+        ^^^^^^^^^^
+    )
+    ^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/query.py", line 677, in create
+    obj = self.model(**kwargs)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Listing() got unexpected keyword arguments: 'category'
+2025-05-20 04:13:14,801 INFO autoreload /home/pluto/jango/CribHunter/dash/admin.py changed, reloading.
+2025-05-20 04:13:15,328 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 04:14:46,513 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 04:14:46,994 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 04:15:14,407 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:15:14,419 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:18:16,477 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:18:16,489 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:19:17,086 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:19:17,099 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:22:39,331 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:22:39,346 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:22:46,561 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:22:46,571 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:23:39,298 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:23:39,308 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:26:33,571 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:26:33,585 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:27:36,486 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:27:36,496 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:28:21,021 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:28:21,033 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:34:58,155 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:34:58,167 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:35:38,126 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:35:38,139 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:52:38,548 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 04:52:38,550 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:59:06,754 WARNING log Not Found: /media/user.jpg
+2025-05-20 04:59:06,756 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:00:28,481 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:00:28,493 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:01:20,740 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:01:20,755 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:03:24,361 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:03:24,373 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:05:41,553 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:05:41,566 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:07:00,948 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:07:00,961 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:07:40,336 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:07:40,346 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:11:07,408 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:11:07,425 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:12:13,139 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:12:13,149 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:13:13,808 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:13:13,819 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:13:56,791 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:13:56,802 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:14:04,315 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:14:04,342 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:15:09,453 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:15:09,456 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:15:23,292 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:15:23,303 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:16:23,043 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:16:23,047 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:17:16,987 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:17:17,003 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:19:15,126 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:19:15,135 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:20:22,142 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:20:22,151 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:21:02,392 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 05:21:02,908 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 05:32:22,482 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 05:32:23,002 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 05:33:37,875 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 05:33:38,400 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 05:34:56,587 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:34:56,602 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:35:54,164 WARNING log Not Found: /dash/pending_listings/
+2025-05-20 05:36:49,057 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:36:49,068 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:37:11,703 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:37:11,717 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:39:37,780 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:39:37,793 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:40:05,262 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:40:05,270 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:42:05,723 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 05:42:06,211 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 05:42:33,960 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 05:42:34,442 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 05:42:39,907 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:42:39,922 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:42:54,081 DEBUG views <QueryDict: {'csrfmiddlewaretoken': ['uXR2lTPryvqbpQaNQ3HO6hoW8fDNQS4N9EmnTPkFgo9FIBZfZ9p3QxibqFKJYmfD'], 'title': ['Zoohouse 887'], 'category': ['1'], 'location': ['Kilimani'], 'units': ['22'], 'rent': ['7688'], 'description': ['desc'], 'avatar2': [''], 'avatar3': [''], 'avatar4': [''], 'avatar5': [''], 'action': ['update_listing'], 'id': ['1']}>
+2025-05-20 05:42:54,084 DEBUG views crib33's listing
+2025-05-20 05:42:54,250 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:42:54,259 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:50:59,025 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:50:59,026 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:51:23,586 DEBUG views <QueryDict: {'csrfmiddlewaretoken': ['lv0Z1dtXxp7RYLrMKqC1pG5t5nFC84Nu0cvkz9YbfiQlhwgeTwkg9WZInNMygyYk'], 'title': ['Zoohouse 887'], 'category': ['1'], 'location': ['Kilimani'], 'units': ['22'], 'rent': ['7688'], 'description': ['None'], 'avatar3': [''], 'avatar4': [''], 'avatar5': [''], 'action': ['update_listing'], 'id': ['1']}>
+2025-05-20 05:51:23,590 DEBUG views crib33's listing
+2025-05-20 05:51:23,758 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:51:23,770 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:53:57,663 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 05:53:58,143 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 05:54:06,142 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:54:06,155 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:54:32,602 DEBUG views <QueryDict: {'csrfmiddlewaretoken': ['wMMX9xuCctmzXIxZTNURsjQ04o49UkHDbthiHtZQUm53gtmr2TC6czKfmOb52OSt'], 'title': ['Zoohouse 887'], 'category': ['1'], 'location': ['Kilimani'], 'units': ['22'], 'rent': ['7688'], 'description': ['desxc'], 'avatar3': [''], 'avatar4': [''], 'avatar5': [''], 'action': ['update_listing'], 'id': ['1']}>
+2025-05-20 05:54:32,604 DEBUG views crib33's listing
+2025-05-20 05:54:32,816 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:54:32,828 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:59:37,767 WARNING log Not Found: /media/user.jpg
+2025-05-20 05:59:37,793 WARNING log Not Found: /media/1.jpg
+2025-05-20 05:59:37,811 WARNING log Not Found: /media/01LW4049122-HeroSquare-f670a23de42e4206b42e87a61fe486fe.jpg
+2025-05-20 05:59:37,813 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 05:59:37,828 WARNING log Not Found: /media/listing5.jpg
+2025-05-20 05:59:37,845 WARNING log Not Found: /media/listing3.jpg
+2025-05-20 05:59:37,859 WARNING log Not Found: /media/listing4.jpg
+2025-05-20 05:59:37,867 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 05:59:37,876 WARNING log Not Found: /media/listing2.jpg
+2025-05-20 06:02:12,154 WARNING log Not Found: /media/user.jpg
+2025-05-20 06:02:12,172 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 06:05:05,583 WARNING log Not Found: /media/user.jpg
+2025-05-20 06:05:05,597 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 06:09:31,124 WARNING log Not Found: /media/user.jpg
+2025-05-20 06:09:31,135 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 06:10:10,544 WARNING log Not Found: /media/user.jpg
+2025-05-20 06:10:10,555 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 06:10:54,416 WARNING log Not Found: /media/user.jpg
+2025-05-20 06:10:54,427 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 06:12:10,323 DEBUG views <QueryDict: {'csrfmiddlewaretoken': ['kIwrUQ0aWNWHkB85vzDQz5QJa0qO6j4eZp1MsMvoEGFbDmXxEFl5jlKYsqxKeNf4'], 'title': ['Zoohouse 887'], 'category': ['1'], 'location': ['Kilimani'], 'units': ['22'], 'rent': ['7688'], 'description': ['Desxc'], 'avatar2': [''], 'action': ['update_listing'], 'id': ['1']}>
+2025-05-20 06:12:10,326 DEBUG views crib33's listing
+2025-05-20 06:12:10,524 WARNING log Not Found: /media/user.jpg
+2025-05-20 06:12:10,531 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 11:28:25,398 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 11:31:25,242 ERROR log Internal Server Error: /dash/pending_listings/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2123, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/CribHunter/dash/views.py", line 20, in pending_listings_view
+    listings = Listing.objects.filter(user=request.user, status="pending", is_deleted=False)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1555, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1385, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2125, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7cca3da6c590>>.
+2025-05-20 11:31:25,366 WARNING log Not Found: /favicon.ico
+2025-05-20 11:31:46,186 WARNING log Not Found: /favicon.ico
+2025-05-20 11:31:49,573 ERROR log Internal Server Error: /dash/pending_listings/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2123, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/CribHunter/dash/views.py", line 20, in pending_listings_view
+    listings = Listing.objects.filter(user=request.user, status="pending", is_deleted=False)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1555, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1385, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 2125, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7cca3d309e50>>.
+2025-05-20 11:33:07,086 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 11:33:07,098 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 11:33:07,129 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 11:33:07,135 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 11:33:07,164 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 11:33:07,167 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 11:33:07,174 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 11:33:07,201 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 11:33:07,203 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 11:33:18,109 INFO views Authenticatd user: crib33
+2025-05-20 11:33:18,347 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 11:33:18,380 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 11:33:18,381 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 11:33:18,395 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 11:33:18,398 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 11:33:18,414 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 11:33:18,441 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 11:33:18,446 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 11:33:18,453 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 11:33:27,469 WARNING log Not Found: /media/user.jpg
+2025-05-20 11:33:27,489 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 11:33:33,305 WARNING log Not Found: /media/user.jpg
+2025-05-20 11:33:33,315 WARNING log Not Found: /dash/img/user.jpg
+2025-05-20 11:33:36,932 WARNING log Not Found: /media/user.jpg
+2025-05-20 11:33:36,944 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 11:45:27,953 WARNING log Not Found: /media/user.jpg
+2025-05-20 11:45:27,964 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 11:46:13,582 WARNING log Not Found: /media/user.jpg
+2025-05-20 11:46:13,596 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 11:47:12,608 WARNING log Not Found: /media/user.jpg
+2025-05-20 11:47:12,619 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 11:47:21,244 WARNING log Not Found: /media/user.jpg
+2025-05-20 11:47:21,253 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 11:49:51,981 WARNING log Not Found: /media/user.jpg
+2025-05-20 11:49:51,997 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 11:50:34,049 WARNING log Not Found: /media/user.jpg
+2025-05-20 11:50:34,050 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 11:51:12,073 WARNING log Not Found: /media/user.jpg
+2025-05-20 11:51:12,089 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 11:54:38,898 WARNING log Not Found: /media/user.jpg
+2025-05-20 11:54:38,910 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 11:58:42,742 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 11:58:43,219 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 12:00:05,187 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 12:00:05,667 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 12:00:08,575 WARNING log Not Found: /media/user.jpg
+2025-05-20 12:00:08,588 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 12:00:11,991 WARNING log Forbidden (CSRF token missing.): /dash/pending_listings/
+2025-05-20 12:00:41,540 WARNING log Not Found: /media/user.jpg
+2025-05-20 12:00:41,549 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 12:00:44,858 WARNING log Not Found: /media/user.jpg
+2025-05-20 12:00:44,867 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 12:01:03,183 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 12:01:03,665 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 12:03:36,302 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 12:03:36,785 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 12:04:47,526 INFO autoreload /home/pluto/jango/CribHunter/dash/urls.py changed, reloading.
+2025-05-20 12:04:48,009 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 12:04:59,226 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 12:04:59,703 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 12:05:56,451 WARNING log Not Found: /media/user.jpg
+2025-05-20 12:05:56,462 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 12:06:01,106 WARNING log Not Found: /media/user.jpg
+2025-05-20 12:06:01,124 WARNING log Not Found: /dash/posted_listings/img/user.jpg
+2025-05-20 12:10:16,204 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 12:10:16,687 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 12:10:18,312 WARNING log Not Found: /media/user.jpg
+2025-05-20 12:10:18,325 WARNING log Not Found: /dash/posted_listings/img/user.jpg
+2025-05-20 12:14:52,829 WARNING log Not Found: /media/user.jpg
+2025-05-20 12:14:52,854 WARNING log Not Found: /dash/posted_listings/img/user.jpg
+2025-05-20 12:17:24,876 WARNING log Not Found: /media/user.jpg
+2025-05-20 12:17:24,893 WARNING log Not Found: /dash/posted_listings/img/user.jpg
+2025-05-20 12:17:39,766 WARNING log Not Found: /media/user.jpg
+2025-05-20 12:17:39,781 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 12:18:06,886 WARNING log Not Found: /media/user.jpg
+2025-05-20 12:18:06,899 WARNING log Not Found: /dash/pending_listings/img/user.jpg
+2025-05-20 12:18:17,221 WARNING log Not Found: /media/user.jpg
+2025-05-20 12:18:17,235 WARNING log Not Found: /dash/posted_listings/img/user.jpg
+2025-05-20 12:18:59,201 INFO autoreload /home/pluto/jango/CribHunter/dash/views.py changed, reloading.
+2025-05-20 12:18:59,722 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 12:21:29,300 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-20 12:21:29,809 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 12:25:07,019 ERROR log Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/CribHunter/main/views.py", line 15, in index_view
+    listings = Listing.objects.filter(status="posted", is_deleted=False)
+               ^^^^^^^
+NameError: name 'Listing' is not defined
+2025-05-20 12:25:41,858 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-20 12:25:42,338 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 12:25:44,897 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:25:44,915 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:25:44,929 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:25:44,961 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:25:44,962 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:25:44,991 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:25:44,994 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:25:45,007 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:25:45,009 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:25:45,028 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:25:45,031 WARNING log Not Found: /media/6430161cv13d.jpg
+2025-05-20 12:27:53,052 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:27:53,133 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:27:53,081 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:27:53,072 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:27:53,096 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:27:53,146 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:27:53,174 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:27:53,171 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:27:53,186 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:27:53,218 WARNING log Not Found: /media/6430161cv13d.jpg
+2025-05-20 12:27:53,221 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:28:41,159 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:28:41,180 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:28:41,191 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:28:41,207 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:28:41,211 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:28:41,218 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:28:41,231 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:28:41,244 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:28:41,258 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:28:41,270 WARNING log Not Found: /media/6430161cv13d.jpg
+2025-05-20 12:28:41,277 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:29:00,613 WARNING log Not Found: /media/6430161cv13d.jpg
+2025-05-20 12:29:33,868 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-20 12:29:34,380 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 12:32:40,726 INFO autoreload /home/pluto/jango/CribHunter/main/urls.py changed, reloading.
+2025-05-20 12:32:41,183 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 12:32:49,989 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:32:50,018 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:32:50,019 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:32:50,032 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:32:50,051 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:32:50,089 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:32:50,068 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:32:50,079 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:32:50,065 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:32:50,100 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:36:18,525 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:36:18,548 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:36:18,571 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:36:18,602 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:36:18,612 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:36:18,616 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:36:18,618 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:36:18,624 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:36:18,633 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:36:18,656 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:37:13,662 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:37:13,678 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:37:13,703 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:37:13,725 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:37:13,726 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:37:13,727 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:37:13,756 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:37:13,759 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:37:13,771 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:37:13,773 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:37:48,571 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:37:48,581 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:37:48,604 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:37:48,619 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:37:48,623 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:37:48,624 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:37:48,641 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:37:48,652 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:37:48,659 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:37:48,671 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:37:52,423 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:37:52,457 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:37:52,444 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:37:52,462 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:37:52,473 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:37:52,478 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:37:52,544 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:37:52,548 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:37:52,553 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:37:52,579 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:41:51,189 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:41:51,203 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:41:51,213 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:41:51,262 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:41:51,266 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:41:51,278 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:41:51,284 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:41:51,285 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:41:51,305 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:41:51,314 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:42:31,784 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:42:31,801 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:42:31,831 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:42:31,841 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:42:31,854 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:42:31,864 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:42:31,864 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:42:31,889 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:42:31,898 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:42:31,911 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:42:54,282 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:42:54,287 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:42:54,324 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:42:54,328 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:42:54,330 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:42:54,347 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:42:54,349 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:42:54,367 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:42:54,378 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:42:54,389 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:45:39,450 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:45:39,473 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:45:39,480 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:45:39,503 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:45:39,508 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:45:39,520 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:45:39,523 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:45:39,530 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:45:39,543 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:45:39,549 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:47:51,360 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:47:51,378 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:47:51,397 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:47:51,421 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:47:51,424 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:47:51,449 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:47:51,451 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:47:51,455 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:47:51,465 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:47:51,476 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:49:24,296 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:49:24,326 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:49:24,329 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:49:24,328 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:49:24,343 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:49:24,344 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:49:24,351 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:49:24,374 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:49:24,378 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:49:24,385 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:49:50,190 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:49:50,200 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:49:50,234 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:49:50,244 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:49:50,236 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:49:50,246 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:49:50,263 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:49:50,276 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:49:50,279 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:49:50,286 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:50:09,857 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:50:09,861 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:50:09,869 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:50:09,892 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:50:09,897 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:50:09,903 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:50:09,915 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:50:09,938 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:50:09,946 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:50:09,954 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:54:05,468 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:54:05,471 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:54:05,505 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:54:05,508 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:54:05,508 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:54:05,515 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:54:05,521 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:54:05,535 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:54:05,548 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:54:05,550 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 12:55:57,943 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 12:55:57,949 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 12:55:57,954 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 12:55:57,975 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 12:55:57,977 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 12:55:57,977 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 12:55:57,985 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 12:55:58,003 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 12:55:58,011 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 12:55:58,024 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 13:00:53,056 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-20 13:00:53,554 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 13:00:58,823 INFO autoreload /home/pluto/jango/CribHunter/dash/models.py changed, reloading.
+2025-05-20 13:00:59,301 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 13:02:07,970 INFO autoreload /home/pluto/jango/CribHunter/main/urls.py changed, reloading.
+2025-05-20 13:02:08,439 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 13:03:19,936 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-20 13:03:19,958 WARNING log Not Found: /img/webp/people1.webp
+2025-05-20 13:03:19,982 WARNING log Not Found: /img/webp/people2.webp
+2025-05-20 13:03:19,988 WARNING log Not Found: /img/webp/people23.webp
+2025-05-20 13:03:19,994 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-20 13:03:20,017 WARNING log Not Found: /img/webp/person11.webp
+2025-05-20 13:03:20,018 WARNING log Not Found: /img/webp/people15.webp
+2025-05-20 13:03:20,031 WARNING log Not Found: /img/webp/interior42.webp
+2025-05-20 13:03:20,049 WARNING log Not Found: /img/webp/people4.webp
+2025-05-20 13:03:20,051 WARNING log Not Found: /media/listing1.jpg
+2025-05-20 13:03:24,661 WARNING log Not Found: /listing/KR1N4O49PP/images/product/electronic/product1.jpg
+2025-05-20 13:03:24,723 WARNING log Not Found: /listing/KR1N4O49PP/images/product/electronic/product26.jpg
+2025-05-20 13:03:24,734 WARNING log Not Found: /listing/KR1N4O49PP/images/product/electronic/product2.jpg
+2025-05-20 13:03:24,738 WARNING log Not Found: /listing/KR1N4O49PP/images/product/electronic/product23.jpg
+2025-05-20 13:03:24,740 WARNING log Not Found: /listing/KR1N4O49PP/images/product/electronic/product3.jpg
+2025-05-20 13:03:24,773 WARNING log Not Found: /listing/KR1N4O49PP/images/product/electronic/product30.jpg
+2025-05-20 13:03:49,131 WARNING log Not Found: /listing/6DWBOHGRQ9/images/product/electronic/product1.jpg
+2025-05-20 13:03:49,137 WARNING log Not Found: /listing/6DWBOHGRQ9/images/product/electronic/product2.jpg
+2025-05-20 13:03:49,158 WARNING log Not Found: /listing/6DWBOHGRQ9/images/product/electronic/product30.jpg
+2025-05-20 13:03:49,188 WARNING log Not Found: /listing/6DWBOHGRQ9/images/product/electronic/product3.jpg
+2025-05-20 13:03:49,195 WARNING log Not Found: /listing/6DWBOHGRQ9/images/product/electronic/product23.jpg
+2025-05-20 13:03:49,202 WARNING log Not Found: /listing/6DWBOHGRQ9/images/product/electronic/product26.jpg
+2025-05-20 13:23:42,757 INFO autoreload /home/pluto/jango/CribHunter/main/views.py changed, reloading.
+2025-05-20 13:23:43,251 INFO autoreload Watching for file changes with StatReloader
+2025-05-20 13:23:47,491 INFO autoreload /home/pluto/jango/CribHunter/main/urls.py changed, reloading.
+2025-05-20 13:23:47,965 INFO autoreload Watching for file changes with StatReloader
