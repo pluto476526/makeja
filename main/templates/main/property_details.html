@@ -1,63 +1,81 @@
 {% extends 'main/main.html' %}
 {% load static %}
-
+{% load humanize %}
 {% block main %}
 
 <main>
     <div class="w-100 overflow-hidden bg-gray-100" id="top">
 
 		<!--====== App Content ======-->
-        <div class="app-content py-vh-4 bg-gray-100 w-100 overflow-hidden">
-
-            
+        <div class="app-content py-vh-4 bg-gray-100 w-100 overflow-hidden u-s-m-t-15">
+            {% if messages %}
+            {% for m in messages %}
+            <!--====== Messages Section ======-->
+            <div class="u-s-p-t-12">
+                <!--====== Section Content ======-->
+                <div class="section__content">
+                    <div class="container">
+                        <div class="breadcrumb">
+                            <div class="breadcrumb__wrap">
+                                <ul class="breadcrumb__list bg-primary p-2">
+                                    <li class="is-marked">
+                                        <a href="#" class="text-white">{{ m }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--====== End Messages Section ======-->
+            {% endfor %}
+            {% endif %}
+                    
             <!--====== Section 1 ======-->
-            <div class="u-s-p-y-90">
+            <div class="u-s-p-y-30">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5">
-
-
                             <!--====== Product Detail Zoom ======-->
                             <div class="pd u-s-m-b-30">
                                 <div class="slider-fouc pd-wrap">
                                     <div id="pd-o-initiate">
-                                        <div class="pd-o-img-wrap" data-src="{% static 'shop/images/product/product-d-1.jpg' %}">
-
-                                            <img class="u-img-fluid" src="{% static 'shop/images/product/product-d-1.jpg' %}" data-zoom-image="{% static 'shop/images/product/product-d-1.jpg' %}" alt=""></div>
-                                        <div class="pd-o-img-wrap" data-src="{% static 'shop/images/product/product-d-2.jpg' %}">
-
-                                            <img class="u-img-fluid" src="{% static 'shop/images/product/product-d-2.jpg' %}" data-zoom-image="{% static 'shop/images/product/product-d-2.jpg' %}" alt=""></div>
-                                        <div class="pd-o-img-wrap" data-src="{% static 'shop/images/product/product-d-3.jpg' %}">
-
-                                            <img class="u-img-fluid" src="{% static 'shop/images/product/product-d-3.jpg' %}" data-zoom-image="{% static 'shop/images/product/product-d-3.jpg' %}" alt=""></div>
-                                        <div class="pd-o-img-wrap" data-src="{% static 'shop/images/product/product-d-4.jpg' %}">
-
-                                            <img class="u-img-fluid" src="{% static 'shop/images/product/product-d-4.jpg' %}" data-zoom-image="{% static 'shop/images/product/product-d-4.jpg' %}" alt=""></div>
-                                        <div class="pd-o-img-wrap" data-src="{% static 'shop/images/product/product-d-5.jpg' %}">
-
-                                            <img class="u-img-fluid" src="{% static 'shop/images/product/product-d-5.jpg' %}" data-zoom-image="{% static 'shop/images/product/product-d-5.jpg' %}" alt=""></div>
+                                        <div class="pd-o-img-wrap" data-src="{{ listing.avatar1.url }}">
+                                            <img class="u-img-fluid" src="{{ listing.avatar1.url }}" data-zoom-image="{{ listing.avatar1.url }}" alt="" style="height: 30rem; object-fit: cover;">
+                                        </div>
+                                        <div class="pd-o-img-wrap" data-src="{{ listing.avatar2.url }}">
+                                            <img class="u-img-fluid" src="{{ listing.avatar2.url }}" data-zoom-image="{{ listing.avatar2.url }}" alt="" style="height: 30rem; object-fit: cover;">
+                                        </div>
+                                        <div class="pd-o-img-wrap" data-src="{{ listing.avatar3.url }}">
+                                            <img class="u-img-fluid" src="{{ listing.avatar3.url }}" data-zoom-image="{{ listing.avatar3.url }}" alt="" style="height: 30rem; object-fit: cover;">
+                                        </div>
+                                        <div class="pd-o-img-wrap" data-src="{{ listing.avatar4.url }}">
+                                            <img class="u-img-fluid" src="{{ listing.avatar4.url }}" data-zoom-image="{{ listing.avatar4.url }}" alt="" style="height: 30rem; object-fit: cover;">
+                                        </div>
+                                        <div class="pd-o-img-wrap" data-src="{{ listing.avatar5.url }}">
+                                            <img class="u-img-fluid" src="{{ listing.avatar5.url }}" data-zoom-image="{{ listing.avatar5.url }}" alt="" style="height: 30rem; object-fit: cover;">
+                                        </div>
                                     </div>
-
                                     <span class="pd-text">Click for larger zoom</span>
                                 </div>
                                 <div class="u-s-m-t-15">
                                     <div class="slider-fouc">
                                         <div id="pd-o-thumbnail">
                                             <div>
-
-                                                <img class="u-img-fluid" src="{% static 'shop/images/product/product-d-1.jpg' %}" alt=""></div>
+                                                <img class="u-img-fluid" src="{{ listing.avatar1.url }}" alt="" style="height: 8rem; object-fit: cover;">
+                                            </div>
                                             <div>
-
-                                                <img class="u-img-fluid" src="{% static 'shop/images/product/product-d-2.jpg' %}" alt=""></div>
+                                                <img class="u-img-fluid" src="{{ listing.avatar2.url }}" alt="" style="height: 8rem; object-fit: cover;">
+                                            </div>
                                             <div>
-
-                                                <img class="u-img-fluid" src="{% static 'shop/images/product/product-d-3.jpg' %}" alt=""></div>
+                                                <img class="u-img-fluid" src="{{ listing.avatar3.url }}" alt="" style="height: 8rem; object-fit: cover;">
+                                            </div>
                                             <div>
-
-                                                <img class="u-img-fluid" src="{% static 'shop/images/product/product-d-4.jpg' %}" alt=""></div>
+                                                <img class="u-img-fluid" src="{{ listing.avatar4.url }}" alt="" style="height: 8rem; object-fit: cover;">
+                                            </div>
                                             <div>
-
-                                                <img class="u-img-fluid" src="{% static 'shop/images/product/product-d-5.jpg' %}" alt=""></div>
+                                                <img class="u-img-fluid" src="{{ listing.avatar5.url }}" alt="" style="height: 8rem; object-fit: cover;">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -69,171 +87,186 @@
                             <!--====== Product Right Side Details ======-->
                             <div class="pd-detail">
                                 <div>
-
-                                    <span class="pd-detail__name">Nikon Camera 4k Lens Zoom Pro</span></div>
+                                    <span class="pd-detail__name">{{ listing.title|title }}</span>
+                                </div>
                                 <div>
-                                    <div class="pd-detail__inline">
-
-                                        <span class="pd-detail__price">$6.99</span>
-
-                                        <span class="pd-detail__discount">(76% OFF)</span><del class="pd-detail__del">$28.97</del></div>
+                                    <div class="">
+                                        <!--<span class="pd-detail__price">$6.99</span>-->
+                                        <span class="pd-detail__discount">Initial Deposit: Ksh {{ listing.deposit|intcomma }}</span><br>
+                                        <span class="pd-detail__discount">Monthly Rent: Ksh {{ listing.rent|intcomma }}</span>
+                                    </div>
                                 </div>
                                 <div class="u-s-m-b-15">
-                                    <div class="pd-detail__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-
+                                    <div class="pd-detail__rating gl-rating-style">
+                                        {% with rating=listing.avg_rating|default:0 %}
+                                            {% for i in "12345" %}
+                                                {% if rating >= forloop.counter %}
+                                                    <i class="fas fa-star"></i>  {# full star #}
+                                                {% elif rating >= forloop.counter0|add:"0.5" %}
+                                                    <i class="fas fa-star-half-alt"></i>  {# half star #}
+                                                {% else %}
+                                                    <i class="far fa-star"></i>  {# empty star #}
+                                                {% endif %}
+                                            {% endfor %}
+                                        {% endwith %}
                                         <span class="pd-detail__review u-s-m-l-4">
-
-                                            <a data-click-scroll="#view-review">23 Reviews</a></span></div>
+                                            <a data-click-scroll="#view-review">{{ listing.reviews_count|default:0 }} Review(s)</a>
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="u-s-m-b-15">
                                     <div class="pd-detail__inline">
-
-                                        <span class="pd-detail__stock">200 in stock</span>
-
-                                        <span class="pd-detail__left">Only 2 left</span></div>
+                                        <span class="pd-detail__left bg-info text-white">{{ listing.category.category|title }}</span>
+                                        <span class="pd-detail__stock">{{ listing.area_sqft|intcomma }} square feet</span>
+                                        <span class="pd-detail__left">{{ listing.available_units }} available units</span>
+                                        <span class="pd-detail__left bg-primary text-white">{{ listing.location|title }}</span>
+                                    </div>
                                 </div>
                                 <div class="u-s-m-b-15">
-
-                                    <span class="pd-detail__preview-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></div>
+                                    <ul class="pd-detail__policy-list">
+                                        <li>
+                                            <small>{{ listing.bathrooms }}</small>
+                                            <small class="">Bathrooms.</small>
+                                        </li>
+                                        <li>
+                                            <small>{{ listing.bedrooms }}</small>
+                                            <small class="">Bedrooms.</small>
+                                        </li>
+                                        <li>
+                                            <small>{{ listing.floor_number }}</small>
+                                            <small class="">floor.</small>
+                                        </li>
+                                        <li>
+                                            <small>{{ listing.total_floors }}</small>
+                                            <small class="">Total Floors.</small>
+                                        </li>
+                                        <li>
+                                            <small>{{ listing.year_built }}</small>
+                                            <small class="">Year Built.</small>
+                                        </li>
+                                    <!--<span class="pd-detail__preview-desc">{{ listing.description }}</span>-->
+                                </div>
                                 <div class="u-s-m-b-15">
-                                    <div class="pd-detail__inline">
-
-                                        <span class="pd-detail__click-wrap"><i class="far fa-heart u-s-m-r-6"></i>
-
-                                            <a href="signin.html">Add to Wishlist</a>
-
-                                            <span class="pd-detail__click-count">(222)</span></span></div>
+                                    <span class="pd-detail__label u-s-m-b-8">Address:</span>
+                                    <div class="pd-detail__size">
+                                        {% if listing.address.city %}
+                                        <div class="size__radio">
+                                            <div class="size__radio-label">City: {{ listing.address.city|title }}</div>
+                                        </div>
+                                        {% endif %}
+                                        {% if listing.address.county %}
+                                        <div class="size__radio">
+                                            <div class="size__radio-label">County: {{ listing.address.county|title }}</div>
+                                        </div>
+                                        {% endif %}
+                                        {% if listing.address.town %}
+                                        <div class="size__radio">
+                                            <div class="size__radio-label">Town: {{ listing.address.town|title }}</div>
+                                        </div>
+                                        {% endif %}
+                                        {% if listing.address.street %}
+                                        <div class="size__radio">
+                                            <div class="size__radio-label">Street: {{ listing.address.street }}</div>
+                                        </div>
+                                        {% endif %}
+                                        {% if listing.address.house %}
+                                        <div class="size__radio">
+                                            <div class="size__radio-label">House No.: {{ listing.address.house }}</div>
+                                        </div>
+                                        {% endif %}
+                                    </div>
                                 </div>
                                 <div class="u-s-m-b-15">
                                     <div class="pd-detail__inline">
-
+                                        <span class="pd-detail__click-wrap">
+                                            <i class="far fa-heart u-s-m-r-6"></i>
+                                            <a href="">Video Tour</a>
+                                            <span class="pd-detail__click-count">(222)</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="u-s-m-b-15">
+                                    <div class="pd-detail__inline">
                                         <span class="pd-detail__click-wrap"><i class="far fa-envelope u-s-m-r-6"></i>
-
-                                            <a href="signin.html">Email me When the price drops</a>
-
-                                            <span class="pd-detail__click-count">(20)</span></span></div>
+                                            <a href="">3D Tour</a>
+                                            <span class="pd-detail__click-count">(20)</span>
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="u-s-m-b-15">
-                                    <ul class="pd-social-list">
+                                    <div class="pd-detail__inline">
+                                        <span class="pd-detail__click-wrap"><i class="far fa-envelope u-s-m-r-6"></i>
+                                            <a href="">Floor Plan</a>
+                                            <span class="pd-detail__click-count">(PDF)</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="u-s-m-b-15">
+                                    <div class="pd-detail__inline">
+                                        <span class="pd-detail__click-wrap">
+                                            <form method="post" id="likeForm-{{ listing.id }}" action="{% url 'listings' %}">
+                                                {% csrf_token %}
+                                                <input type="hidden" name="l_id" value="{{ listing.id }}">
+                                                <input type="hidden" name="action" value="like">
+                                            </form>
+                                            <i class="{% if listing.is_liked %}fas fa-heart{% else %}far fa-heart{% endif %} u-s-m-r-6"></i>
+                                            <a href="#"
+                                                title="{% if listing.is_liked %}Remove from favorites{% else %}Add to favorites{% endif %}"
+                                                id="likeLink-{{ listing.id }}">Hearts
+                                            </a>
+                                            <script>
+                                                document.getElementById('likeLink-{{ listing.id }}').addEventListener('click', function(e) {
+                                                    e.preventDefault();
+                                                    document.getElementById('likeForm-{{ listing.id }}').submit();
+                                                });
+                                            </script>
+                                            <span class="pd-detail__click-count">({{ listing.likes_count|intcomma|default:0 }})</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="u-s-m-b-15">
+                                    <span class="pd-detail__label u-s-m-b-8">Ammenities:</span>
+                                    <ul class="pd-detail__policy-list">
+                                        {% if listing.parking %}
                                         <li>
-
-                                            <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                            <span>Parking available.</span>
+                                        </li>
+                                        {% endif %}
+                                        {% if listing.internet %}
                                         <li>
-
-                                            <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                            <span>Strong internet connection.</span>
+                                        </li>
+                                        {% endif %}
+                                        {% if listing.security %}
                                         <li>
-
-                                            <a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a></li>
+                                            <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                            <span>24/7 Security.</span>
+                                        </li>
+                                        {% endif %}
+                                        {% if listing.balcony %}
                                         <li>
-
-                                            <a class="s-wa--color-hover" href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                            <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                            <span>Private balcony available.</span>
+                                        </li>
+                                        {% endif %}
+                                        {% if listing.pet_friendly %}
                                         <li>
-
-                                            <a class="s-gplus--color-hover" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                            <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                            <span>Pet-friendly environment.</span>
+                                        </li>
+                                        {% endif %}
                                     </ul>
                                 </div>
                                 <div class="u-s-m-b-15">
                                     <form class="pd-detail__form">
-                                        <div class="u-s-m-b-15">
-
-                                            <span class="pd-detail__label u-s-m-b-8">Color:</span>
-                                            <div class="pd-detail__color">
-                                                <div class="color__radio">
-
-                                                    <input type="radio" id="jet" name="color" checked>
-
-                                                    <label class="color__radio-label" for="jet" style="background-color: #333333"></label></div>
-                                                <div class="color__radio">
-
-                                                    <input type="radio" id="folly" name="color">
-
-                                                    <label class="color__radio-label" for="folly" style="background-color: #FF0055"></label></div>
-                                                <div class="color__radio">
-
-                                                    <input type="radio" id="yellow" name="color">
-
-                                                    <label class="color__radio-label" for="yellow" style="background-color: #FFFF00"></label></div>
-                                                <div class="color__radio">
-
-                                                    <input type="radio" id="granite-gray" name="color">
-
-                                                    <label class="color__radio-label" for="granite-gray" style="background-color: #605F5E"></label></div>
-                                                <div class="color__radio">
-
-                                                    <input type="radio" id="space-cadet" name="color">
-
-                                                    <label class="color__radio-label" for="space-cadet" style="background-color: #1D3461"></label></div>
-                                            </div>
-                                        </div>
-                                        <div class="u-s-m-b-15">
-
-                                            <span class="pd-detail__label u-s-m-b-8">Size:</span>
-                                            <div class="pd-detail__size">
-                                                <div class="size__radio">
-
-                                                    <input type="radio" id="xs" name="size" checked>
-
-                                                    <label class="size__radio-label" for="xs">XS</label></div>
-                                                <div class="size__radio">
-
-                                                    <input type="radio" id="small" name="size">
-
-                                                    <label class="size__radio-label" for="xxl">Small</label></div>
-                                                <div class="size__radio">
-
-                                                    <input type="radio" id="medium" name="size">
-
-                                                    <label class="size__radio-label" for="medium">Medium</label></div>
-                                                <div class="size__radio">
-
-                                                    <input type="radio" id="large" name="size">
-
-                                                    <label class="size__radio-label" for="xxl">Large</label></div>
-                                                <div class="size__radio">
-
-                                                    <input type="radio" id="xl" name="size">
-
-                                                    <label class="size__radio-label" for="xl">XL</label></div>
-                                                <div class="size__radio">
-
-                                                    <input type="radio" id="xxl" name="size">
-
-                                                    <label class="size__radio-label" for="xxl">XXL</label></div>
-                                            </div>
-                                        </div>
                                         <div class="pd-detail-inline-2">
                                             <div class="u-s-m-b-15">
-
-                                                <!--====== Input Counter ======-->
-                                                <div class="input-counter">
-
-                                                    <span class="input-counter__minus fas fa-minus"></span>
-
-                                                    <input class="input-counter__text input-counter--text-primary-style" type="text" value="1" data-min="1" data-max="1000">
-
-                                                    <span class="input-counter__plus fas fa-plus"></span></div>
-                                                <!--====== End - Input Counter ======-->
+                                                <button class="btn btn--e-brand-b-2" type="submit">Contact Landlord</button>
                                             </div>
-                                            <div class="u-s-m-b-15">
-
-                                                <button class="btn btn--e-brand-b-2" type="submit">Add to Cart</button></div>
                                         </div>
                                     </form>
-                                </div>
-                                <div class="u-s-m-b-15">
-
-                                    <span class="pd-detail__label u-s-m-b-8">Product Policy:</span>
-                                    <ul class="pd-detail__policy-list">
-                                        <li><i class="fas fa-check-circle u-s-m-r-8"></i>
-
-                                            <span>Buyer Protection.</span></li>
-                                        <li><i class="fas fa-check-circle u-s-m-r-8"></i>
-
-                                            <span>Full Refund if you don't receive your order.</span></li>
-                                        <li><i class="fas fa-check-circle u-s-m-r-8"></i>
-
-                                            <span>Returns accepted if product not as described.</span></li>
-                                    </ul>
                                 </div>
                             </div>
                             <!--====== End - Product Right Side Details ======-->
@@ -251,16 +284,11 @@
                                 <div class="u-s-m-b-30">
                                     <ul class="nav pd-tab__list">
                                         <li class="nav-item">
-
-                                            <a class="nav-link" data-toggle="tab" href="#pd-desc">DESCRIPTION</a></li>
+                                            <a class="nav-link" data-toggle="tab" href="#pd-desc">DESCRIPTION</a>
+                                        </li>
                                         <li class="nav-item">
-
-                                            <a class="nav-link" data-toggle="tab" href="#pd-tag">TAGS</a></li>
-                                        <li class="nav-item">
-
-                                            <a class="nav-link active" id="view-review" data-toggle="tab" href="#pd-rev">REVIEWS
-
-                                                <span>(23)</span></a></li>
+                                            <a class="nav-link active" id="view-review" data-toggle="tab" href="#pd-rev">REVIEWS</a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="tab-content">
@@ -269,91 +297,48 @@
                                     <div class="tab-pane" id="pd-desc">
                                         <div class="pd-tab__desc">
                                             <div class="u-s-m-b-15">
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                                <p>{{ listing.description|capfirst }}</p>
                                             </div>
-                                            <div class="u-s-m-b-30"><iframe src="https://www.youtube.com/embed/qKqSBm07KZk" allowfullscreen></iframe></div>
+                                            <!--<div class="u-s-m-b-30">
+                                                <iframe src="" allowfullscreen></iframe>
+                                            </div>-->
                                             <div class="u-s-m-b-30">
                                                 <ul>
-                                                    <li><i class="fas fa-check u-s-m-r-8"></i>
-
-                                                        <span>Buyer Protection.</span></li>
-                                                    <li><i class="fas fa-check u-s-m-r-8"></i>
-
-                                                        <span>Full Refund if you don't receive your order.</span></li>
-                                                    <li><i class="fas fa-check u-s-m-r-8"></i>
-
-                                                        <span>Returns accepted if product not as described.</span></li>
+                                                    {% if listing.parking %}
+                                                    <li>
+                                                        <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                                        <span>Parking available.</span>
+                                                    </li>
+                                                    {% endif %}
+                                                    {% if listing.internet %}
+                                                    <li>
+                                                        <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                                        <span>Strong internet connection.</span>
+                                                    </li>
+                                                    {% endif %}
+                                                    {% if listing.security %}
+                                                    <li>
+                                                        <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                                        <span>24/7 Security.</span>
+                                                    </li>
+                                                    {% endif %}
+                                                    {% if listing.balcony %}
+                                                    <li>
+                                                        <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                                        <span>Private balcony available.</span>
+                                                    </li>
+                                                    {% endif %}
+                                                    {% if listing.pet_friendly %}
+                                                    <li>
+                                                        <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                                        <span>Pet-friendly environment.</span>
+                                                    </li>
+                                                    {% endif %}
                                                 </ul>
-                                            </div>
-                                            <div class="u-s-m-b-15">
-                                                <h4>PRODUCT INFORMATION</h4>
-                                            </div>
-                                            <div class="u-s-m-b-15">
-                                                <div class="pd-table gl-scroll">
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Main Material</td>
-                                                                <td>Cotton</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Color</td>
-                                                                <td>Green, Blue, Red</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Sleeves</td>
-                                                                <td>Long Sleeve</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Top Fit</td>
-                                                                <td>Regular</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Print</td>
-                                                                <td>Not Printed</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Neck</td>
-                                                                <td>Round Neck</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Pieces Count</td>
-                                                                <td>1 Piece</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Occasion</td>
-                                                                <td>Casual</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Shipping Weight (kg)</td>
-                                                                <td>0.5</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!--====== End - Tab 1 ======-->
-
-
-                                    <!--====== Tab 2 ======-->
-                                    <div class="tab-pane" id="pd-tag">
-                                        <div class="pd-tab__tag">
-                                            <h2 class="u-s-m-b-15">ADD YOUR TAGS</h2>
-                                            <div class="u-s-m-b-15">
-                                                <form>
-
-                                                    <input class="input-text input-text--primary-style" type="text">
-
-                                                    <button class="btn btn--e-brand-b-2" type="submit">ADD TAGS</button></form>
-                                            </div>
-
-                                            <span class="gl-text">Use spaces to separate tags. Use single quotes (') for phrases.</span>
-                                        </div>
-                                    </div>
-                                    <!--====== End - Tab 2 ======-->
-
 
                                     <!--====== Tab 3 ======-->
                                     <div class="tab-pane fade show active" id="pd-rev">
@@ -361,69 +346,59 @@
                                             <div class="u-s-m-b-30">
                                                 <div class="pd-tab__rev-score">
                                                     <div class="u-s-m-b-8">
-                                                        <h2>23 Reviews - 4.6 (Overall)</h2>
+                                                        <h2>{{ listing.reviews_count|intcomma|default:0 }} Reviews - {{ listing.avg_rating|default:0 }} (Average)</h2>
                                                     </div>
-                                                    <div class="gl-rating-style-2 u-s-m-b-8"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                                                    <div class="gl-rating-style-2 u-s-m-b-8">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </div>
                                                     <div class="u-s-m-b-8">
                                                         <h4>We want to hear from you!</h4>
                                                     </div>
-
-                                                    <span class="gl-text">Tell us what you think about this item</span>
+                                                    <span class="gl-text">Tell us what you think about {{ listing.title|title }}.</span>
                                                 </div>
                                             </div>
                                             <div class="u-s-m-b-30">
                                                 <form class="pd-tab__rev-f1">
                                                     <div class="rev-f1__group">
+                                                        <div class="u-s-m-b-15"></div>
                                                         <div class="u-s-m-b-15">
-                                                            <h2>23 Review(s) for Man Ruched Floral Applique Tee</h2>
-                                                        </div>
-                                                        <div class="u-s-m-b-15">
-
-                                                            <label for="sort-review"></label><select class="select-box select-box--primary-style" id="sort-review">
+                                                            <label for="sort-review"></label>
+                                                            <select class="select-box select-box--primary-style" id="sort-review">
                                                                 <option selected>Sort by: Best Rating</option>
                                                                 <option>Sort by: Worst Rating</option>
-                                                            </select></div>
+                                                            </select>
+                                                        </div>
                                                     </div>
                                                     <div class="rev-f1__review">
+                                                        {% for r in reviews %}
                                                         <div class="review-o u-s-m-b-15">
                                                             <div class="review-o__info u-s-m-b-8">
-
-                                                                <span class="review-o__name">John Doe</span>
-
-                                                                <span class="review-o__date">27 Feb 2018 10:57:43</span></div>
-                                                            <div class="review-o__rating gl-rating-style u-s-m-b-8"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-
-                                                                <span>(4)</span></div>
-                                                            <p class="review-o__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                                                <span class="review-o__name">{{ r.user.username|title }}</span>
+                                                                <span class="review-o__date">{{ r.timestamp }}</span>
+                                                            </div>
+                                                            <div class="review-o__rating gl-rating-style u-s-m-b-8">
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="far fa-star"></i>
+                                                                <span>(4)</span>
+                                                            </div>
+                                                            <p class="review-o__text">{{ r.comment|capfirst }}</p>
+                                                            <p class="gl-text">{{ r.body|capfirst }}</p>
                                                         </div>
-                                                        <div class="review-o u-s-m-b-15">
-                                                            <div class="review-o__info u-s-m-b-8">
-
-                                                                <span class="review-o__name">John Doe</span>
-
-                                                                <span class="review-o__date">27 Feb 2018 10:57:43</span></div>
-                                                            <div class="review-o__rating gl-rating-style u-s-m-b-8"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-
-                                                                <span>(4)</span></div>
-                                                            <p class="review-o__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                                        </div>
-                                                        <div class="review-o u-s-m-b-15">
-                                                            <div class="review-o__info u-s-m-b-8">
-
-                                                                <span class="review-o__name">John Doe</span>
-
-                                                                <span class="review-o__date">27 Feb 2018 10:57:43</span></div>
-                                                            <div class="review-o__rating gl-rating-style u-s-m-b-8"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-
-                                                                <span>(4)</span></div>
-                                                            <p class="review-o__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                                        </div>
+                                                        {% endfor %}
                                                     </div>
                                                 </form>
                                             </div>
                                             <div class="u-s-m-b-30">
-                                                <form class="pd-tab__rev-f2">
-                                                    <h2 class="u-s-m-b-15">Add a Review</h2>
+                                                <form class="pd-tab__rev-f2" method="post">
+                                                    {% csrf_token %}
+                                                    <h3 class="u-s-m-b-15">Add a Review</h3>
 
                                                     <span class="gl-text u-s-m-b-15">Your email address will not be published. Required fields are marked *</span>
                                                     <div class="u-s-m-b-30">
@@ -432,159 +407,96 @@
                                                                 <thead>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="gl-rating-style-2"><i class="fas fa-star"></i>
-
-                                                                                <span>(1)</span></div>
+                                                                            <div class="gl-rating-style-2">
+                                                                                <i class="fas fa-star"></i>
+                                                                                <span>(1)</span>
+                                                                            </div>
                                                                         </th>
                                                                         <th>
-                                                                            <div class="gl-rating-style-2"><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-
-                                                                                <span>(1.5)</span></div>
+                                                                            <div class="gl-rating-style-2">
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star"></i>
+                                                                                <span>(2)</span>
+                                                                            </div>
                                                                         </th>
                                                                         <th>
-                                                                            <div class="gl-rating-style-2"><i class="fas fa-star"></i><i class="fas fa-star"></i>
-
-                                                                                <span>(2)</span></div>
+                                                                            <div class="gl-rating-style-2">
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star"></i>
+                                                                                <span>(3)</span>
+                                                                            </div>
                                                                         </th>
                                                                         <th>
-                                                                            <div class="gl-rating-style-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-
-                                                                                <span>(2.5)</span></div>
+                                                                            <div class="gl-rating-style-2">
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star"></i>
+                                                                                <span>(4)</span>
+                                                                            </div>
                                                                         </th>
                                                                         <th>
-                                                                            <div class="gl-rating-style-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-
-                                                                                <span>(3)</span></div>
-                                                                        </th>
-                                                                        <th>
-                                                                            <div class="gl-rating-style-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-
-                                                                                <span>(3.5)</span></div>
-                                                                        </th>
-                                                                        <th>
-                                                                            <div class="gl-rating-style-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-
-                                                                                <span>(4)</span></div>
-                                                                        </th>
-                                                                        <th>
-                                                                            <div class="gl-rating-style-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-
-                                                                                <span>(4.5)</span></div>
-                                                                        </th>
-                                                                        <th>
-                                                                            <div class="gl-rating-style-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-
-                                                                                <span>(5)</span></div>
+                                                                            <div class="gl-rating-style-2">
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star"></i>
+                                                                                <span>(5)</span>
+                                                                            </div>
                                                                         </th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
                                                                         <td>
-
                                                                             <!--====== Radio Box ======-->
                                                                             <div class="radio-box">
-
-                                                                                <input type="radio" id="star-1" name="rating">
+                                                                                <input type="radio" id="star-1" name="rating" value="1">
                                                                                 <div class="radio-box__state radio-box__state--primary">
-
-                                                                                    <label class="radio-box__label" for="star-1"></label></div>
+                                                                                    <label class="radio-box__label" for="star-1"></label>
+                                                                                </div>
                                                                             </div>
                                                                             <!--====== End - Radio Box ======-->
                                                                         </td>
                                                                         <td>
-
                                                                             <!--====== Radio Box ======-->
                                                                             <div class="radio-box">
-
-                                                                                <input type="radio" id="star-1.5" name="rating">
+                                                                                <input type="radio" id="star-2" name="rating" value="2">
                                                                                 <div class="radio-box__state radio-box__state--primary">
-
-                                                                                    <label class="radio-box__label" for="star-1.5"></label></div>
+                                                                                    <label class="radio-box__label" for="star-2"></label>
+                                                                                </div>
                                                                             </div>
                                                                             <!--====== End - Radio Box ======-->
                                                                         </td>
                                                                         <td>
-
                                                                             <!--====== Radio Box ======-->
                                                                             <div class="radio-box">
-
-                                                                                <input type="radio" id="star-2" name="rating">
+                                                                                <input type="radio" id="star-3" name="rating" value="3">
                                                                                 <div class="radio-box__state radio-box__state--primary">
-
-                                                                                    <label class="radio-box__label" for="star-2"></label></div>
+                                                                                    <label class="radio-box__label" for="star-3"></label>
+                                                                                </div>
                                                                             </div>
                                                                             <!--====== End - Radio Box ======-->
                                                                         </td>
                                                                         <td>
-
                                                                             <!--====== Radio Box ======-->
                                                                             <div class="radio-box">
-
-                                                                                <input type="radio" id="star-2.5" name="rating">
+                                                                                <input type="radio" id="star-4" name="rating" value="4">
                                                                                 <div class="radio-box__state radio-box__state--primary">
-
-                                                                                    <label class="radio-box__label" for="star-2.5"></label></div>
+                                                                                    <label class="radio-box__label" for="star-4"></label>
+                                                                                </div>
                                                                             </div>
                                                                             <!--====== End - Radio Box ======-->
                                                                         </td>
                                                                         <td>
-
                                                                             <!--====== Radio Box ======-->
                                                                             <div class="radio-box">
-
-                                                                                <input type="radio" id="star-3" name="rating">
+                                                                                <input type="radio" id="star-5" name="rating" value="5">
                                                                                 <div class="radio-box__state radio-box__state--primary">
-
-                                                                                    <label class="radio-box__label" for="star-3"></label></div>
-                                                                            </div>
-                                                                            <!--====== End - Radio Box ======-->
-                                                                        </td>
-                                                                        <td>
-
-                                                                            <!--====== Radio Box ======-->
-                                                                            <div class="radio-box">
-
-                                                                                <input type="radio" id="star-3.5" name="rating">
-                                                                                <div class="radio-box__state radio-box__state--primary">
-
-                                                                                    <label class="radio-box__label" for="star-3.5"></label></div>
-                                                                            </div>
-                                                                            <!--====== End - Radio Box ======-->
-                                                                        </td>
-                                                                        <td>
-
-                                                                            <!--====== Radio Box ======-->
-                                                                            <div class="radio-box">
-
-                                                                                <input type="radio" id="star-4" name="rating">
-                                                                                <div class="radio-box__state radio-box__state--primary">
-
-                                                                                    <label class="radio-box__label" for="star-4"></label></div>
-                                                                            </div>
-                                                                            <!--====== End - Radio Box ======-->
-                                                                        </td>
-                                                                        <td>
-
-                                                                            <!--====== Radio Box ======-->
-                                                                            <div class="radio-box">
-
-                                                                                <input type="radio" id="star-4.5" name="rating">
-                                                                                <div class="radio-box__state radio-box__state--primary">
-
-                                                                                    <label class="radio-box__label" for="star-4.5"></label></div>
-                                                                            </div>
-                                                                            <!--====== End - Radio Box ======-->
-                                                                        </td>
-                                                                        <td>
-
-                                                                            <!--====== Radio Box ======-->
-                                                                            <div class="radio-box">
-
-                                                                                <input type="radio" id="star-5" name="rating">
-                                                                                <div class="radio-box__state radio-box__state--primary">
-
-                                                                                    <label class="radio-box__label" for="star-5"></label></div>
+                                                                                    <label class="radio-box__label" for="star-5"></label>
+                                                                                </div>
                                                                             </div>
                                                                             <!--====== End - Radio Box ======-->
                                                                         </td>
@@ -594,25 +506,26 @@
                                                         </div>
                                                     </div>
                                                     <div class="rev-f2__group">
-                                                        <div class="u-s-m-b-15">
-
-                                                            <label class="gl-label" for="reviewer-text">YOUR REVIEW *</label><textarea class="text-area text-area--primary-style" id="reviewer-text"></textarea></div>
                                                         <div>
                                                             <p class="u-s-m-b-30">
-
-                                                                <label class="gl-label" for="reviewer-name">NAME *</label>
-
-                                                                <input class="input-text input-text--primary-style" type="text" id="reviewer-name"></p>
-                                                            <p class="u-s-m-b-30">
-
                                                                 <label class="gl-label" for="reviewer-email">EMAIL *</label>
-
-                                                                <input class="input-text input-text--primary-style" type="text" id="reviewer-email"></p>
+                                                                <input class="input-text input-text--primary-style" type="email" name="email" id="reviewer-email" required>
+                                                            </p>
+                                                            <p class="u-s-m-b-30">
+                                                                <label class="gl-label" for="reviewer-name">COMMENT *</label>
+                                                                <input class="input-text input-text--primary-style" type="text" name="comment" id="reviewer-name" required>
+                                                            </p>
+                                                        </div>
+                                                        <div class="u-s-m-b-15">
+                                                            <label class="gl-label" for="reviewer-text">YOUR REVIEW *</label>
+                                                            <textarea class="text-area text-area--primary-style" id="reviewer-text" name="body"></textarea>
                                                         </div>
                                                     </div>
-                                                    <div>
-
-                                                        <button class="btn btn--e-brand-shadow" type="submit">SUBMIT</button></div>
+                                                    <input type="hidden" name="l_id" value="{{ listing.id }}">
+                                                    <input type="hidden" name="action" value="new_review">
+                                                    <div class="d-flex justify-content-center">
+                                                        <button class="btn btn--e-brand-shadow" type="submit">SUBMIT</button>
+                                                    </div>
                                                 </form>
                                             </div>
                                         </div>

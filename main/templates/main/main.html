@@ -134,7 +134,9 @@
           </li>
           {% if request.user.is_authenticated %}
           <li class="nav-item item-small-screen">
+            {% if request.user.profile.is_landlord %}
             <a class="nav-link" href="{% url 'dash' %}">DASHBOARD</a>
+            {% endif %}
           </li>
           <li class="nav-item item-small-screen">
             <a class="nav-link" href="">MY PROFILE</a>
