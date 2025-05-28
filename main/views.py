@@ -25,7 +25,7 @@ def index_view(request):
             F('auth_likes') + F('guest_likes'),
             output_field=IntegerField()
         )
-    ).order_by('-total_likes')
+    ).order_by('-total_likes')[:3]
 
     context = {
         'listings': listings,
@@ -204,7 +204,7 @@ def all_listings_view(request):
                                 guest_like.save()
                                 messages.success(request, "Listing added to favourites.")
                         except GuestLike.DoesNotExist:
-                            Guestlike.objects.create(session_key=session_key, listing=l_listing)
+                            GuestLike.objects.create(session_key=session_key, listing=l_listing)
                             messages.success(request, "Listing added to favourites.")
 
 

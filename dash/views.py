@@ -5,7 +5,8 @@ from django.contrib import messages
 from django.db import transaction
 from master.models import ListingCategory
 from dash.models import Listing, Address
-import logging
+from io import TextIOWrapper
+import logging, csv
 
 logger = logging.getLogger(__name__)
 
@@ -115,6 +116,7 @@ def pending_listings_view(request):
                         messages.success(request, 'New listing created.')
                     except ValueError:
                         messages.warning(request, "Invalid input. Use numbers where necessary.")
+                
                 case "update_listing":
                     l_address = Address.objects.get(id=listing.address.id)
                     l_address.city = city
@@ -165,6 +167,106 @@ def pending_listings_view(request):
                     
                     except ValueError:
                         messages.warning(request, "Invalid input. Use numbers where necessary.")
+                   
+
+                case 'bulk_upload':
+                    csv_file = request.FILES.get("listing_csv")
+
+                    if not csv_file.name.endswith('.csv'):
+                        messages.error(request, "File must be a CSV.")
+                        return redirect('pending_listings')
+
+                    try:
+                        reader = csv.DictReader(TextIOWrapper(csv_file.file, encoding='utf-8'))
+                        errors = []
+                        success_count = 0
+
+                        for index, row in enumerate(reader, start=2):  # Start at 2 to match Excel line numbers
+                            try:
+                                # Basic field presence checks
+                                required_fields = ["title", "location", "description", "category", "bedrooms", "bathrooms",
+                                                   "area", "year", "floor", "total_floors", "units", "rent", "deposit",
+                                                   "county", "town"]
+                                for field in required_fields:
+                                    if not row.get(field):
+                                        raise ValueError(f"Missing required field '{field}' on line {index}")
+
+                                # Convert and validate numbers
+                                bedrooms = int(row.get("bedrooms"))
+                                bathrooms = int(row.get("bathrooms"))
+                                area = int(row.get("area"))
+                                year = int(row.get("year"))
+                                floor_no = int(row.get("floor"))
+                                total_floors = int(row.get("total_floors"))
+                                units = int(row.get("units"))
+                                rent = int(row.get("rent"))
+                                deposit = int(row.get("deposit"))
+
+                                title = row.get("title")
+                                category = row.get("category").strip().lower()
+                                location = row.get("location")
+                                description = row.get("description")
+                                furnished = row.get("furnished")
+                                parking = row.get("parking")
+                                pets = row.get("pet_friendly")
+                                balcony = row.get("balcony")
+                                security = row.get("security")
+                                internet = row.get("internet")
+
+                                category = categories.filter(category=category).first()
+                                if not category:
+                                    raise ValueError(f"Invalid category '{row.get('category')}' on line {index}")
+
+                                # Create address
+                                address = Address.objects.create(
+                                    user=request.user,
+                                    city=row.get("city"),
+                                    county=row.get("county"),
+                                    town=row.get("town"),
+                                    street=row.get("street"),
+                                    house=row.get("house"),
+                                )
+
+                                # Create listing
+                                Listing.objects.create(
+                                    user=request.user,
+                                    title=title,
+                                    category=category,
+                                    location=location,
+                                    address=address,
+                                    description=description,
+                                    bedrooms=bedrooms,
+                                    bathrooms=bathrooms,
+                                    area_sqft=area,
+                                    year_built=year,
+                                    floor_number=floor_no,
+                                    total_floors=total_floors,
+                                    available_units=units,
+                                    rent=rent,
+                                    deposit=deposit,
+                                    furnished=furnished,
+                                    parking=parking,
+                                    pet_friendly=pets,
+                                    balcony=balcony,
+                                    security=security,
+                                    internet=internet,
+                                )
+                                success_count += 1
+
+                            except ValueError as ve:
+                                errors.append(str(ve))
+
+                        if errors:
+                            for error in errors:
+                                messages.warning(request, error)
+
+                        if success_count:
+                            messages.success(request, f"{success_count} listings uploaded successfully.")
+
+                    except Exception as e:
+                        messages.error(request, f"Failed to process file: {str(e)}")
+
+                    return redirect('pending_listings')
 
                 case 'post_listing':
                     listing.status = 'posted'
