@@ -7251,3 +7251,310 @@ NameError: name 'Guestlike' is not defined. Did you mean: 'GuestLike'?
 2025-05-30 02:46:54,865 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
 2025-05-30 02:46:54,886 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
 2025-05-30 02:46:54,895 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 13:51:55,873 INFO autoreload Watching for file changes with StatReloader
+2025-05-30 14:01:48,260 WARNING log Not Found: /favicon.ico
+2025-05-30 14:02:06,918 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:02:06,920 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:02:06,937 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:02:06,943 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:02:06,954 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:02:06,969 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:02:14,446 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:02:14,478 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:02:14,488 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:02:14,494 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:02:14,518 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:02:14,519 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:04:22,819 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:04:22,853 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:04:22,864 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:04:22,875 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:04:22,900 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:04:22,903 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:04:24,275 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:04:24,317 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:04:24,319 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:04:24,342 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:04:24,343 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:04:24,343 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:06:06,160 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:06:06,202 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:06:06,212 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:06:06,214 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:06:06,216 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:06:06,227 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:06:15,814 WARNING log Not Found: /listing/0PYYFWP495/signin.html
+2025-05-30 14:06:15,888 WARNING log Not Found: /favicon.ico
+2025-05-30 14:06:37,378 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:06:37,384 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:06:37,389 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:06:37,417 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:06:37,419 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:06:37,419 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:08:54,485 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:08:54,491 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:08:54,504 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:08:54,522 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:08:54,544 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:08:54,546 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:08:59,794 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:08:59,831 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:08:59,845 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:08:59,858 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:08:59,859 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:08:59,870 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:09:02,028 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:09:02,036 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:09:02,061 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:09:02,072 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:09:02,078 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:09:02,083 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:09:25,324 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:09:25,339 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:09:25,345 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:09:25,369 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:09:25,377 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:09:25,383 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:09:59,109 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:09:59,128 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:09:59,132 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:09:59,155 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:09:59,163 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:09:59,166 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:14:24,467 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:14:24,495 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:14:24,496 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:14:24,520 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:14:24,536 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:14:24,540 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:14:56,781 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:14:56,792 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:14:56,815 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:14:56,826 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:14:56,836 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:14:56,838 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:16:38,799 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:16:38,833 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:16:38,839 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:16:38,847 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:16:38,873 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:16:38,876 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:16:39,967 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:16:39,978 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:16:39,983 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:16:40,010 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:16:40,013 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:16:40,016 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:20:22,869 ERROR log Internal Server Error: /listing/0PYYFWP495/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/makeja/main/views.py", line 288, in property_details_view
+    return render(request, 'main/property_details.html', context)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'schedule_viewing' not found. 'schedule_viewing' is not a valid view function or pattern name.
+2025-05-30 14:20:42,660 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:20:42,675 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:20:42,713 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:20:42,730 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:20:42,732 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:20:42,736 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:21:59,551 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:21:59,565 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:21:59,576 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:21:59,577 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:21:59,590 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:21:59,595 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:22:51,252 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:22:51,272 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:22:51,277 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:22:51,290 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:22:51,300 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:22:51,316 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:23:35,887 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:23:35,913 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:23:35,920 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:23:35,942 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:23:35,946 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:23:35,951 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:24:30,781 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:24:30,816 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:24:30,836 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:24:30,839 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:24:30,842 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:24:30,847 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:29:26,643 INFO autoreload /home/pluto/jango/makeja/dash/models.py changed, reloading.
+2025-05-30 14:29:27,141 INFO autoreload Watching for file changes with StatReloader
+2025-05-30 14:41:09,042 INFO autoreload /home/pluto/jango/makeja/dash/models.py changed, reloading.
+2025-05-30 14:41:09,543 INFO autoreload Watching for file changes with StatReloader
+2025-05-30 14:57:49,169 INFO autoreload /home/pluto/jango/makeja/main/views.py changed, reloading.
+2025-05-30 14:57:49,680 INFO autoreload Watching for file changes with StatReloader
+2025-05-30 14:58:14,370 INFO autoreload /home/pluto/jango/makeja/main/views.py changed, reloading.
+2025-05-30 14:58:14,890 INFO autoreload Watching for file changes with StatReloader
+2025-05-30 14:59:11,206 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 14:59:11,206 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 14:59:11,212 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 14:59:11,241 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 14:59:11,241 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 14:59:11,251 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 14:59:34,197 ERROR log Internal Server Error: /listing/0PYYFWP495/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/makeja/main/views.py", line 264, in property_details_view
+    v_date = request.POST,get("viewing_date")
+                          ^^^
+NameError: name 'get' is not defined. Did you mean: 'set'?
+2025-05-30 15:00:00,626 INFO autoreload /home/pluto/jango/makeja/main/views.py changed, reloading.
+2025-05-30 15:00:01,109 INFO autoreload Watching for file changes with StatReloader
+2025-05-30 15:00:07,679 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 15:00:07,692 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 15:00:07,715 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 15:00:07,722 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 15:00:07,739 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 15:00:07,749 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 15:00:33,016 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 15:00:33,025 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 15:00:33,053 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 15:00:33,060 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 15:00:33,065 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 15:00:33,080 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 15:01:46,832 INFO autoreload /home/pluto/jango/makeja/main/views.py changed, reloading.
+2025-05-30 15:01:47,343 INFO autoreload Watching for file changes with StatReloader
+2025-05-30 15:01:55,049 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 15:01:55,070 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 15:01:55,088 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 15:01:55,099 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 15:01:55,106 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 15:01:55,119 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 15:02:08,724 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product1.jpg
+2025-05-30 15:02:08,743 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product3.jpg
+2025-05-30 15:02:08,747 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product26.jpg
+2025-05-30 15:02:08,782 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product23.jpg
+2025-05-30 15:02:08,778 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product30.jpg
+2025-05-30 15:02:08,776 WARNING log Not Found: /listing/0PYYFWP495/images/product/electronic/product2.jpg
+2025-05-30 15:02:32,835 INFO views Authenticatd user: hunter01
+2025-05-30 15:02:33,118 WARNING log Not Found: /img/webp/interior37.webp
+2025-05-30 15:02:33,133 WARNING log Not Found: /img/webp/interior29.webp
+2025-05-30 15:02:33,134 WARNING log Not Found: /img/webp/people2.webp
+2025-05-30 15:02:33,151 WARNING log Not Found: /img/webp/people1.webp
+2025-05-30 15:02:33,157 WARNING log Not Found: /img/webp/person11.webp
+2025-05-30 15:02:33,171 WARNING log Not Found: /img/webp/people23.webp
+2025-05-30 15:02:41,049 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product1.jpg
+2025-05-30 15:02:41,092 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product23.jpg
+2025-05-30 15:02:41,095 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product2.jpg
+2025-05-30 15:02:41,105 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product3.jpg
+2025-05-30 15:02:41,107 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product30.jpg
+2025-05-30 15:02:41,118 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product26.jpg
+2025-05-30 15:03:14,524 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product1.jpg
+2025-05-30 15:03:14,540 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product3.jpg
+2025-05-30 15:03:14,563 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product2.jpg
+2025-05-30 15:03:14,576 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product23.jpg
+2025-05-30 15:03:14,581 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product26.jpg
+2025-05-30 15:03:14,585 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product30.jpg
+2025-05-30 15:09:28,210 INFO autoreload /home/pluto/jango/makeja/main/views.py changed, reloading.
+2025-05-30 15:09:28,730 INFO autoreload Watching for file changes with StatReloader
+2025-05-30 15:09:33,227 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product1.jpg
+2025-05-30 15:09:33,249 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product2.jpg
+2025-05-30 15:09:33,252 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product26.jpg
+2025-05-30 15:09:33,266 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product3.jpg
+2025-05-30 15:09:33,283 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product23.jpg
+2025-05-30 15:09:33,298 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product30.jpg
+2025-05-30 15:09:49,863 ERROR log Internal Server Error: /listing/TRQXU89BVW/
+Traceback (most recent call last):
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pluto/jango/dj/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pluto/jango/makeja/main/views.py", line 287, in property_details_view
+    viewing = Viewing.objects.filter(user=user, listing=listing).first()
+                                          ^^^^
+NameError: name 'user' is not defined. Did you mean: 'super'?
+2025-05-30 15:09:49,967 WARNING log Not Found: /favicon.ico
+2025-05-30 15:10:15,045 INFO autoreload /home/pluto/jango/makeja/main/views.py changed, reloading.
+2025-05-30 15:10:15,538 INFO autoreload Watching for file changes with StatReloader
+2025-05-30 15:10:21,195 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product1.jpg
+2025-05-30 15:10:21,213 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product2.jpg
+2025-05-30 15:10:21,230 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product3.jpg
+2025-05-30 15:10:21,244 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product26.jpg
+2025-05-30 15:10:21,270 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product23.jpg
+2025-05-30 15:10:21,273 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product30.jpg
+2025-05-30 15:12:24,712 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product1.jpg
+2025-05-30 15:12:24,728 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product2.jpg
+2025-05-30 15:12:24,762 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product23.jpg
+2025-05-30 15:12:24,773 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product3.jpg
+2025-05-30 15:12:24,797 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product26.jpg
+2025-05-30 15:12:24,797 WARNING log Not Found: /listing/TRQXU89BVW/images/product/electronic/product30.jpg
+2025-05-30 15:12:32,779 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:16:12,867 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:16:16,312 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:19:56,124 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:21:25,837 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:22:05,647 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:22:47,384 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:23:02,054 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:23:21,080 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:24:06,071 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:24:35,948 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:24:52,076 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:25:44,584 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:26:11,532 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:31:22,283 WARNING log Not Found: /dash/img/user.jpg
+2025-05-30 15:35:18,013 INFO autoreload /home/pluto/jango/makeja/dash/models.py changed, reloading.
+2025-05-30 15:35:18,522 INFO autoreload Watching for file changes with StatReloader
+2025-05-30 15:37:29,710 INFO autoreload /home/pluto/jango/makeja/master/models.py changed, reloading.
+2025-05-30 15:37:30,212 INFO autoreload Watching for file changes with StatReloader
+2025-05-30 15:38:05,173 INFO autoreload /home/pluto/jango/makeja/main/views.py changed, reloading.
+2025-05-30 15:38:05,666 INFO autoreload Watching for file changes with StatReloader
+2025-05-30 15:38:39,628 INFO autoreload /home/pluto/jango/makeja/master/models.py changed, reloading.
+2025-05-30 15:38:40,163 INFO autoreload Watching for file changes with StatReloader

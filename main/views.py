@@ -8,7 +8,7 @@ from django.contrib import messages
 from django.db import transaction
 from main.forms import UserRegistrationForm
 from main.models import Profile
-from dash.models import Listing, Review, Like, GuestLike
+from dash.models import Listing, Review, Like, GuestLike, Viewing
 from master.models import ListingCategory
 import logging
 
@@ -115,6 +115,7 @@ def all_listings_view(request):
             liked=True
         )
         is_liked_annotation = Exists(user_likes)
+    
     else:
         guest_likes = GuestLike.objects.filter(
             listing=OuterRef('pk'),
@@ -260,13 +261,15 @@ def property_details_view(request, listingID):
         comment = request.POST.get("comment")
         body = request.POST.get("body")
         email = request.POST.get("email")
+        v_date = request.POST.get("viewing_date")
+        v_time = request.POST.get("viewing_time")
         action = request.POST.get("action")
         l_id = request.POST.get("l_id")
 
         with transaction.atomic():
             match action:
                 case "new_review":
-                    try:
+                    if reqyest.user.is_authenticated:
                         Review.objects.create(
                             user=request.user,
                             email=email,
@@ -276,9 +279,27 @@ def property_details_view(request, listingID):
                             rating=rating
                         )
                         messages.success(request, "Rating and review sent.")
-                    except ValueError:
-                        messages.error(request, "Please login to send a review.")
+                    else:
+                        messages.error(request, "Please sign in to send a review.")
+                
+                case "schedule_viewing":
+                    if request.user.is_authenticated:
+                        viewing = Viewing.objects.filter(user=request.user, listing=listing).first()
 
+                        if viewing:
+                            messages.error(request, f"You have already scheduled a viewing for {listing.title}.")
+                            return redirect("property_details", listing.listingID)
+
+                        Viewing.objects.create(
+                            user=request.user,
+                            listing=listing,
+                            viewing_date=v_date,
+                            viewing_time=v_time,
+                        )
+                        messages.success(request, f"You have scheduled a viewing for {listing.title} in {v_date} at {v_time}.")
+                    else:
+                        messages.error(request, "Please sign in to schedule a viewing.")
+        
         return redirect("property_details", listing.listingID)
 
     context = {

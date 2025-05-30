@@ -141,11 +141,9 @@
           {% if request.user.is_authenticated %}
           <!-- Landlord Dashboard Link -->
           <li class="nav-item item-small-screen">
-            {% if request.user.profile.is_landlord %}
             <a class="nav-link fs-5 me-5" href="{% url 'dash' %}" aria-label="Go to Dashboard" title="Go to Dashboard">
               <i class="fas fa-tachometer-alt me-2"></i>DASH
             </a>
-            {% endif %}
           </li>
           
           <!-- Profile & Chats Links (Small screen only) -->
@@ -186,9 +184,7 @@
               style="height: 10rem; width: 10rem; object-fit: cover;">
             </div>
             <h4 class="py-3 link-secondary text-center">{{ request.user.username }}</h4>
-            {% if request.user.profile.is_landlord %}
             <a class="nav-link border-top" href="{% url 'dash' %}">Dashboard</a>
-            {% endif %}
             <a class="nav-link border-top" href="">My Profile</a>
             <a class="nav-link border-top" href="">Messages</a>
             <a class="nav-link border-top border-bottom" href="{% url 'signout' %}">Sign Out</a>

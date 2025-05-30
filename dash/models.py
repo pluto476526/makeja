@@ -99,3 +99,18 @@ class GuestLike(models.Model):
 
     class Meta:
         unique_together = ('session_key', 'listing')
+
+
+
+class Viewing(models.Model):
+    user = models.ForeignKey("auth.User", on_delete=models.CASCADE)
+    listing = models.ForeignKey(Listing, on_delete=models.CASCADE)
+    viewing_date = models.DateField()
+    viewing_time = models.TimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    is_deleted = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Viewing of {self.property.name} on {self.viewing_date} at {self.viewing_time}"
+
+
