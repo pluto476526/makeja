@@ -132,7 +132,7 @@
                                                     <div class="product-m__price text-muted">Ksh. {{ l.rent|intcomma }} monthly</div>
                                                     <div class="product-m__hover">
                                                         <div class="product-m__preview-description">
-                                                            <span>{{ l.description|capfirst }}</span>
+                                                            <span>{{ l.description|capfirst|truncatechars:380 }}</span>
                                                         </div>
                                                         <div class="product-m__wishlist">
                                                             <form method="post" id="likeForm-{{ l.id }}">
