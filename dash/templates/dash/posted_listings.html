@@ -1,6 +1,6 @@
 {% extends 'dash/main.html' %}
 {% load static %}
-
+{% load time_filters %}
 {% block main %}
 
 
@@ -38,7 +38,7 @@
                         <td>{{ l.location|title }}</td>
                         <td>{{ l.units }}</td>
                         <td>{{ l.rent }}</td>
-                        <td>{{ l.time_created }}</td>
+                        <td>{{ l.time_created|natural_time_format }}</td>
                         <td class="d-flex" style="gap: 3px;">
                             <button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#detailsModal{{ l.id }}" title="View and edit listing details.">Details</button>
                             <form method="post">

@@ -9,11 +9,20 @@ from django.db import transaction
 from main.forms import UserRegistrationForm
 from main.models import Profile
 from dash.models import Listing, Review, Like, GuestLike, Viewing
-from master.models import ListingCategory
+from master.models import ListingCategory, Notification
 import logging
 
 logger = logging.getLogger(__name__)
 
+
+
+def create_notification(request, message, n_type, target):
+    Notification.objects.create(
+        user=request.user,
+        message=message,
+        n_type=n_type,
+        target=target,
+    )
 
 
 def index_view(request):
@@ -188,6 +197,8 @@ def all_listings_view(request):
                             like = Like.objects.get(user=request.user, listing=l_listing, liked=True)
                             like.liked = False
                             like.save()
+                            msg = f"{request.user.username} liked your listing '{l_listing.title}'."
+                            create_notification(request, msg, "INFO", l_listing.user)
                             messages.success(request, "Listing removed from favourites.")
                         except Like.DoesNotExist:
                             Like.objects.create(user=request.user, listing=l_listing)
@@ -269,7 +280,7 @@ def property_details_view(request, listingID):
         with transaction.atomic():
             match action:
                 case "new_review":
-                    if reqyest.user.is_authenticated:
+                    if request.user.is_authenticated:
                         Review.objects.create(
                             user=request.user,
                             email=email,
@@ -278,13 +289,16 @@ def property_details_view(request, listingID):
                             body=body,
                             rating=rating
                         )
+                        msg = f"New review from {request.user.username} on your listing '{listing.title}'."
+                        create_notification(request, msg, "INFO", listing.user)
                         messages.success(request, "Rating and review sent.")
                     else:
                         messages.error(request, "Please sign in to send a review.")
                 
                 case "schedule_viewing":
                     if request.user.is_authenticated:
-                        viewing = Viewing.objects.filter(user=request.user, listing=listing).first()
+                        viewings = Viewing.objects.filter(user=request.user, listing=listing)
+                        viewing = viewings.exclude(status="done").first()
 
                         if viewing:
                             messages.error(request, f"You have already scheduled a viewing for {listing.title}.")
@@ -296,6 +310,8 @@ def property_details_view(request, listingID):
                             viewing_date=v_date,
                             viewing_time=v_time,
                         )
+                        msg = f"{request.user.username} has scheduled a viewing for '{listing.title}'. Please confirm or reschedule."
+                        create_notification(request, msg, "URGENT", listing.user)
                         messages.success(request, f"You have scheduled a viewing for {listing.title} in {v_date} at {v_time}.")
                     else:
                         messages.error(request, "Please sign in to schedule a viewing.")

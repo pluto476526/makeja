@@ -1,0 +1,299 @@
+{% extends 'konnekt/main.html' %}
+{% load static %}
+{% load time_filters %}
+
+{% block main %}
+
+<div class="tyn-content tyn-content-full-height tyn-chat">
+    {% include 'konnekt/sidebar.html' %}
+    <div class="tyn-main tyn-chat-content" id="tynMain">
+        <div class="tyn-chat-head">
+            <ul class="tyn-list-inline d-md-none ms-n1">
+                <li><button class="btn btn-icon btn-md btn-pill btn-transparent js-toggle-main">
+                        <!-- arrow-left -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewbox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"></path>
+                        </svg>
+                    </button></li>
+            </ul>
+            <div class="tyn-media-group">
+                <div class="tyn-media tyn-size-lg d-none d-sm-inline-flex">
+                    <img src="{{ sender.profile.avatar.url }}" alt="">
+                </div>
+                <div class="tyn-media tyn-size-rg d-sm-none">
+                    <img src="{{ sender.profile.avatar.url }}" alt="">
+                </div>
+                <div class="tyn-media-col">
+                    <div class="tyn-media-row">
+                        <h6 class="name">{{ sender.username }}</h6>
+                    </div>
+                    <div class="tyn-media-row has-dot-sap">
+                        <span class="meta">Active</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="tyn-list-inline gap gap-3 ms-auto">
+                <li class="d-none d-sm-block"><button class="btn btn-icon btn-light js-toggle-chat-search">
+                        <!-- search -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewbox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                        </svg>
+                    </button></li>
+                <li><button class="btn btn-icon btn-light js-toggle-chat-options">
+                        <!-- layout-sidebar-inset-reverse -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-layout-sidebar-inset-reverse" viewbox="0 0 16 16">
+                            <path d="M2 2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h12z"></path>
+                            <path d="M13 4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V4z"></path>
+                        </svg>
+                    </button></li>
+            </ul>
+            <div class="tyn-chat-search" id="tynChatSearch">
+                <div class="flex-grow-1">
+                    <div class="form-group">
+                        <div class="form-control-wrap form-control-plaintext-wrap">
+                            <div class="form-control-icon start">
+                                <!-- search -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewbox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                                </svg>
+                            </div>
+                            <input type="text" class="form-control form-control-plaintext" id="searchInThisChat" placeholder="Search in this chat">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap gap-3">
+                    <ul class="tyn-list-inline ">
+                        <li><button class="btn btn-icon btn-sm btn-transparent">
+                                <!-- chevron-up -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewbox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"></path>
+                                </svg>
+                            </button></li>
+                        <li><button class="btn btn-icon btn-sm btn-transparent">
+                                <!-- chevron-down -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewbox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+                                </svg>
+                            </button></li>
+                    </ul>
+                    <ul class="tyn-list-inline ">
+                        <li><button class="btn btn-icon btn-md btn-light js-toggle-chat-search">
+                                <!-- x-lg -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewbox="0 0 16 16">
+                                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"></path>
+                                </svg>
+                            </button></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- .tyn-chat-head -->
+
+
+
+        <div class="tyn-chat-body" id="tynChatBody">
+            <div class="tyn-reply" id="tynReply">
+                {% with previous_date=None %}
+                {% for t in texts %}
+                
+
+                {% if sender == request.user %}
+                <div class="tyn-reply-item outgoing">
+                    <div class="tyn-reply-group">
+                        <div class="tyn-reply-bubble">
+                            <div class="tyn-reply-text"> {{ t.body }} </div><!-- tyn-reply-text -->
+                            <ul class="tyn-reply-tools">
+                                <li>
+                                    <button class="btn btn-icon btn-sm btn-transparent btn-pill">
+                                        <!-- emoji-smile-fill -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile-fill" viewbox="0 0 16 16">
+                                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"></path>
+                                        </svg>
+                                    </button>
+                                </li><!-- li -->
+                                <li class="dropup-center">
+                                    <button class="btn btn-icon btn-sm btn-transparent btn-pill" data-bs-toggle="dropdown">
+                                        <!-- three-dots -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewbox="0 0 16 16">
+                                            <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+                                        </svg>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-xxs">
+                                        <ul class="tyn-list-links">
+                                            <li>
+                                                <a href="#">
+                                                    <!-- pencil-square -->
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewbox="0 0 16 16">
+                                                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"></path>
+                                                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"></path>
+                                                    </svg>
+                                                    <span>Edit</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <!-- trash -->
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewbox="0 0 16 16">
+                                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"></path>
+                                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
+                                                    </svg>
+                                                    <span>Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul><!-- .tyn-list-links -->
+                                    </div><!-- .dropdown-menu -->
+                                </li><!-- li -->
+                            </ul><!-- .tyn-reply-tools -->
+                        </div><!-- .tyn-reply-bubble -->
+                    </div><!-- .tyn-reply-group -->
+                </div><!-- .tyn-reply-item -->
+
+                {% else %}
+                <div class="tyn-reply-item incoming">
+                    <div class="tyn-reply-avatar">
+                        <div class="tyn-media tyn-size-md tyn-circle">
+                            <img src="{{ sender.profile.avatar.url }}" alt="">
+                        </div>
+                    </div>
+                    <div class="tyn-reply-group">
+                        <div class="tyn-reply-bubble">
+                            <div class="tyn-reply-text">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">{{ t.time_created|natural_time_format }}</small>
+                                    <div class="indicator varified">
+                                        <!-- check-circle-fill -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-check-circle-fill" viewbox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                 {{ t.body }} </div>
+                            <ul class="tyn-reply-tools">
+                                <li>
+                                    <button class="btn btn-icon btn-sm btn-transparent btn-pill">
+                                        <!-- emoji-smile-fill -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile-fill" viewbox="0 0 16 16">
+                                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"></path>
+                                        </svg>
+                                    </button>
+                                </li><!-- li -->
+                                <li class="dropup-center">
+                                    <button class="btn btn-icon btn-sm btn-transparent btn-pill" data-bs-toggle="dropdown">
+                                        <!-- three-dots -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewbox="0 0 16 16">
+                                            <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+                                        </svg>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-xxs">
+                                        <ul class="tyn-list-links">
+                                            <li>
+                                                <a href="#">
+                                                    <!-- pencil-square -->
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewbox="0 0 16 16">
+                                                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"></path>
+                                                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"></path>
+                                                    </svg>
+                                                    <span>Edit</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <!-- trash -->
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewbox="0 0 16 16">
+                                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"></path>
+                                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
+                                                    </svg>
+                                                    <span>Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul><!-- .tyn-list-links -->
+                                    </div><!-- .dropdown-menu -->
+                                </li><!-- li -->
+                            </ul><!-- .tyn-reply-tools -->
+                        </div><!-- .tyn-reply-bubble -->
+                    </div><!-- .tyn-reply-group -->
+                </div><!-- .tyn-reply-item -->
+                {% endif %}
+
+                {% ifchanged t.time_created.date %}
+                <div class="tyn-reply-separator">{{ t.time_created|date:"l" }}</div>
+                {% endifchanged %}
+
+                {% with previous_date=t.time_created|date:"Y-m-d" %}
+                {% endwith %}
+                {% endfor %}
+                {% endwith %}
+            </div><!-- .tyn-reply -->
+        </div><!-- .tyn-chat-body -->
+
+
+
+        <div class="tyn-chat-form">
+            <div class="tyn-chat-form-insert">
+                <ul class="tyn-list-inline gap gap-3">
+                    <li class="dropup">
+                        <button class="btn btn-icon btn-light btn-md btn-pill" data-bs-toggle="dropdown" data-bs-offset="0,10">
+                            <!-- plus-lg -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewbox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                            <ul class="tyn-list-links">
+                                <li><a href="#">
+                                        <!-- person-video2 -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-video2" viewbox="0 0 16 16">
+                                            <path d="M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
+                                            <path d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z"></path>
+                                        </svg>
+                                        <span>New Group</span>
+                                    </a></li>
+                                <li><a href="#">
+                                        <!-- mic -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic" viewbox="0 0 16 16">
+                                            <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"></path>
+                                            <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"></path>
+                                        </svg>
+                                        <span>Voice Clip</span>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="d-none d-sm-block"><button class="btn btn-icon btn-light btn-md btn-pill">
+                            <!-- card-image -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-image" viewbox="0 0 16 16">
+                                <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path>
+                                <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54A.505.505 0 0 1 1 12.5v-9a.5.5 0 0 1 .5-.5h13z"></path>
+                            </svg>
+                        </button></li>
+                    <li class="d-none d-sm-block"><button class="btn btn-icon btn-light btn-md btn-pill">
+                            <!-- emoji-smile-fill -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile-fill" viewbox="0 0 16 16">
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"></path>
+                            </svg>
+                        </button></li>
+                </ul>
+            </div>
+            <div class="tyn-chat-form-enter">
+                <div class="tyn-chat-form-input" id="tynChatInput" contenteditable=""></div>
+                <ul class="tyn-list-inline me-n2 my-1">
+                    <li><button class="btn btn-icon btn-white btn-md btn-pill">
+                            <!-- mic-fill -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill" viewbox="0 0 16 16">
+                                <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"></path>
+                                <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"></path>
+                            </svg>
+                        </button></li>
+                    <li><button class="btn btn-icon btn-white btn-md btn-pill">
+                            <!-- send-fill -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewbox="0 0 16 16">
+                                <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"></path>
+                            </svg>
+                        </button></li>
+                </ul>
+            </div>
+        </div><!-- .tyn-chat-form -->
+        {% include 'konnekt/rightbar.html' %}
+    </div><!-- .tyn-chat-content -->
+</div>
+
+{% endblock %}

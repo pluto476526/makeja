@@ -1,6 +1,7 @@
 {% extends 'dash/main.html' %}
 {% load static %}
-
+{% load humanize %}
+{% load time_filters %}
 {% block main %}
 
 
@@ -37,17 +38,17 @@
                         <td>{{ l.title|title }}</td>
                         <td>{{ l.location|title }}</td>
                         <td>{{ l.available_units }}</td>
-                        <td>{{ l.rent }}</td>
-                        <td>{{ l.time_created }}</td>
+                        <td>{{ l.rent|intcomma }}</td>
+                        <td>{{ l.time_created|natural_time_format }}</td>
                         <td class="d-flex" style="gap: 3px;">
-                            <button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#detailsModal{{ l.id }}" title="View and edit listing details.">Details</button>
+                            <button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#detailsModal{{ l.id }}">Details</button>
                             <form method="post">
                                 {% csrf_token %}
                                 <input type="hidden" name="action" value="post_listing">
                                 <input type="hidden" name="id" value="{{ l.id }}">
                                 <button class="btn btn-sm btn-success" type="submit">Post</button>
                             </form>
-                            <a class="btn btn-sm btn-danger" href="">Cancel</a>
+                            <button class="btn btn-sm btn-danger" type="button" data-toggle="modal" data-target="#delete{{ l.id }}">Cancel</button>
                         </td>
                     </tr>
                     {% endfor %}
@@ -454,6 +455,38 @@ Cozy Studio,Nairobi,Perfect for singles.,Bungalow,1,1,450,2018,1,4,5,30000,5000,
     </div>
   </div>
 </div>
+
+{% for l in listings %}
+<div class="modal fade" id="delete{{ l.id }}" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content bg-secondary">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close btn btn-primary" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post">
+            {% csrf_token %}
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Please Confirm.</h6>
+                <p>Are you sure you want to delete "{{ l.title|title }}"?</p>
+                <div class="mb-3">
+                    <input type="checkbox" value="True" class="form-check-input" required>
+                </div>
+                <input type="hidden" name="id" value="{{ l.id }}">
+                <input type="hidden" name="action" value="delete_listing">
+                <div>
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
 
 
 <script type="text/javascript">

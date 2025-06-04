@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('main.urls')),
     path("master/", include("master.urls")),
     path("dash/", include("dash.urls")),
+    path("konnekt/", include("konnekt.urls")),
 ]

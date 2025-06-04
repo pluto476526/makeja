@@ -1,3 +1,9 @@
-from django.contrib import admin
+# /main/models.py
+# pluto
 
-# Register your models here.
+from django.contrib import admin
+from main.models import Profile
+
+admin.site.register(Profile)
+
+

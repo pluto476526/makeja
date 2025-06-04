@@ -1,0 +1,137 @@
+{% extends 'dash/main.html' %}
+{% load static %}
+{% load time_filters %}
+
+{% block main %}
+
+
+
+
+<div class="container-fluid pt-4 px-4 d-none d-md-block">
+    <div class="bg-secondary text-center rounded p-4">
+        <div class="d-flex align-items-center mb-4">
+            <h6 class="mb-0">View and Manage Notifications</h6>
+        </div>
+        {% if my_notifications %}
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-hover mb-0">
+                <thead></thead>
+                <form method="post">
+                    {% csrf_token %}
+                    <tbody>
+                        {% for n in my_notifications %}
+                        <tr>
+                            <td><input class="form-check-input" type="checkbox" name="n_id[]" value="{{ n.id }}"></td>
+                            <td>{{ n.n_type }}</td>
+                            <td>{{ n.message }}</td>
+                            <td>{{ n.created_at|natural_time_format }}</td>
+                            {% if n.is_read %}
+                            <td><span class="btn btn-sm btn-warning">Read</span></td>
+                            {% else %}
+                            <td><span class="btn btn-sm btn-success">UnRead</span></td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="hidden" name="action" value="mark_read">
+                                <div>
+                                    <button class="btn btn-success" type="submit">Mark as Read</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </form>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="container-fluid pt-4 px-4 d-lg-none d-md-none d-sm-block">
+    <div class="bg-secondary border-0 rounded-0 rounded-bottom m-0">
+        <div class="d-flex align-items-center mb-2 p-2">
+            <h4 class="mb-0">Notifications</h4>
+        </div>
+        {% for n in notifications %}
+        <div class="p-2">
+            <h6 class="fw-normal mb-0 pt-2">{{ n.n_type }}</h6>
+            <small>{{ n.created_at|natural_time_format }}</small>
+            <p>{{ n.message }}</p>
+        </div>
+        <hr class="dropdown-divider">
+        {% endfor %}
+    </div>
+</div>
+
+
+{% for v in viewings %}
+<div class="modal fade" id="reschedule{{ v.id }}" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content bg-secondary">
+      <div class="modal-header">
+        <h5 class="modal-title">Scheduling Form</h5>
+        <button type="button" class="close btn btn-primary" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post">
+            {% csrf_token %}
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Fill in all the details below.</h6>
+                <div class="form-floating mb-3">
+                    <input type="date" name="viewing_date" class="form-control" required>
+                    <label>Viewing Date</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="time" name="viewing_time" class="form-control" required>
+                    <label>Viewing Time</label>
+                </div>
+                <input type="hidden" name="v_id" value="{{ v.id }}">
+                <input type="hidden" name="action" value="reschedule_viewing">
+                <div>
+                    <button class="btn btn-success" type="submit">Reschedule</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% for v in viewings %}
+<div class="modal fade" id="delete{{ v.id }}" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content bg-secondary">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close btn btn-primary" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post">
+            {% csrf_token %}
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Please Confirm.</h6>
+                <p>Are you sure you want to cancel "{{ v.user.username }}'s" booking?</p>
+                <div class="mb-3">
+                    <input type="checkbox" value="True" class="form-check-input" required>
+                </div>
+                <input type="hidden" name="v_id" value="{{ v.id }}">
+                <input type="hidden" name="action" value="delete_viewing">
+                <div>
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

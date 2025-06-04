@@ -3,8 +3,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.db import transaction
-from master.models import ListingCategory
-from dash.models import Listing, Address
+from master.models import ListingCategory, Notification
+from dash.models import Listing, Address, Viewing, Like
+from main.views import create_notification
 from io import TextIOWrapper
 import logging, csv
 
@@ -17,7 +18,7 @@ def index_view(request):
 
 
 def pending_listings_view(request):
-    categories = ListingCategory.objects.all()
+    categories = ListingCategory.objects.filter(is_deleted=False)
     listings = Listing.objects.filter(user=request.user, status="pending", is_deleted=False)
 
     if request.method == "POST":
@@ -266,12 +267,15 @@ def pending_listings_view(request):
                     except Exception as e:
                         messages.error(request, f"Failed to process file: {str(e)}")
 
-                    return redirect('pending_listings')
-
                 case 'post_listing':
                     listing.status = 'posted'
                     listing.save()
-                    messages.success(request, 'Listing posted.')
+                    messages.success(request, f'{listing.title} posted.')
+                
+                case "delete_listing":
+                    listing.is_deleted = True
+                    listing.save()
+                    messages.warning(request, f"{listing.title} deleted.")
 
             return redirect('pending_listings')
     
@@ -291,3 +295,172 @@ def posted_listings_view(request):
     }
     return render(request, "dash/posted_listings.html", context)
 
+
+def user_viewings_view(request):
+    viewings = Viewing.objects.filter(user=request.user, is_deleted=False)
+    
+    if request.method == "POST":
+        v_date = request.POST.get("viewing_date")
+        v_time = request.POST.get("viewing_time")
+        v_id = request.POST.get("v_id")
+        action = request.POST.get("action")
+    
+        with transaction.atomic():
+            match action:
+                case "reschedule_viewing":
+                    viewing = viewings.get(id=v_id)
+                    viewing.viewing_date = v_date
+                    viewing.viewing_time = v_time
+                    viewing.save()
+                    msg = f"{request.user.username} has rescheduled. Please check and confirm."
+                    create_notification(request, msg, "URGENT", viewing.listing.user)
+                    messages.success(request, f"You have rescheduled the viewing '{viewing.listing.title}'.")
+
+                case "delete_viewing":
+                    viewing.is_deleted = True
+                    viewing.save()
+                    msg = f"{request.user.username} has cancelled viewing '{viewing.listing.title}'."
+                    create_notification(request, msg, "INFO", viewing.listing.user)
+                    messages.warning(request, f"Viewing '{viewing.listing.title}' cancelled.")
+        return redirect('user_viewings')
+    context = {
+        "viewings": viewings,
+    }
+    return render(request, "dash/user_viewings.html", context)
+
+
+def manage_viewings_view(request):
+    viewings = Viewing.objects.filter(listing__user=request.user, is_deleted=False)
+    c_viewings = viewings.filter(status="done")
+    s_viewings = viewings.exclude(status="done")
+
+    if request.method == "POST":
+        v_date = request.POST.get("viewing_date")
+        v_time = request.POST.get("viewing_time")
+        v_id = request.POST.get("v_id")
+        action = request.POST.get("action")
+    
+        if v_id:
+            viewing = viewings.get(id=v_id)
+        
+        with transaction.atomic():
+            match action:
+                case "reschedule_viewing":
+                    viewing.viewing_date = v_date
+                    viewing.viewing_time = v_time
+                    viewing.save()
+                    msg = f"{request.user.username} has rescheduled. Please check and confirm the new dates."
+                    create_notification(request, msg, "URGENT", viewing.user)
+                    messages.success(request, f"You have rescheduled the viewing '{viewing.listing.title}'")
+                
+                case "confirm_viewing":
+                    viewing.status = "confirmed"
+                    viewing.save()
+                    msg = f"Viewing for '{viewing.listing.title}' confirmed."
+                    create_notification(request, msg, "INFO", viewing.user)
+                    messages.success(request, msg)
+                
+                case "complete_viewing":
+                    viewing.status = "done"
+                    viewing.save()
+                    msg = f"Viewing for '{viewing.listing.title}' done."
+                    messages.success(request, msg)
+                
+                case "delete_viewing":
+                    viewing.is_deleted = True
+                    viewing.save()
+                    messages.warning(request, f"{viewing.user.username}'s booking deleted.")
+
+        return redirect('manage_viewings')
+    
+    context = {
+        "viewings": viewings,
+        "scheduled_viewings": s_viewings,
+        "completed_viewings": c_viewings,
+    }
+    return render(request, "dash/manage_viewings.html", context)
+
+
+def favourites_view(request):
+    likes = Like.objects.filter(user=request.user, liked=True)
+    listings = []
+    
+    for l in likes:
+        listings.append(l.listing)
+
+    if request.method == "POST":
+        v_date = request.POST.get("viewing_date")
+        v_time = request.POST.get("viewing_time")
+        l_id = request.POST.get("l_id")
+        action = request.POST.get("action")
+        
+        if l_id:
+            listing = Listing.objects.get(id=l_id) 
+
+        with transaction.atomic():
+            match action:
+                case "schedule_viewing":
+                        viewings = Viewing.objects.filter(user=request.user, listing=listing)
+                        viewing = viewings.exclude(status="done").first()
+
+                        if viewing:
+                            messages.error(request, f"You have already scheduled a viewing for {listing.title}.")
+                            return redirect("favourites")
+
+                        Viewing.objects.create(
+                            user=request.user,
+                            listing=listing,
+                            viewing_date=v_date,
+                            viewing_time=v_time,
+                        )
+                        msg = f"{request.user.username} has scheduled a viewing for '{listing.title}'. Please confirm or reschedule."
+                        create_notification(request, msg, "URGENT", listing.user)
+                        messages.success(request, f"You have scheduled a viewing for {listing.title} on {v_date} at {v_time}.")
+
+                case "unlike":
+                    like = Like.objects.get(user=request.user, listing=listing)
+                    like.liked = False
+                    like.save()
+                    msg = f"{request.user.username} unliked '{listing.title}'."
+                    create_notification(request, msg, "INFO", listing.user)
+                    messages.success(request, f"{listing.title} removed from favourites.")
+
+        return redirect("favourites")
+    
+    context = {
+        "listings": listings,
+    }
+    return render(request, "dash/favourites.html", context)
+
+
+def notifications_view(request):
+    my_notifications = Notification.objects.filter(target=request.user, is_deleted=False)
+    
+    if request.method == "POST":
+        n_ids = request.POST.getlist("n_id[]")
+        action = request.POST.get("action")
+
+        with transaction.atomic():
+            match action:
+                case "mark_read":
+                    if not n_ids:
+                        messages.warning(request, "No notifications selected.")
+                        return redirect("notifications")
+                    
+                    for n in n_ids:
+                        notification = my_notifications.get(id=n)
+                        notification.is_read = True
+                        notification.save()
+                    messages.success(request, "Notifications marked as read.")
+        
+        return redirect("notifications")
+
+    context = {
+        "my_notifications": my_notifications,
+    }
+    return render(request, "dash/notifications.html", context)
+
+
+def faqs_view(request):
+    context = {}
+    return render(request, "dash/faqs.html", context)

@@ -1,0 +1,56 @@
+{% extends 'konnekt/main.html' %}
+{% load static %}
+
+{% block main %}
+
+<div class="tyn-content tyn-content-full-height tyn-chat">
+    {% include 'konnekt/sidebar.html' %}
+    <div class="tyn-main tyn-content-inner" id="tynMain">
+        <div class="container">
+            <div class="tyn-profile">
+                <div class="tyn-profile-head">
+                    <div class="tyn-profile-cover">
+                        <img class="tyn-profile-cover-image" src="{{ request.user.profile.cover.url }}" alt="">
+                    </div>
+                    <div class="tyn-profile-info">
+                        <div class="tyn-media-group align-items-start">
+                            <div class="tyn-media tyn-media-bordered tyn-size-4xl tyn-profile-avatar">
+                                <img src="{{ request.user.profile.avatar.url }}" alt="">
+                            </div>
+                            <div class="tyn-media-col">
+                                <div class="tyn-media-row">
+                                    <h4 class="name">{{ request.user.username }} <span class="username">{{ request.user.email }}</span></h4>
+                                </div>
+                                <div class="tyn-media-row has-dot-sap">
+                                    <span class="content">287 Contacts</span>
+                                </div>
+                                <div class="tyn-media-row pt-2">
+                                    <div class="tyn-media-multiple">
+                                        <div class="tyn-media tyn-circle tyn-size-md tyn-media-bordered">
+                                            <img src="images/avatar/2.jpg" alt="">
+                                        </div>
+                                        <div class="tyn-media tyn-circle tyn-size-md tyn-media-bordered">
+                                            <img src="images/avatar/3.jpg" alt="">
+                                        </div>
+                                        <div class="tyn-media tyn-circle tyn-size-md tyn-media-bordered">
+                                            <img src="images/avatar/4.jpg" alt="">
+                                        </div>
+                                        <div class="tyn-media tyn-circle tyn-size-md tyn-media-bordered">
+                                            <img src="images/avatar/5.jpg" alt="">
+                                        </div>
+                                        <div class="tyn-media tyn-circle tyn-size-md tyn-media-bordered">
+                                            <img src="images/avatar/6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .tyn-media-group -->
+                    </div><!-- .tyn-profile-info -->
+                </div><!-- .tyn-profile-head -->
+           
+            </div>
+        </div><!-- .container -->
+    </div><!-- .tyn-main -->
+</div>
+
+{% endblock %}

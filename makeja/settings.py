@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
     'main.apps.MainConfig',
     'dash.apps.DashConfig',
     'master.apps.MasterConfig',
+    'konnekt.apps.KonnektConfig',
     'crispy_forms',
     'crispy_bootstrap5',
 ]
@@ -70,13 +73,15 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'dash.context_processors.get_notifications',
+                'konnekt.context_processors.get_registered_users',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'makeja.wsgi.application'
-
+ASGI_APPLICATION = 'makeja.asgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
@@ -107,6 +112,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
+    },
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

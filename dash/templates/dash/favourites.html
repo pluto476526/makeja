@@ -1,0 +1,266 @@
+{% extends 'dash/main.html' %}
+{% load static %}
+{% load humanize %}
+{% load time_filters %}
+{% block main %}
+
+
+
+<!-- My Listings Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-secondary text-center rounded p-4">
+        <div class="d-flex align-items-center mb-4">
+            <h6 class="mb-0">Favourite Listings</h6>
+        </div>
+        {% if listings %}
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-white">
+                        <th scope="col"></th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Units</th>
+                        <th scope="col">Rent</th>
+                        <th scope="col">Created</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for l in listings %}
+                    <tr>
+                        <td><input class="form-check-input" type="checkbox"></td>
+                        <td>{{ l.title|title }}</td>
+                        <td>{{ l.location|title }}</td>
+                        <td>{{ l.available_units }}</td>
+                        <td>{{ l.rent|intcomma }}</td>
+                        <td>{{ l.time_created|natural_time_format }}</td>
+                        <td class="d-flex" style="gap: 3px;">
+                            <button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#details{{ l.id }}">Details</button>
+                            <button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#schedule{{ l.id }}">Schedule Viewing</button>
+                            <form method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="action" value="post_listing">
+                                <input type="hidden" name="id" value="{{ l.id }}">
+                                <button class="btn btn-sm btn-success" type="submit">Reach Out</button>
+                            </form>
+                            <button class="btn btn-sm btn-danger" type="button" data-toggle="modal" data-target="#unlike{{ l.id }}">Remove</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+</div>
+<!-- Recent Sales End -->
+
+
+{% for l in listings %}
+<div class="modal fade" id="details{{ l.id }}" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content bg-secondary">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close btn btn-primary" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+            {% csrf_token %}
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4"></h6>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" value="{{ l.title|title }}">
+                    <label>Listing Title/Property Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" value="{{ l.category.category|title }}">
+                    <label>Category</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" value="{{ l.location|title }}">
+                    <label>Location</label>
+                </div>
+                <div class="d-flex justify-content-between mb-3 gap-2">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" value="{{ l.bedrooms }}">
+                        <label>Bedrooms</label>
+                    </div>                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" value="{{ l.bathrooms }}">
+                        <label>Bathrooms</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" value="{{ l.area_sqft }}">
+                        <label>Area in SQFT</label>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mb-3 gap-2">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" value="{{ l.year_built }}">
+                        <label>Year Built</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" value="{{ l.floor_number }}">
+                        <label>Floor No.</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" value="{{ l.total_floors }}">
+                        <label>Total Floors</label>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mb-3 gap-2">
+                    <div class="">
+                        <label>Furnished</label>
+                        <input type="checkbox" value="True" class="form-check-input" {% if l.furnished %} checked {% endif %}>
+                    </div>
+                    <div class="">
+                        <label>Parking</label>
+                        <input type="checkbox" value="True" class="form-check-input" {% if l.parking %} checked {% endif %}>
+                    </div>
+                    <div class="">
+                        <label>Pet Friendly</label>
+                        <input type="checkbox" value="True" class="form-check-input" {% if l.pet_friendly %} checked {% endif %}>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mb-3 gap-2">
+                    <div class="">
+                        <label>Security</label>
+                        <input type="checkbox" value="True" class="form-check-input" {% if l.security %} checked {% endif %}>
+                    </div>
+                    <div class="">
+                        <label>Internet</label>
+                        <input type="checkbox" value="True" class="form-check-input" {% if l.internet %} checked {% endif %}>
+                    </div>
+                    <div class="">
+                        <label>Balcony</label>
+                        <input type="checkbox" value="True" class="form-check-input" {% if l.balcony %} checked {% endif %}>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mb-3 gap-2">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" value="{{ l.available_units }}">
+                        <label>Available Units</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" value="{{ l.rent }}">
+                        <label>Monthly Rent</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" value="{{ l.deposit }}">
+                        <label>Deposit</label>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea name="description" class="form-control" style="height: 200px;">{{ l.description|capfirst }}</textarea>
+                    <label for="floatingTextarea">Property Description</label>
+                </div>
+                <p class="text-muted">Property Address</p>
+                <div class="d-flex justify-content-between mb-3 gap-2">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" value="{{ l.address.city|title }}">
+                        <label>Nearest City</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" value="{{ l.address.county|title }}">
+                        <label>County</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" value="{{ l.address.town|title }}">
+                        <label>Town</label>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mb-3 gap-2">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" value="{{ l.address.street|title }}">
+                        <label>Street</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" value="{{ l.address.house }}">
+                        <label>House No.</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+
+
+{% for l in listings %}
+<div class="modal fade" id="schedule{{ l.id }}" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content bg-secondary">
+      <div class="modal-header">
+        <h5 class="modal-title">Scheduling Form</h5>
+        <button type="button" class="close btn btn-primary" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post">
+            {% csrf_token %}
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Fill in all the details below.</h6>
+                <div class="form-floating mb-3">
+                    <input type="date" name="viewing_date" class="form-control" required>
+                    <label>Viewing Date</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="time" name="viewing_time" class="form-control" required>
+                    <label>Viewing Time</label>
+                </div>
+                <input type="hidden" name="l_id" value="{{ l.id }}">
+                <input type="hidden" name="action" value="schedule_viewing">
+                <div>
+                    <button class="btn btn-success" type="submit">Schedule</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+
+{% for l in listings %}
+<div class="modal fade" id="unlike{{ l.id }}" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content bg-secondary">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close btn btn-primary" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post">
+            {% csrf_token %}
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Please Confirm.</h6>
+                <p>Are you sure you want to remove "{{ l.title|title }}" from your favourites list?</p>
+                <div class="mb-3">
+                    <input type="checkbox" value="True" class="form-check-input" required>
+                </div>
+                <input type="hidden" name="l_id" value="{{ l.id }}">
+                <input type="hidden" name="action" value="unlike">
+                <div>
+                    <button class="btn btn-danger" type="submit">Remove</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+
+{% endblock %}
