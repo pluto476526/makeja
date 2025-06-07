@@ -186,11 +186,11 @@ document.addEventListener("DOMContentLoaded", () => {
         recentChatsList.innerHTML = chats.map(chat => {
             const isGroup = chat.is_group;
             const friend = chat.participants?.[0] || {};
-            const avatar = escapeHtml(friend.avatar_url || "/static/default-avatar.png");
-            const title = escapeHtml(chat.title || friend.username || "Unknown");
+            const avatar = escapeHtml(friend.avatar_url);
+            const title = escapeHtml(chat.title || friend.username);
             const chatID = escapeHtml(chat.c_id);
             const lastMessage = escapeHtml(chat.last_message || "No message yet");
-            const time = naturalTime(chat.timestamp) || "Just now";
+            const time = naturalTime(chat.timestamp);
 
             return `
             <li class="tyn-aside-item js-toggle-main">

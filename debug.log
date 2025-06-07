@@ -21347,3 +21347,1517 @@ django.contrib.auth.models.User.profile.RelatedObjectDoesNotExist: User has no p
 2025-06-02 03:03:44,050 DEBUG ws_protocol Sent WebSocket packet to client for ['127.0.0.1', 57942]
 2025-06-02 03:16:30,396 DEBUG ws_protocol WebSocket closed for ['127.0.0.1', 57942]
 2025-06-02 03:16:30,397 INFO runserver WebSocket DISCONNECT /ws/konnekt/recent-chats/4/ [127.0.0.1:57942]
+2025-06-06 19:50:46,506 DEBUG selector_events Using selector: EpollSelector
+2025-06-06 19:50:47,252 DEBUG selector_events Using selector: EpollSelector
+2025-06-06 19:50:47,400 INFO autoreload Watching for file changes with StatReloader
+2025-06-06 19:50:47,789 INFO server HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2025-06-06 19:50:47,790 INFO server Configuring endpoint tcp:port=43000:interface=127.0.0.1
+2025-06-06 19:50:47,794 INFO server Listening on TCP address 127.0.0.1:43000
+2025-06-06 19:51:00,615 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 53388]
+2025-06-06 19:51:00,643 WARNING log Not Found: /favicon.ico
+2025-06-06 19:51:00,644 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 53388]
+2025-06-06 19:51:00,644 DEBUG http_protocol HTTP close for ['127.0.0.1', 53388]
+2025-06-06 19:51:00,644 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 53388]
+2025-06-06 19:51:00,644 WARNING runserver [33mHTTP GET /favicon.ico 404 [0.03, 127.0.0.1:53388][0m
+2025-06-06 19:51:03,550 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,603 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,604 DEBUG http_protocol HTTP close for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,606 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,606 INFO runserver [mHTTP GET / 200 [0.06, 127.0.0.1:53376][0m
+2025-06-06 19:51:03,679 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,684 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,687 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,688 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,712 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,723 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,731 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,732 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,733 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,733 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,735 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,736 DEBUG http_protocol HTTP close for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,737 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,737 INFO runserver [mHTTP GET /static/main/css/theme.min.css 200 [0.06, 127.0.0.1:53376][0m
+2025-06-06 19:51:03,738 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,741 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,742 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,742 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,742 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,742 DEBUG http_protocol HTTP close for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,743 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,743 INFO runserver [mHTTP GET /static/shop/css/vendor.css 200 [0.06, 127.0.0.1:55290][0m
+2025-06-06 19:51:03,743 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,743 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,743 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,743 DEBUG http_protocol HTTP close for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,744 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,744 INFO runserver [mHTTP GET /static/shop/css/app.css 200 [0.06, 127.0.0.1:55302][0m
+2025-06-06 19:51:03,744 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,745 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,745 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,745 DEBUG http_protocol HTTP close for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,745 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,745 INFO runserver [mHTTP GET /static/shop/css/utility.css 200 [0.06, 127.0.0.1:55300][0m
+2025-06-06 19:51:03,748 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,748 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,748 DEBUG http_protocol HTTP close for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,749 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,749 INFO runserver [mHTTP GET /static/main/js/bootstrap.bundle.min.js 200 [0.04, 127.0.0.1:55314][0m
+2025-06-06 19:51:03,750 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,751 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,751 DEBUG http_protocol HTTP close for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,751 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,752 INFO runserver [mHTTP GET /static/main/js/aos.js 200 [0.03, 127.0.0.1:55328][0m
+2025-06-06 19:51:03,754 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,755 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,765 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,771 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,772 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,778 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,780 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,780 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,781 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,781 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,781 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,781 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,781 DEBUG http_protocol HTTP close for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,782 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,782 INFO runserver [mHTTP GET /static/shop/js/vendor.js 200 [0.04, 127.0.0.1:53376][0m
+2025-06-06 19:51:03,784 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,785 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,785 DEBUG http_protocol HTTP close for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,786 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,787 INFO runserver [mHTTP GET /static/shop/js/jquery.shopnav.js 200 [0.04, 127.0.0.1:55290][0m
+2025-06-06 19:51:03,790 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,791 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,792 DEBUG http_protocol HTTP close for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,792 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,792 INFO runserver [mHTTP GET /static/shop/js/app.js 200 [0.04, 127.0.0.1:55302][0m
+2025-06-06 19:51:03,793 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,798 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,868 WARNING log Not Found: /img/webp/people1.webp
+2025-06-06 19:51:03,870 WARNING log Not Found: /img/webp/people2.webp
+2025-06-06 19:51:03,874 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,871 WARNING log Not Found: /img/webp/interior37.webp
+2025-06-06 19:51:03,875 DEBUG http_protocol HTTP close for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,873 WARNING log Not Found: /img/webp/people23.webp
+2025-06-06 19:51:03,874 WARNING log Not Found: /img/webp/interior29.webp
+2025-06-06 19:51:03,875 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,875 WARNING runserver [33mHTTP GET /img/webp/people1.webp 404 [0.11, 127.0.0.1:55314][0m
+2025-06-06 19:51:03,877 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,877 DEBUG http_protocol HTTP close for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,877 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,877 WARNING runserver [33mHTTP GET /img/webp/people2.webp 404 [0.11, 127.0.0.1:55328][0m
+2025-06-06 19:51:03,878 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,878 DEBUG http_protocol HTTP close for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,878 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,878 WARNING runserver [33mHTTP GET /img/webp/interior37.webp 404 [0.12, 127.0.0.1:55300][0m
+2025-06-06 19:51:03,879 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,879 DEBUG http_protocol HTTP close for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,879 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,879 WARNING runserver [33mHTTP GET /img/webp/people23.webp 404 [0.09, 127.0.0.1:55290][0m
+2025-06-06 19:51:03,880 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,880 DEBUG http_protocol HTTP close for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,880 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,880 WARNING runserver [33mHTTP GET /img/webp/interior29.webp 404 [0.09, 127.0.0.1:53376][0m
+2025-06-06 19:51:03,880 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,883 WARNING log Not Found: /img/webp/person11.webp
+2025-06-06 19:51:03,885 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,886 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,887 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,888 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,891 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,891 DEBUG http_protocol HTTP close for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,891 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55302]
+2025-06-06 19:51:03,892 WARNING runserver [33mHTTP GET /img/webp/person11.webp 404 [0.09, 127.0.0.1:55302][0m
+2025-06-06 19:51:03,900 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,902 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,905 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,906 DEBUG http_protocol HTTP close for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,906 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55328]
+2025-06-06 19:51:03,906 INFO runserver [mHTTP GET /static/main/img/webp/interior11.webp 200 [0.02, 127.0.0.1:55328][0m
+2025-06-06 19:51:03,907 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,907 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,907 DEBUG http_protocol HTTP close for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,907 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55314]
+2025-06-06 19:51:03,907 INFO runserver [mHTTP GET /static/shop/webfonts/fa-solid-900.woff2 200 [0.03, 127.0.0.1:55314][0m
+2025-06-06 19:51:03,921 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,922 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,923 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,924 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,924 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,924 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,924 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,924 DEBUG http_protocol HTTP close for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,925 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 53376]
+2025-06-06 19:51:03,925 INFO runserver [mHTTP GET /media/listing1.jpg 200 [0.04, 127.0.0.1:53376][0m
+2025-06-06 19:51:03,926 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,927 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,927 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,928 DEBUG http_protocol HTTP close for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,928 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,928 INFO runserver [mHTTP GET /media/listing2.jpg 200 [0.04, 127.0.0.1:55290][0m
+2025-06-06 19:51:03,929 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,930 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,930 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,930 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,931 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,931 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,931 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,931 DEBUG http_protocol HTTP close for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,932 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,932 INFO runserver [mHTTP GET /media/listing3.jpg 200 [0.04, 127.0.0.1:55300][0m
+2025-06-06 19:51:03,950 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,952 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,957 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,958 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,959 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,959 DEBUG http_protocol HTTP close for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,959 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55290]
+2025-06-06 19:51:03,960 INFO runserver [mHTTP GET /static/main/img/favicon-16x16.png 200 [0.01, 127.0.0.1:55290][0m
+2025-06-06 19:51:03,960 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,960 DEBUG http_protocol HTTP close for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,960 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55300]
+2025-06-06 19:51:03,961 INFO runserver [mHTTP GET /static/main/img/apple-touch-icon.png 200 [0.01, 127.0.0.1:55300][0m
+2025-06-06 19:58:44,409 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45598]
+2025-06-06 19:58:44,445 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 45598]
+2025-06-06 19:58:44,445 DEBUG http_protocol HTTP close for ['127.0.0.1', 45598]
+2025-06-06 19:58:44,446 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45598]
+2025-06-06 19:58:44,446 INFO runserver [mHTTP GET / 200 [0.04, 127.0.0.1:45598][0m
+2025-06-06 19:58:44,513 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45598]
+2025-06-06 19:58:44,517 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45602]
+2025-06-06 19:58:44,522 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45604]
+2025-06-06 19:58:44,523 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45616]
+2025-06-06 19:58:44,524 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45628]
+2025-06-06 19:58:44,527 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45634]
+2025-06-06 19:58:44,603 WARNING log Not Found: /img/webp/interior37.webp
+2025-06-06 19:58:44,605 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 45598]
+2025-06-06 19:58:44,606 DEBUG http_protocol HTTP close for ['127.0.0.1', 45598]
+2025-06-06 19:58:44,606 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45598]
+2025-06-06 19:58:44,606 WARNING runserver [33mHTTP GET /img/webp/interior37.webp 404 [0.09, 127.0.0.1:45598][0m
+2025-06-06 19:58:44,609 WARNING log Not Found: /img/webp/people2.webp
+2025-06-06 19:58:44,610 WARNING log Not Found: /img/webp/people1.webp
+2025-06-06 19:58:44,611 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 45604]
+2025-06-06 19:58:44,611 DEBUG http_protocol HTTP close for ['127.0.0.1', 45604]
+2025-06-06 19:58:44,611 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45604]
+2025-06-06 19:58:44,611 WARNING runserver [33mHTTP GET /img/webp/people2.webp 404 [0.09, 127.0.0.1:45604][0m
+2025-06-06 19:58:44,612 WARNING log Not Found: /img/webp/people23.webp
+2025-06-06 19:58:44,613 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 45602]
+2025-06-06 19:58:44,614 DEBUG http_protocol HTTP close for ['127.0.0.1', 45602]
+2025-06-06 19:58:44,612 WARNING log Not Found: /img/webp/person11.webp
+2025-06-06 19:58:44,615 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45602]
+2025-06-06 19:58:44,615 WARNING runserver [33mHTTP GET /img/webp/people1.webp 404 [0.10, 127.0.0.1:45602][0m
+2025-06-06 19:58:44,617 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 45628]
+2025-06-06 19:58:44,616 WARNING log Not Found: /img/webp/interior29.webp
+2025-06-06 19:58:44,619 DEBUG http_protocol HTTP close for ['127.0.0.1', 45628]
+2025-06-06 19:58:44,620 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45628]
+2025-06-06 19:58:44,620 WARNING runserver [33mHTTP GET /img/webp/people23.webp 404 [0.10, 127.0.0.1:45628][0m
+2025-06-06 19:58:44,620 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 45634]
+2025-06-06 19:58:44,620 DEBUG http_protocol HTTP close for ['127.0.0.1', 45634]
+2025-06-06 19:58:44,621 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45634]
+2025-06-06 19:58:44,621 WARNING runserver [33mHTTP GET /img/webp/person11.webp 404 [0.09, 127.0.0.1:45634][0m
+2025-06-06 19:58:44,623 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 45616]
+2025-06-06 19:58:44,623 DEBUG http_protocol HTTP close for ['127.0.0.1', 45616]
+2025-06-06 19:58:44,624 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45616]
+2025-06-06 19:58:44,624 WARNING runserver [33mHTTP GET /img/webp/interior29.webp 404 [0.10, 127.0.0.1:45616][0m
+2025-06-06 19:58:57,509 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 59102]
+2025-06-06 19:58:57,523 WARNING log Not Found: /favicon.ico
+2025-06-06 19:58:57,524 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 59102]
+2025-06-06 19:58:57,524 DEBUG http_protocol HTTP close for ['127.0.0.1', 59102]
+2025-06-06 19:58:57,525 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 59102]
+2025-06-06 19:58:57,526 WARNING runserver [33mHTTP GET /favicon.ico 404 [0.02, 127.0.0.1:59102][0m
+2025-06-06 19:58:59,955 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45598]
+2025-06-06 19:58:59,980 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 45598]
+2025-06-06 19:58:59,980 DEBUG http_protocol HTTP close for ['127.0.0.1', 45598]
+2025-06-06 19:58:59,981 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45598]
+2025-06-06 19:58:59,981 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:45598][0m
+2025-06-06 19:59:00,065 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45616]
+2025-06-06 19:59:00,066 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45628]
+2025-06-06 19:59:00,071 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45634]
+2025-06-06 19:59:00,074 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45604]
+2025-06-06 19:59:00,074 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45602]
+2025-06-06 19:59:00,075 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45598]
+2025-06-06 19:59:00,182 WARNING log Not Found: /img/webp/interior29.webp
+2025-06-06 19:59:00,185 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 45604]
+2025-06-06 19:59:00,185 WARNING log Not Found: /img/webp/person11.webp
+2025-06-06 19:59:00,187 DEBUG http_protocol HTTP close for ['127.0.0.1', 45604]
+2025-06-06 19:59:00,185 WARNING log Not Found: /img/webp/people23.webp
+2025-06-06 19:59:00,187 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45604]
+2025-06-06 19:59:00,187 WARNING runserver [33mHTTP GET /img/webp/interior29.webp 404 [0.11, 127.0.0.1:45604][0m
+2025-06-06 19:59:00,189 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 45602]
+2025-06-06 19:59:00,190 DEBUG http_protocol HTTP close for ['127.0.0.1', 45602]
+2025-06-06 19:59:00,190 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45602]
+2025-06-06 19:59:00,190 WARNING runserver [33mHTTP GET /img/webp/person11.webp 404 [0.12, 127.0.0.1:45602][0m
+2025-06-06 19:59:00,191 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 45598]
+2025-06-06 19:59:00,191 DEBUG http_protocol HTTP close for ['127.0.0.1', 45598]
+2025-06-06 19:59:00,191 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45598]
+2025-06-06 19:59:00,192 WARNING runserver [33mHTTP GET /img/webp/people23.webp 404 [0.12, 127.0.0.1:45598][0m
+2025-06-06 19:59:00,194 WARNING log Not Found: /img/webp/people1.webp
+2025-06-06 19:59:00,196 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 45628]
+2025-06-06 19:59:00,195 WARNING log Not Found: /img/webp/interior37.webp
+2025-06-06 19:59:00,195 WARNING log Not Found: /img/webp/people2.webp
+2025-06-06 19:59:00,196 DEBUG http_protocol HTTP close for ['127.0.0.1', 45628]
+2025-06-06 19:59:00,197 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45628]
+2025-06-06 19:59:00,197 WARNING runserver [33mHTTP GET /img/webp/people1.webp 404 [0.13, 127.0.0.1:45628][0m
+2025-06-06 19:59:00,198 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 45616]
+2025-06-06 19:59:00,198 DEBUG http_protocol HTTP close for ['127.0.0.1', 45616]
+2025-06-06 19:59:00,199 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45616]
+2025-06-06 19:59:00,199 WARNING runserver [33mHTTP GET /img/webp/interior37.webp 404 [0.13, 127.0.0.1:45616][0m
+2025-06-06 19:59:00,199 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 45634]
+2025-06-06 19:59:00,200 DEBUG http_protocol HTTP close for ['127.0.0.1', 45634]
+2025-06-06 19:59:00,200 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45634]
+2025-06-06 19:59:00,200 WARNING runserver [33mHTTP GET /img/webp/people2.webp 404 [0.13, 127.0.0.1:45634][0m
+2025-06-06 20:01:49,567 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51620]
+2025-06-06 20:01:49,601 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 51620]
+2025-06-06 20:01:49,601 DEBUG http_protocol HTTP close for ['127.0.0.1', 51620]
+2025-06-06 20:01:49,602 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51620]
+2025-06-06 20:01:49,602 INFO runserver [mHTTP GET / 200 [0.04, 127.0.0.1:51620][0m
+2025-06-06 20:01:49,665 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51620]
+2025-06-06 20:01:49,669 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51634]
+2025-06-06 20:01:49,681 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51660]
+2025-06-06 20:01:49,690 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51650]
+2025-06-06 20:01:49,694 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51680]
+2025-06-06 20:01:49,695 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51672]
+2025-06-06 20:01:49,728 WARNING log Not Found: /img/webp/interior37.webp
+2025-06-06 20:01:49,730 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51620]
+2025-06-06 20:01:49,731 DEBUG http_protocol HTTP close for ['127.0.0.1', 51620]
+2025-06-06 20:01:49,753 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51620]
+2025-06-06 20:01:49,753 WARNING runserver [33mHTTP GET /img/webp/interior37.webp 404 [0.09, 127.0.0.1:51620][0m
+2025-06-06 20:01:49,761 WARNING log Not Found: /img/webp/people1.webp
+2025-06-06 20:01:49,770 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51634]
+2025-06-06 20:01:49,771 WARNING log Not Found: /img/webp/people2.webp
+2025-06-06 20:01:49,771 DEBUG http_protocol HTTP close for ['127.0.0.1', 51634]
+2025-06-06 20:01:49,771 WARNING log Not Found: /img/webp/interior29.webp
+2025-06-06 20:01:49,772 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51634]
+2025-06-06 20:01:49,772 WARNING runserver [33mHTTP GET /img/webp/people1.webp 404 [0.10, 127.0.0.1:51634][0m
+2025-06-06 20:01:49,773 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51650]
+2025-06-06 20:01:49,774 DEBUG http_protocol HTTP close for ['127.0.0.1', 51650]
+2025-06-06 20:01:49,775 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51650]
+2025-06-06 20:01:49,775 WARNING runserver [33mHTTP GET /img/webp/people2.webp 404 [0.09, 127.0.0.1:51650][0m
+2025-06-06 20:01:49,775 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51660]
+2025-06-06 20:01:49,776 DEBUG http_protocol HTTP close for ['127.0.0.1', 51660]
+2025-06-06 20:01:49,776 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51660]
+2025-06-06 20:01:49,776 WARNING runserver [33mHTTP GET /img/webp/interior29.webp 404 [0.10, 127.0.0.1:51660][0m
+2025-06-06 20:01:49,780 WARNING log Not Found: /img/webp/person11.webp
+2025-06-06 20:01:49,780 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51680]
+2025-06-06 20:01:49,781 DEBUG http_protocol HTTP close for ['127.0.0.1', 51680]
+2025-06-06 20:01:49,781 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51680]
+2025-06-06 20:01:49,781 WARNING runserver [33mHTTP GET /img/webp/person11.webp 404 [0.09, 127.0.0.1:51680][0m
+2025-06-06 20:01:49,783 WARNING log Not Found: /img/webp/people23.webp
+2025-06-06 20:01:49,784 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51672]
+2025-06-06 20:01:49,784 DEBUG http_protocol HTTP close for ['127.0.0.1', 51672]
+2025-06-06 20:01:49,784 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51672]
+2025-06-06 20:01:49,785 WARNING runserver [33mHTTP GET /img/webp/people23.webp 404 [0.09, 127.0.0.1:51672][0m
+2025-06-06 20:03:00,480 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56246]
+2025-06-06 20:03:00,509 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 56246]
+2025-06-06 20:03:00,509 DEBUG http_protocol HTTP close for ['127.0.0.1', 56246]
+2025-06-06 20:03:00,510 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 56246]
+2025-06-06 20:03:00,510 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:56246][0m
+2025-06-06 20:03:00,551 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56246]
+2025-06-06 20:03:00,556 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56252]
+2025-06-06 20:03:00,558 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56268]
+2025-06-06 20:03:00,559 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56280]
+2025-06-06 20:03:00,559 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56288]
+2025-06-06 20:03:00,567 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56304]
+2025-06-06 20:03:00,645 WARNING log Not Found: /img/webp/interior37.webp
+2025-06-06 20:03:00,647 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 56246]
+2025-06-06 20:03:00,645 WARNING log Not Found: /img/webp/people1.webp
+2025-06-06 20:03:00,645 WARNING log Not Found: /img/webp/person11.webp
+2025-06-06 20:03:00,646 WARNING log Not Found: /img/webp/people23.webp
+2025-06-06 20:03:00,647 DEBUG http_protocol HTTP close for ['127.0.0.1', 56246]
+2025-06-06 20:03:00,646 WARNING log Not Found: /img/webp/interior29.webp
+2025-06-06 20:03:00,647 WARNING log Not Found: /img/webp/people2.webp
+2025-06-06 20:03:00,648 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 56246]
+2025-06-06 20:03:00,648 WARNING runserver [33mHTTP GET /img/webp/interior37.webp 404 [0.10, 127.0.0.1:56246][0m
+2025-06-06 20:03:00,649 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 56268]
+2025-06-06 20:03:00,650 DEBUG http_protocol HTTP close for ['127.0.0.1', 56268]
+2025-06-06 20:03:00,651 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 56268]
+2025-06-06 20:03:00,651 WARNING runserver [33mHTTP GET /img/webp/people1.webp 404 [0.09, 127.0.0.1:56268][0m
+2025-06-06 20:03:00,651 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 56304]
+2025-06-06 20:03:00,651 DEBUG http_protocol HTTP close for ['127.0.0.1', 56304]
+2025-06-06 20:03:00,651 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 56304]
+2025-06-06 20:03:00,651 WARNING runserver [33mHTTP GET /img/webp/person11.webp 404 [0.08, 127.0.0.1:56304][0m
+2025-06-06 20:03:00,652 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 56280]
+2025-06-06 20:03:00,652 DEBUG http_protocol HTTP close for ['127.0.0.1', 56280]
+2025-06-06 20:03:00,652 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 56280]
+2025-06-06 20:03:00,652 WARNING runserver [33mHTTP GET /img/webp/people23.webp 404 [0.09, 127.0.0.1:56280][0m
+2025-06-06 20:03:00,652 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 56288]
+2025-06-06 20:03:00,652 DEBUG http_protocol HTTP close for ['127.0.0.1', 56288]
+2025-06-06 20:03:00,653 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 56288]
+2025-06-06 20:03:00,653 WARNING runserver [33mHTTP GET /img/webp/interior29.webp 404 [0.09, 127.0.0.1:56288][0m
+2025-06-06 20:03:00,653 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 56252]
+2025-06-06 20:03:00,653 DEBUG http_protocol HTTP close for ['127.0.0.1', 56252]
+2025-06-06 20:03:00,653 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 56252]
+2025-06-06 20:03:00,653 WARNING runserver [33mHTTP GET /img/webp/people2.webp 404 [0.10, 127.0.0.1:56252][0m
+2025-06-06 20:03:00,669 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56288]
+2025-06-06 20:03:00,670 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 56288]
+2025-06-06 20:03:22,422 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56246]
+2025-06-06 20:03:22,455 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 56246]
+2025-06-06 20:03:22,455 DEBUG http_protocol HTTP close for ['127.0.0.1', 56246]
+2025-06-06 20:03:22,456 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 56246]
+2025-06-06 20:03:22,456 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:56246][0m
+2025-06-06 20:03:22,502 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56280]
+2025-06-06 20:03:22,505 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56304]
+2025-06-06 20:03:22,506 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56268]
+2025-06-06 20:03:22,507 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56252]
+2025-06-06 20:03:22,510 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56246]
+2025-06-06 20:03:22,519 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 55866]
+2025-06-06 20:03:22,591 WARNING log Not Found: /img/webp/interior37.webp
+2025-06-06 20:03:22,592 WARNING log Not Found: /img/webp/people2.webp
+2025-06-06 20:03:22,593 WARNING log Not Found: /img/webp/interior29.webp
+2025-06-06 20:03:22,594 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 56252]
+2025-06-06 20:03:22,594 DEBUG http_protocol HTTP close for ['127.0.0.1', 56252]
+2025-06-06 20:03:22,595 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 56252]
+2025-06-06 20:03:22,595 WARNING runserver [33mHTTP GET /img/webp/interior37.webp 404 [0.09, 127.0.0.1:56252][0m
+2025-06-06 20:03:22,595 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 56304]
+2025-06-06 20:03:22,596 DEBUG http_protocol HTTP close for ['127.0.0.1', 56304]
+2025-06-06 20:03:22,596 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 56304]
+2025-06-06 20:03:22,597 WARNING runserver [33mHTTP GET /img/webp/people2.webp 404 [0.09, 127.0.0.1:56304][0m
+2025-06-06 20:03:22,597 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 56268]
+2025-06-06 20:03:22,597 WARNING log Not Found: /img/webp/people23.webp
+2025-06-06 20:03:22,598 DEBUG http_protocol HTTP close for ['127.0.0.1', 56268]
+2025-06-06 20:03:22,598 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 56268]
+2025-06-06 20:03:22,598 WARNING runserver [33mHTTP GET /img/webp/interior29.webp 404 [0.09, 127.0.0.1:56268][0m
+2025-06-06 20:03:22,600 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 55866]
+2025-06-06 20:03:22,601 DEBUG http_protocol HTTP close for ['127.0.0.1', 55866]
+2025-06-06 20:03:22,601 WARNING log Not Found: /img/webp/people1.webp
+2025-06-06 20:03:22,601 WARNING log Not Found: /img/webp/person11.webp
+2025-06-06 20:03:22,602 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 55866]
+2025-06-06 20:03:22,602 WARNING runserver [33mHTTP GET /img/webp/people23.webp 404 [0.08, 127.0.0.1:55866][0m
+2025-06-06 20:03:22,605 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 56280]
+2025-06-06 20:03:22,607 DEBUG http_protocol HTTP close for ['127.0.0.1', 56280]
+2025-06-06 20:03:22,607 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 56280]
+2025-06-06 20:03:22,608 WARNING runserver [33mHTTP GET /img/webp/people1.webp 404 [0.11, 127.0.0.1:56280][0m
+2025-06-06 20:03:22,609 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 56246]
+2025-06-06 20:03:22,609 DEBUG http_protocol HTTP close for ['127.0.0.1', 56246]
+2025-06-06 20:03:22,610 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 56246]
+2025-06-06 20:03:22,610 WARNING runserver [33mHTTP GET /img/webp/person11.webp 404 [0.10, 127.0.0.1:56246][0m
+2025-06-06 20:03:22,618 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56252]
+2025-06-06 20:03:22,619 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 56252]
+2025-06-06 20:03:22,621 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 56268]
+2025-06-06 20:03:22,622 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 56268]
+2025-06-06 20:07:36,616 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49338]
+2025-06-06 20:07:36,646 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 49338]
+2025-06-06 20:07:36,646 DEBUG http_protocol HTTP close for ['127.0.0.1', 49338]
+2025-06-06 20:07:36,647 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49338]
+2025-06-06 20:07:36,647 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:49338][0m
+2025-06-06 20:07:36,696 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49338]
+2025-06-06 20:07:36,700 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49354]
+2025-06-06 20:07:36,702 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49366]
+2025-06-06 20:07:36,703 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49370]
+2025-06-06 20:07:36,707 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49380]
+2025-06-06 20:07:36,712 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49392]
+2025-06-06 20:07:36,788 WARNING log Not Found: /img/webp/interior37.webp
+2025-06-06 20:07:36,789 WARNING log Not Found: /img/webp/people2.webp
+2025-06-06 20:07:36,790 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49338]
+2025-06-06 20:07:36,790 WARNING log Not Found: /img/webp/people1.webp
+2025-06-06 20:07:36,790 DEBUG http_protocol HTTP close for ['127.0.0.1', 49338]
+2025-06-06 20:07:36,791 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49338]
+2025-06-06 20:07:36,791 WARNING runserver [33mHTTP GET /img/webp/interior37.webp 404 [0.09, 127.0.0.1:49338][0m
+2025-06-06 20:07:36,792 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49366]
+2025-06-06 20:07:36,792 WARNING log Not Found: /img/webp/person11.webp
+2025-06-06 20:07:36,793 DEBUG http_protocol HTTP close for ['127.0.0.1', 49366]
+2025-06-06 20:07:36,793 WARNING log Not Found: /img/webp/people23.webp
+2025-06-06 20:07:36,794 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49366]
+2025-06-06 20:07:36,794 WARNING runserver [33mHTTP GET /img/webp/people2.webp 404 [0.09, 127.0.0.1:49366][0m
+2025-06-06 20:07:36,794 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49370]
+2025-06-06 20:07:36,794 DEBUG http_protocol HTTP close for ['127.0.0.1', 49370]
+2025-06-06 20:07:36,794 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49370]
+2025-06-06 20:07:36,795 WARNING runserver [33mHTTP GET /img/webp/people1.webp 404 [0.09, 127.0.0.1:49370][0m
+2025-06-06 20:07:36,796 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49392]
+2025-06-06 20:07:36,796 WARNING log Not Found: /img/webp/interior29.webp
+2025-06-06 20:07:36,797 DEBUG http_protocol HTTP close for ['127.0.0.1', 49392]
+2025-06-06 20:07:36,798 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49392]
+2025-06-06 20:07:36,798 WARNING runserver [33mHTTP GET /img/webp/person11.webp 404 [0.09, 127.0.0.1:49392][0m
+2025-06-06 20:07:36,798 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49380]
+2025-06-06 20:07:36,798 DEBUG http_protocol HTTP close for ['127.0.0.1', 49380]
+2025-06-06 20:07:36,799 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49380]
+2025-06-06 20:07:36,799 WARNING runserver [33mHTTP GET /img/webp/people23.webp 404 [0.09, 127.0.0.1:49380][0m
+2025-06-06 20:07:36,802 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49354]
+2025-06-06 20:07:36,802 DEBUG http_protocol HTTP close for ['127.0.0.1', 49354]
+2025-06-06 20:07:36,803 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49354]
+2025-06-06 20:07:36,804 WARNING runserver [33mHTTP GET /img/webp/interior29.webp 404 [0.10, 127.0.0.1:49354][0m
+2025-06-06 20:07:36,814 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49354]
+2025-06-06 20:07:36,815 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 49354]
+2025-06-06 20:07:36,816 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49380]
+2025-06-06 20:07:36,817 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 49380]
+2025-06-06 20:10:50,313 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51476]
+2025-06-06 20:10:50,345 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 51476]
+2025-06-06 20:10:50,346 DEBUG http_protocol HTTP close for ['127.0.0.1', 51476]
+2025-06-06 20:10:50,346 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51476]
+2025-06-06 20:10:50,347 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:51476][0m
+2025-06-06 20:10:50,397 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51476]
+2025-06-06 20:10:50,402 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51482]
+2025-06-06 20:10:50,403 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51496]
+2025-06-06 20:10:50,404 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51512]
+2025-06-06 20:10:50,406 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51522]
+2025-06-06 20:10:50,410 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51524]
+2025-06-06 20:10:50,484 WARNING log Not Found: /img/webp/people2.webp
+2025-06-06 20:10:50,484 WARNING log Not Found: /img/webp/interior37.webp
+2025-06-06 20:10:50,486 WARNING log Not Found: /img/webp/person11.webp
+2025-06-06 20:10:50,486 WARNING log Not Found: /img/webp/interior29.webp
+2025-06-06 20:10:50,489 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51496]
+2025-06-06 20:10:50,489 WARNING log Not Found: /img/webp/people23.webp
+2025-06-06 20:10:50,490 DEBUG http_protocol HTTP close for ['127.0.0.1', 51496]
+2025-06-06 20:10:50,490 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51496]
+2025-06-06 20:10:50,489 WARNING log Not Found: /img/webp/people1.webp
+2025-06-06 20:10:50,490 WARNING runserver [33mHTTP GET /img/webp/people2.webp 404 [0.09, 127.0.0.1:51496][0m
+2025-06-06 20:10:50,491 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51476]
+2025-06-06 20:10:50,491 DEBUG http_protocol HTTP close for ['127.0.0.1', 51476]
+2025-06-06 20:10:50,491 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51476]
+2025-06-06 20:10:50,491 WARNING runserver [33mHTTP GET /img/webp/interior37.webp 404 [0.09, 127.0.0.1:51476][0m
+2025-06-06 20:10:50,492 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51524]
+2025-06-06 20:10:50,492 DEBUG http_protocol HTTP close for ['127.0.0.1', 51524]
+2025-06-06 20:10:50,492 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51524]
+2025-06-06 20:10:50,492 WARNING runserver [33mHTTP GET /img/webp/person11.webp 404 [0.08, 127.0.0.1:51524][0m
+2025-06-06 20:10:50,492 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51512]
+2025-06-06 20:10:50,492 DEBUG http_protocol HTTP close for ['127.0.0.1', 51512]
+2025-06-06 20:10:50,493 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51512]
+2025-06-06 20:10:50,493 WARNING runserver [33mHTTP GET /img/webp/interior29.webp 404 [0.09, 127.0.0.1:51512][0m
+2025-06-06 20:10:50,494 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51522]
+2025-06-06 20:10:50,494 DEBUG http_protocol HTTP close for ['127.0.0.1', 51522]
+2025-06-06 20:10:50,495 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51522]
+2025-06-06 20:10:50,495 WARNING runserver [33mHTTP GET /img/webp/people23.webp 404 [0.09, 127.0.0.1:51522][0m
+2025-06-06 20:10:50,495 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51482]
+2025-06-06 20:10:50,495 DEBUG http_protocol HTTP close for ['127.0.0.1', 51482]
+2025-06-06 20:10:50,496 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51482]
+2025-06-06 20:10:50,496 WARNING runserver [33mHTTP GET /img/webp/people1.webp 404 [0.09, 127.0.0.1:51482][0m
+2025-06-06 20:10:50,512 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51512]
+2025-06-06 20:10:50,513 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 51512]
+2025-06-06 20:10:50,517 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51524]
+2025-06-06 20:10:50,518 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 51524]
+2025-06-06 20:17:15,834 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46292]
+2025-06-06 20:17:15,868 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 46292]
+2025-06-06 20:17:15,869 DEBUG http_protocol HTTP close for ['127.0.0.1', 46292]
+2025-06-06 20:17:15,870 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46292]
+2025-06-06 20:17:15,870 INFO runserver [mHTTP GET / 200 [0.04, 127.0.0.1:46292][0m
+2025-06-06 20:17:15,912 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46292]
+2025-06-06 20:17:15,917 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46308]
+2025-06-06 20:17:15,918 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46324]
+2025-06-06 20:17:15,919 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46340]
+2025-06-06 20:17:15,924 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46356]
+2025-06-06 20:17:15,925 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46360]
+2025-06-06 20:17:16,015 WARNING log Not Found: /img/webp/interior37.webp
+2025-06-06 20:17:16,015 WARNING log Not Found: /img/webp/interior29.webp
+2025-06-06 20:17:16,016 WARNING log Not Found: /img/webp/people2.webp
+2025-06-06 20:17:16,016 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 46292]
+2025-06-06 20:17:16,016 WARNING log Not Found: /img/webp/people1.webp
+2025-06-06 20:17:16,017 DEBUG http_protocol HTTP close for ['127.0.0.1', 46292]
+2025-06-06 20:17:16,017 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46292]
+2025-06-06 20:17:16,017 WARNING runserver [33mHTTP GET /img/webp/interior37.webp 404 [0.11, 127.0.0.1:46292][0m
+2025-06-06 20:17:16,018 WARNING log Not Found: /img/webp/person11.webp
+2025-06-06 20:17:16,018 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 46340]
+2025-06-06 20:17:16,019 DEBUG http_protocol HTTP close for ['127.0.0.1', 46340]
+2025-06-06 20:17:16,020 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46340]
+2025-06-06 20:17:16,020 WARNING runserver [33mHTTP GET /img/webp/interior29.webp 404 [0.10, 127.0.0.1:46340][0m
+2025-06-06 20:17:16,020 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 46308]
+2025-06-06 20:17:16,020 DEBUG http_protocol HTTP close for ['127.0.0.1', 46308]
+2025-06-06 20:17:16,020 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46308]
+2025-06-06 20:17:16,021 WARNING runserver [33mHTTP GET /img/webp/people2.webp 404 [0.10, 127.0.0.1:46308][0m
+2025-06-06 20:17:16,021 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 46324]
+2025-06-06 20:17:16,021 DEBUG http_protocol HTTP close for ['127.0.0.1', 46324]
+2025-06-06 20:17:16,021 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46324]
+2025-06-06 20:17:16,021 WARNING runserver [33mHTTP GET /img/webp/people1.webp 404 [0.10, 127.0.0.1:46324][0m
+2025-06-06 20:17:16,021 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 46360]
+2025-06-06 20:17:16,022 DEBUG http_protocol HTTP close for ['127.0.0.1', 46360]
+2025-06-06 20:17:16,022 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46360]
+2025-06-06 20:17:16,022 WARNING runserver [33mHTTP GET /img/webp/person11.webp 404 [0.10, 127.0.0.1:46360][0m
+2025-06-06 20:17:16,024 WARNING log Not Found: /img/webp/people23.webp
+2025-06-06 20:17:16,030 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 46356]
+2025-06-06 20:17:16,030 DEBUG http_protocol HTTP close for ['127.0.0.1', 46356]
+2025-06-06 20:17:16,031 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46356]
+2025-06-06 20:17:16,031 WARNING runserver [33mHTTP GET /img/webp/people23.webp 404 [0.11, 127.0.0.1:46356][0m
+2025-06-06 20:17:16,039 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46340]
+2025-06-06 20:17:16,040 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 46340]
+2025-06-06 20:17:16,041 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46360]
+2025-06-06 20:17:16,042 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 46360]
+2025-06-06 20:18:15,576 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46292]
+2025-06-06 20:18:15,631 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 46292]
+2025-06-06 20:18:15,632 DEBUG http_protocol HTTP close for ['127.0.0.1', 46292]
+2025-06-06 20:18:15,632 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46292]
+2025-06-06 20:18:15,633 INFO runserver [mHTTP GET / 200 [0.06, 127.0.0.1:46292][0m
+2025-06-06 20:18:15,673 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46356]
+2025-06-06 20:18:15,675 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46324]
+2025-06-06 20:18:15,676 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46308]
+2025-06-06 20:18:15,678 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46292]
+2025-06-06 20:18:15,687 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51038]
+2025-06-06 20:18:15,690 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51042]
+2025-06-06 20:18:15,765 WARNING log Not Found: /img/webp/people1.webp
+2025-06-06 20:18:15,767 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 46356]
+2025-06-06 20:18:15,768 DEBUG http_protocol HTTP close for ['127.0.0.1', 46356]
+2025-06-06 20:18:15,768 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46356]
+2025-06-06 20:18:15,768 WARNING runserver [33mHTTP GET /img/webp/people1.webp 404 [0.10, 127.0.0.1:46356][0m
+2025-06-06 20:18:15,768 WARNING log Not Found: /img/webp/interior37.webp
+2025-06-06 20:18:15,770 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 46292]
+2025-06-06 20:18:15,771 DEBUG http_protocol HTTP close for ['127.0.0.1', 46292]
+2025-06-06 20:18:15,771 WARNING log Not Found: /img/webp/interior29.webp
+2025-06-06 20:18:15,771 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46292]
+2025-06-06 20:18:15,771 WARNING runserver [33mHTTP GET /img/webp/interior37.webp 404 [0.09, 127.0.0.1:46292][0m
+2025-06-06 20:18:15,773 WARNING log Not Found: /img/webp/people2.webp
+2025-06-06 20:18:15,774 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 46308]
+2025-06-06 20:18:15,774 DEBUG http_protocol HTTP close for ['127.0.0.1', 46308]
+2025-06-06 20:18:15,774 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46308]
+2025-06-06 20:18:15,774 WARNING runserver [33mHTTP GET /img/webp/interior29.webp 404 [0.10, 127.0.0.1:46308][0m
+2025-06-06 20:18:15,775 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 46324]
+2025-06-06 20:18:15,776 DEBUG http_protocol HTTP close for ['127.0.0.1', 46324]
+2025-06-06 20:18:15,776 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46324]
+2025-06-06 20:18:15,776 WARNING runserver [33mHTTP GET /img/webp/people2.webp 404 [0.10, 127.0.0.1:46324][0m
+2025-06-06 20:18:15,778 WARNING log Not Found: /img/webp/person11.webp
+2025-06-06 20:18:15,778 WARNING log Not Found: /img/webp/people23.webp
+2025-06-06 20:18:15,779 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51042]
+2025-06-06 20:18:15,780 DEBUG http_protocol HTTP close for ['127.0.0.1', 51042]
+2025-06-06 20:18:15,780 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51042]
+2025-06-06 20:18:15,780 WARNING runserver [33mHTTP GET /img/webp/person11.webp 404 [0.09, 127.0.0.1:51042][0m
+2025-06-06 20:18:15,781 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51038]
+2025-06-06 20:18:15,781 DEBUG http_protocol HTTP close for ['127.0.0.1', 51038]
+2025-06-06 20:18:15,782 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51038]
+2025-06-06 20:18:15,782 WARNING runserver [33mHTTP GET /img/webp/people23.webp 404 [0.10, 127.0.0.1:51038][0m
+2025-06-06 20:20:53,622 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 38606]
+2025-06-06 20:20:53,659 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 38606]
+2025-06-06 20:20:53,660 DEBUG http_protocol HTTP close for ['127.0.0.1', 38606]
+2025-06-06 20:20:53,660 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 38606]
+2025-06-06 20:20:53,660 INFO runserver [mHTTP GET / 200 [0.04, 127.0.0.1:38606][0m
+2025-06-06 20:20:53,692 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 38606]
+2025-06-06 20:20:53,725 WARNING log Not Found: /img/webp/person11.webp
+2025-06-06 20:20:53,727 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 38606]
+2025-06-06 20:20:53,727 DEBUG http_protocol HTTP close for ['127.0.0.1', 38606]
+2025-06-06 20:20:53,728 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 38606]
+2025-06-06 20:20:53,728 WARNING runserver [33mHTTP GET /img/webp/person11.webp 404 [0.04, 127.0.0.1:38606][0m
+2025-06-06 20:20:53,775 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 38622]
+2025-06-06 20:20:53,776 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 38622]
+2025-06-06 20:22:11,686 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 57072]
+2025-06-06 20:22:11,723 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 57072]
+2025-06-06 20:22:11,723 DEBUG http_protocol HTTP close for ['127.0.0.1', 57072]
+2025-06-06 20:22:11,723 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 57072]
+2025-06-06 20:22:11,723 INFO runserver [mHTTP GET / 200 [0.04, 127.0.0.1:57072][0m
+2025-06-06 20:22:11,762 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 57072]
+2025-06-06 20:22:11,765 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 57072]
+2025-06-06 20:22:11,767 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 57072]
+2025-06-06 20:22:11,768 DEBUG http_protocol HTTP close for ['127.0.0.1', 57072]
+2025-06-06 20:22:11,768 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 57072]
+2025-06-06 20:22:11,769 INFO runserver [mHTTP GET /static/main/img/webp/person11.webp 200 [0.01, 127.0.0.1:57072][0m
+2025-06-06 20:28:23,838 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 47228]
+2025-06-06 20:28:23,866 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 47228]
+2025-06-06 20:28:23,867 DEBUG http_protocol HTTP close for ['127.0.0.1', 47228]
+2025-06-06 20:28:23,867 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 47228]
+2025-06-06 20:28:23,868 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:47228][0m
+2025-06-06 20:28:23,914 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 47228]
+2025-06-06 20:28:23,931 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 47228]
+2025-06-06 20:28:23,932 DEBUG http_protocol HTTP close for ['127.0.0.1', 47228]
+2025-06-06 20:28:23,932 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 47228]
+2025-06-06 20:28:23,932 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:47228][0m
+2025-06-06 20:28:23,987 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 47234]
+2025-06-06 20:28:23,989 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 47234]
+2025-06-06 20:28:23,990 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 47228]
+2025-06-06 20:28:23,991 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 47228]
+2025-06-06 20:36:33,966 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 54604]
+2025-06-06 20:36:33,997 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 54604]
+2025-06-06 20:36:33,997 DEBUG http_protocol HTTP close for ['127.0.0.1', 54604]
+2025-06-06 20:36:33,998 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 54604]
+2025-06-06 20:36:33,998 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:54604][0m
+2025-06-06 20:36:34,047 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 54604]
+2025-06-06 20:36:34,065 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 54604]
+2025-06-06 20:36:34,065 DEBUG http_protocol HTTP close for ['127.0.0.1', 54604]
+2025-06-06 20:36:34,066 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 54604]
+2025-06-06 20:36:34,066 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:54604][0m
+2025-06-06 20:36:34,123 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 54614]
+2025-06-06 20:36:34,124 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 54614]
+2025-06-06 20:36:34,125 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 54604]
+2025-06-06 20:36:34,126 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 54604]
+2025-06-06 20:38:42,954 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 35514]
+2025-06-06 20:38:42,986 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 35514]
+2025-06-06 20:38:42,986 DEBUG http_protocol HTTP close for ['127.0.0.1', 35514]
+2025-06-06 20:38:42,987 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 35514]
+2025-06-06 20:38:42,987 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:35514][0m
+2025-06-06 20:38:43,025 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 35514]
+2025-06-06 20:38:43,041 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 35514]
+2025-06-06 20:38:43,042 DEBUG http_protocol HTTP close for ['127.0.0.1', 35514]
+2025-06-06 20:38:43,042 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 35514]
+2025-06-06 20:38:43,042 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:35514][0m
+2025-06-06 20:38:43,092 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 35516]
+2025-06-06 20:38:43,093 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 35516]
+2025-06-06 20:39:31,283 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 35514]
+2025-06-06 20:39:31,315 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 35514]
+2025-06-06 20:39:31,315 DEBUG http_protocol HTTP close for ['127.0.0.1', 35514]
+2025-06-06 20:39:31,316 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 35514]
+2025-06-06 20:39:31,316 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:35514][0m
+2025-06-06 20:39:31,360 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 35514]
+2025-06-06 20:39:31,374 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 35514]
+2025-06-06 20:39:31,374 DEBUG http_protocol HTTP close for ['127.0.0.1', 35514]
+2025-06-06 20:39:31,375 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 35514]
+2025-06-06 20:39:31,376 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:35514][0m
+2025-06-06 20:39:31,427 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 42730]
+2025-06-06 20:39:31,428 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 42730]
+2025-06-06 20:39:31,428 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 35514]
+2025-06-06 20:39:31,429 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 35514]
+2025-06-06 20:40:17,063 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36556]
+2025-06-06 20:40:17,096 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36556]
+2025-06-06 20:40:17,097 DEBUG http_protocol HTTP close for ['127.0.0.1', 36556]
+2025-06-06 20:40:17,097 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36556]
+2025-06-06 20:40:17,097 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:36556][0m
+2025-06-06 20:40:17,140 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36556]
+2025-06-06 20:40:17,157 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 36556]
+2025-06-06 20:40:17,157 DEBUG http_protocol HTTP close for ['127.0.0.1', 36556]
+2025-06-06 20:40:17,158 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36556]
+2025-06-06 20:40:17,158 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:36556][0m
+2025-06-06 20:40:17,213 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36562]
+2025-06-06 20:40:17,214 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 36562]
+2025-06-06 20:40:52,025 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36556]
+2025-06-06 20:40:52,053 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36556]
+2025-06-06 20:40:52,054 DEBUG http_protocol HTTP close for ['127.0.0.1', 36556]
+2025-06-06 20:40:52,054 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36556]
+2025-06-06 20:40:52,054 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:36556][0m
+2025-06-06 20:40:52,096 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36556]
+2025-06-06 20:40:52,114 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 36556]
+2025-06-06 20:40:52,115 DEBUG http_protocol HTTP close for ['127.0.0.1', 36556]
+2025-06-06 20:40:52,115 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36556]
+2025-06-06 20:40:52,116 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:36556][0m
+2025-06-06 20:40:52,163 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 50948]
+2025-06-06 20:40:52,164 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 50948]
+2025-06-06 20:41:25,849 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36556]
+2025-06-06 20:41:25,881 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36556]
+2025-06-06 20:41:25,882 DEBUG http_protocol HTTP close for ['127.0.0.1', 36556]
+2025-06-06 20:41:25,883 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36556]
+2025-06-06 20:41:25,883 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:36556][0m
+2025-06-06 20:41:25,919 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36556]
+2025-06-06 20:41:25,931 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 36556]
+2025-06-06 20:41:25,932 DEBUG http_protocol HTTP close for ['127.0.0.1', 36556]
+2025-06-06 20:41:25,932 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36556]
+2025-06-06 20:41:25,933 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.01, 127.0.0.1:36556][0m
+2025-06-06 20:41:25,979 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 43454]
+2025-06-06 20:41:25,980 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 43454]
+2025-06-06 20:42:11,355 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36556]
+2025-06-06 20:42:11,383 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36556]
+2025-06-06 20:42:11,384 DEBUG http_protocol HTTP close for ['127.0.0.1', 36556]
+2025-06-06 20:42:11,385 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36556]
+2025-06-06 20:42:11,385 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:36556][0m
+2025-06-06 20:42:11,425 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36556]
+2025-06-06 20:42:11,448 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 36556]
+2025-06-06 20:42:11,448 DEBUG http_protocol HTTP close for ['127.0.0.1', 36556]
+2025-06-06 20:42:11,449 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36556]
+2025-06-06 20:42:11,450 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:36556][0m
+2025-06-06 20:42:11,491 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 37796]
+2025-06-06 20:42:11,492 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 37796]
+2025-06-06 20:42:11,492 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36556]
+2025-06-06 20:42:11,493 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 36556]
+2025-06-06 20:44:23,873 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 35630]
+2025-06-06 20:44:23,909 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 35630]
+2025-06-06 20:44:23,910 DEBUG http_protocol HTTP close for ['127.0.0.1', 35630]
+2025-06-06 20:44:23,910 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 35630]
+2025-06-06 20:44:23,910 INFO runserver [mHTTP GET / 200 [0.04, 127.0.0.1:35630][0m
+2025-06-06 20:44:23,952 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 35630]
+2025-06-06 20:44:23,965 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 35630]
+2025-06-06 20:44:23,966 DEBUG http_protocol HTTP close for ['127.0.0.1', 35630]
+2025-06-06 20:44:23,966 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 35630]
+2025-06-06 20:44:23,966 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.01, 127.0.0.1:35630][0m
+2025-06-06 20:44:24,020 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 35634]
+2025-06-06 20:44:24,021 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 35634]
+2025-06-06 20:44:53,146 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 35630]
+2025-06-06 20:44:53,235 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 35630]
+2025-06-06 20:44:53,236 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 35630]
+2025-06-06 20:44:53,236 DEBUG http_protocol HTTP close for ['127.0.0.1', 35630]
+2025-06-06 20:44:53,237 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 35630]
+2025-06-06 20:44:53,238 INFO runserver [mHTTP GET /listings/ 200 [0.09, 127.0.0.1:35630][0m
+2025-06-06 20:44:53,320 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 35630]
+2025-06-06 20:44:53,326 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 35630]
+2025-06-06 20:44:53,329 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 35630]
+2025-06-06 20:44:53,329 DEBUG http_protocol HTTP close for ['127.0.0.1', 35630]
+2025-06-06 20:44:53,330 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 35630]
+2025-06-06 20:44:53,330 INFO runserver [mHTTP GET /static/shop/webfonts/fa-regular-400.woff2 200 [0.01, 127.0.0.1:35630][0m
+2025-06-06 20:44:53,389 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 35630]
+2025-06-06 20:44:53,390 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 35630]
+2025-06-06 20:45:21,131 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49344]
+2025-06-06 20:45:21,168 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 49344]
+2025-06-06 20:45:21,169 DEBUG http_protocol HTTP close for ['127.0.0.1', 49344]
+2025-06-06 20:45:21,169 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49344]
+2025-06-06 20:45:21,169 INFO runserver [mHTTP GET / 200 [0.04, 127.0.0.1:49344][0m
+2025-06-06 20:45:21,239 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49344]
+2025-06-06 20:45:21,255 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49344]
+2025-06-06 20:45:21,256 DEBUG http_protocol HTTP close for ['127.0.0.1', 49344]
+2025-06-06 20:45:21,257 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49344]
+2025-06-06 20:45:21,257 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:49344][0m
+2025-06-06 20:48:01,624 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 59986]
+2025-06-06 20:48:01,655 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 59986]
+2025-06-06 20:48:01,656 DEBUG http_protocol HTTP close for ['127.0.0.1', 59986]
+2025-06-06 20:48:01,656 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 59986]
+2025-06-06 20:48:01,656 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:59986][0m
+2025-06-06 20:48:01,707 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 59986]
+2025-06-06 20:48:01,720 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 59986]
+2025-06-06 20:48:01,721 DEBUG http_protocol HTTP close for ['127.0.0.1', 59986]
+2025-06-06 20:48:01,721 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 59986]
+2025-06-06 20:48:01,721 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.01, 127.0.0.1:59986][0m
+2025-06-06 20:48:01,774 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60000]
+2025-06-06 20:48:01,775 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 60000]
+2025-06-06 20:50:33,477 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46456]
+2025-06-06 20:50:33,520 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 46456]
+2025-06-06 20:50:33,520 DEBUG http_protocol HTTP close for ['127.0.0.1', 46456]
+2025-06-06 20:50:33,521 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46456]
+2025-06-06 20:50:33,521 INFO runserver [mHTTP GET / 200 [0.04, 127.0.0.1:46456][0m
+2025-06-06 20:50:33,562 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46456]
+2025-06-06 20:50:33,576 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 46456]
+2025-06-06 20:50:33,577 DEBUG http_protocol HTTP close for ['127.0.0.1', 46456]
+2025-06-06 20:50:33,577 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 46456]
+2025-06-06 20:50:33,577 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.01, 127.0.0.1:46456][0m
+2025-06-06 20:50:33,627 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 46456]
+2025-06-06 20:50:33,629 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 46456]
+2025-06-06 20:51:05,501 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51514]
+2025-06-06 20:51:05,532 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 51514]
+2025-06-06 20:51:05,533 DEBUG http_protocol HTTP close for ['127.0.0.1', 51514]
+2025-06-06 20:51:05,533 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51514]
+2025-06-06 20:51:05,534 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:51514][0m
+2025-06-06 20:51:05,578 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51514]
+2025-06-06 20:51:05,592 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51514]
+2025-06-06 20:51:05,592 DEBUG http_protocol HTTP close for ['127.0.0.1', 51514]
+2025-06-06 20:51:05,593 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51514]
+2025-06-06 20:51:05,593 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:51514][0m
+2025-06-06 20:51:05,640 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51528]
+2025-06-06 20:51:05,641 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 51528]
+2025-06-06 20:51:50,182 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51514]
+2025-06-06 20:51:50,217 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 51514]
+2025-06-06 20:51:50,217 DEBUG http_protocol HTTP close for ['127.0.0.1', 51514]
+2025-06-06 20:51:50,218 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51514]
+2025-06-06 20:51:50,218 INFO runserver [mHTTP GET / 200 [0.04, 127.0.0.1:51514][0m
+2025-06-06 20:51:50,251 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 51514]
+2025-06-06 20:51:50,267 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 51514]
+2025-06-06 20:51:50,267 DEBUG http_protocol HTTP close for ['127.0.0.1', 51514]
+2025-06-06 20:51:50,268 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 51514]
+2025-06-06 20:51:50,268 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:51514][0m
+2025-06-06 20:51:50,322 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 37244]
+2025-06-06 20:51:50,323 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 37244]
+2025-06-06 20:59:36,739 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60532]
+2025-06-06 20:59:36,769 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 60532]
+2025-06-06 20:59:36,770 DEBUG http_protocol HTTP close for ['127.0.0.1', 60532]
+2025-06-06 20:59:36,770 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60532]
+2025-06-06 20:59:36,771 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:60532][0m
+2025-06-06 20:59:36,822 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60532]
+2025-06-06 20:59:36,837 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60532]
+2025-06-06 20:59:36,837 DEBUG http_protocol HTTP close for ['127.0.0.1', 60532]
+2025-06-06 20:59:36,838 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60532]
+2025-06-06 20:59:36,838 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:60532][0m
+2025-06-06 20:59:36,891 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60536]
+2025-06-06 20:59:36,892 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 60536]
+2025-06-06 21:04:00,845 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 50644]
+2025-06-06 21:04:00,883 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 50644]
+2025-06-06 21:04:00,883 DEBUG http_protocol HTTP close for ['127.0.0.1', 50644]
+2025-06-06 21:04:00,884 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 50644]
+2025-06-06 21:04:00,884 INFO runserver [mHTTP GET / 200 [0.04, 127.0.0.1:50644][0m
+2025-06-06 21:04:00,924 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 50644]
+2025-06-06 21:04:00,939 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 50644]
+2025-06-06 21:04:00,940 DEBUG http_protocol HTTP close for ['127.0.0.1', 50644]
+2025-06-06 21:04:00,940 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 50644]
+2025-06-06 21:04:00,940 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:50644][0m
+2025-06-06 21:04:00,996 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 50652]
+2025-06-06 21:04:00,998 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 50652]
+2025-06-06 21:04:25,764 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 50644]
+2025-06-06 21:04:25,828 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 50644]
+2025-06-06 21:04:25,828 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 50644]
+2025-06-06 21:04:25,829 DEBUG http_protocol HTTP close for ['127.0.0.1', 50644]
+2025-06-06 21:04:25,830 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 50644]
+2025-06-06 21:04:25,830 INFO runserver [mHTTP GET /listings/ 200 [0.07, 127.0.0.1:50644][0m
+2025-06-06 21:04:25,910 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 50644]
+2025-06-06 21:04:25,911 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 50644]
+2025-06-06 21:05:14,433 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45194]
+2025-06-06 21:05:14,491 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 45194]
+2025-06-06 21:05:14,491 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 45194]
+2025-06-06 21:05:14,492 DEBUG http_protocol HTTP close for ['127.0.0.1', 45194]
+2025-06-06 21:05:14,492 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45194]
+2025-06-06 21:05:14,492 INFO runserver [mHTTP GET /listings/?show=36&sort_by=latest 200 [0.06, 127.0.0.1:45194][0m
+2025-06-06 21:05:50,683 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45194]
+2025-06-06 21:05:50,707 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 45194]
+2025-06-06 21:05:50,708 DEBUG http_protocol HTTP close for ['127.0.0.1', 45194]
+2025-06-06 21:05:50,708 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45194]
+2025-06-06 21:05:50,709 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:45194][0m
+2025-06-06 21:05:50,755 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 45194]
+2025-06-06 21:05:50,773 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 45194]
+2025-06-06 21:05:50,775 DEBUG http_protocol HTTP close for ['127.0.0.1', 45194]
+2025-06-06 21:05:50,775 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 45194]
+2025-06-06 21:05:50,777 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:45194][0m
+2025-06-06 21:05:50,819 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 54970]
+2025-06-06 21:05:50,820 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 54970]
+2025-06-06 21:07:44,920 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 34904]
+2025-06-06 21:07:44,982 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 34904]
+2025-06-06 21:07:44,983 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 34904]
+2025-06-06 21:07:44,983 DEBUG http_protocol HTTP close for ['127.0.0.1', 34904]
+2025-06-06 21:07:44,983 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 34904]
+2025-06-06 21:07:44,983 INFO runserver [mHTTP GET /listings/?show=36&sort_by=latest 200 [0.06, 127.0.0.1:34904][0m
+2025-06-06 21:07:45,093 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 34904]
+2025-06-06 21:07:45,094 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 34904]
+2025-06-06 21:07:56,723 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 59076]
+2025-06-06 21:07:56,755 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 59076]
+2025-06-06 21:07:56,755 DEBUG http_protocol HTTP close for ['127.0.0.1', 59076]
+2025-06-06 21:07:56,756 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 59076]
+2025-06-06 21:07:56,756 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:59076][0m
+2025-06-06 21:07:56,798 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 59076]
+2025-06-06 21:07:56,818 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 59076]
+2025-06-06 21:07:56,818 DEBUG http_protocol HTTP close for ['127.0.0.1', 59076]
+2025-06-06 21:07:56,819 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 59076]
+2025-06-06 21:07:56,819 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.02, 127.0.0.1:59076][0m
+2025-06-06 21:08:34,002 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 59076]
+2025-06-06 21:08:34,058 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 59076]
+2025-06-06 21:08:34,060 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 59076]
+2025-06-06 21:08:34,060 DEBUG http_protocol HTTP close for ['127.0.0.1', 59076]
+2025-06-06 21:08:34,061 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 59076]
+2025-06-06 21:08:34,061 INFO runserver [mHTTP GET /listings/?show=36&sort_by=latest 200 [0.06, 127.0.0.1:59076][0m
+2025-06-06 21:08:34,182 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 59076]
+2025-06-06 21:08:34,183 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 59076]
+2025-06-06 21:08:56,642 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,684 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,685 DEBUG http_protocol HTTP close for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,685 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,686 INFO runserver [mHTTP GET /sign-in/ 200 [0.04, 127.0.0.1:39464][0m
+2025-06-06 21:08:56,755 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,757 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39470]
+2025-06-06 21:08:56,759 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39472]
+2025-06-06 21:08:56,762 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,763 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 39472]
+2025-06-06 21:08:56,764 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 39470]
+2025-06-06 21:08:56,765 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39472]
+2025-06-06 21:08:56,765 DEBUG http_protocol HTTP close for ['127.0.0.1', 39472]
+2025-06-06 21:08:56,766 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39472]
+2025-06-06 21:08:56,766 INFO runserver [mHTTP GET /static/main/fonts/inter-v12-latin-500.woff2 200 [0.01, 127.0.0.1:39472][0m
+2025-06-06 21:08:56,766 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39470]
+2025-06-06 21:08:56,766 DEBUG http_protocol HTTP close for ['127.0.0.1', 39470]
+2025-06-06 21:08:56,767 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39470]
+2025-06-06 21:08:56,767 INFO runserver [mHTTP GET /static/main/fonts/inter-v12-latin-300.woff2 200 [0.01, 127.0.0.1:39470][0m
+2025-06-06 21:08:56,768 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,768 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,768 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,769 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,769 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,769 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,769 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,769 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,769 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,769 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,769 DEBUG http_protocol HTTP close for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,770 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39464]
+2025-06-06 21:08:56,770 INFO runserver [mHTTP GET /static/main/img/webp/colorful.webp 200 [0.02, 127.0.0.1:39464][0m
+2025-06-06 21:09:14,796 DEBUG http_protocol HTTP b'POST' request for ['127.0.0.1', 39464]
+2025-06-06 21:09:15,437 INFO views Authenticatd user: hunter02
+2025-06-06 21:09:15,519 DEBUG http_protocol HTTP 302 response started for ['127.0.0.1', 39464]
+2025-06-06 21:09:15,520 DEBUG http_protocol HTTP close for ['127.0.0.1', 39464]
+2025-06-06 21:09:15,521 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39464]
+2025-06-06 21:09:15,522 INFO runserver [32mHTTP POST /sign-in/ 302 [0.73, 127.0.0.1:39464][0m
+2025-06-06 21:09:15,543 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39464]
+2025-06-06 21:09:15,576 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 39464]
+2025-06-06 21:09:15,577 DEBUG http_protocol HTTP close for ['127.0.0.1', 39464]
+2025-06-06 21:09:15,577 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39464]
+2025-06-06 21:09:15,578 INFO runserver [mHTTP GET / 200 [0.03, 127.0.0.1:39464][0m
+2025-06-06 21:09:15,632 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39472]
+2025-06-06 21:09:15,636 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 39472]
+2025-06-06 21:09:15,639 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39472]
+2025-06-06 21:09:15,639 DEBUG http_protocol HTTP close for ['127.0.0.1', 39472]
+2025-06-06 21:09:15,640 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39472]
+2025-06-06 21:09:15,640 INFO runserver [mHTTP GET /static/main/img/webp/people2.webp 200 [0.01, 127.0.0.1:39472][0m
+2025-06-06 21:09:15,643 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39470]
+2025-06-06 21:09:15,670 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 39470]
+2025-06-06 21:09:15,670 DEBUG http_protocol HTTP close for ['127.0.0.1', 39470]
+2025-06-06 21:09:15,670 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39470]
+2025-06-06 21:09:15,671 WARNING runserver [33mHTTP GET /static/main/img/webp/house-icon.webp 404 [0.03, 127.0.0.1:39470][0m
+2025-06-06 21:09:15,725 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39472]
+2025-06-06 21:09:15,726 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 39472]
+2025-06-06 21:09:20,597 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,624 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,625 DEBUG http_protocol HTTP close for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,626 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,626 INFO runserver [mHTTP GET /dash/ 200 [0.03, 127.0.0.1:39464][0m
+2025-06-06 21:09:20,707 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,709 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,711 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,712 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36042]
+2025-06-06 21:09:20,713 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,716 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36066]
+2025-06-06 21:09:20,722 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,722 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,723 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,723 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,724 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36042]
+2025-06-06 21:09:20,725 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36066]
+2025-06-06 21:09:20,726 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,726 DEBUG http_protocol HTTP close for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,727 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,727 INFO runserver [mHTTP GET /static/dash/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css 200 [0.02, 127.0.0.1:39464][0m
+2025-06-06 21:09:20,728 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,728 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,728 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,728 DEBUG http_protocol HTTP close for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,728 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,728 INFO runserver [mHTTP GET /static/dash/css/bootstrap.min.css 200 [0.02, 127.0.0.1:36028][0m
+2025-06-06 21:09:20,730 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36042]
+2025-06-06 21:09:20,730 DEBUG http_protocol HTTP close for ['127.0.0.1', 36042]
+2025-06-06 21:09:20,731 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36042]
+2025-06-06 21:09:20,733 INFO runserver [mHTTP GET /static/dash/css/style.css 200 [0.02, 127.0.0.1:36042][0m
+2025-06-06 21:09:20,734 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,734 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,735 DEBUG http_protocol HTTP close for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,735 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,735 INFO runserver [mHTTP GET /static/dash/vendor/jquery/jquery-3.5.1.min.js 200 [0.02, 127.0.0.1:36054][0m
+2025-06-06 21:09:20,735 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,735 DEBUG http_protocol HTTP close for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,736 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,736 INFO runserver [mHTTP GET /static/dash/lib/owlcarousel/assets/owl.carousel.min.css 200 [0.03, 127.0.0.1:39470][0m
+2025-06-06 21:09:20,736 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36066]
+2025-06-06 21:09:20,736 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36066]
+2025-06-06 21:09:20,736 DEBUG http_protocol HTTP close for ['127.0.0.1', 36066]
+2025-06-06 21:09:20,736 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36066]
+2025-06-06 21:09:20,737 INFO runserver [mHTTP GET /static/dash/vendor/bootstrap.bundle.min.js 200 [0.02, 127.0.0.1:36066][0m
+2025-06-06 21:09:20,738 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,739 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,743 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36042]
+2025-06-06 21:09:20,745 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,747 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,748 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36066]
+2025-06-06 21:09:20,764 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,766 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,766 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,770 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36066]
+2025-06-06 21:09:20,771 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36042]
+2025-06-06 21:09:20,772 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,772 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,772 DEBUG http_protocol HTTP close for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,773 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,773 INFO runserver [mHTTP GET /static/dash/lib/owlcarousel/owl.carousel.min.js 200 [0.03, 127.0.0.1:39470][0m
+2025-06-06 21:09:20,773 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,774 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,774 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,774 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,775 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,775 DEBUG http_protocol HTTP close for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,775 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36054]
+2025-06-06 21:09:20,775 INFO runserver [mHTTP GET /static/dash/lib/tempusdominus/js/moment.min.js 200 [0.03, 127.0.0.1:36054][0m
+2025-06-06 21:09:20,776 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,776 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,776 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,776 DEBUG http_protocol HTTP close for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,777 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39464]
+2025-06-06 21:09:20,777 INFO runserver [mHTTP GET /static/dash/lib/chart/chart.min.js 200 [0.04, 127.0.0.1:39464][0m
+2025-06-06 21:09:20,777 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36066]
+2025-06-06 21:09:20,777 DEBUG http_protocol HTTP close for ['127.0.0.1', 36066]
+2025-06-06 21:09:20,777 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36066]
+2025-06-06 21:09:20,777 INFO runserver [mHTTP GET /static/dash/lib/tempusdominus/js/moment-timezone.min.js 200 [0.03, 127.0.0.1:36066][0m
+2025-06-06 21:09:20,778 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36042]
+2025-06-06 21:09:20,778 DEBUG http_protocol HTTP close for ['127.0.0.1', 36042]
+2025-06-06 21:09:20,778 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36042]
+2025-06-06 21:09:20,778 INFO runserver [mHTTP GET /static/dash/lib/waypoints/waypoints.min.js 200 [0.04, 127.0.0.1:36042][0m
+2025-06-06 21:09:20,779 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,779 DEBUG http_protocol HTTP close for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,779 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,779 INFO runserver [mHTTP GET /static/dash/lib/easing/easing.min.js 200 [0.04, 127.0.0.1:36028][0m
+2025-06-06 21:09:20,780 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,786 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,790 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,791 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,792 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,792 DEBUG http_protocol HTTP close for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,793 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39470]
+2025-06-06 21:09:20,793 INFO runserver [mHTTP GET /static/dash/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js 200 [0.01, 127.0.0.1:39470][0m
+2025-06-06 21:09:20,794 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,794 DEBUG http_protocol HTTP close for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,795 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36028]
+2025-06-06 21:09:20,795 INFO runserver [mHTTP GET /static/dash/js/main.js 200 [0.01, 127.0.0.1:36028][0m
+2025-06-06 21:09:22,498 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36054]
+2025-06-06 21:09:22,499 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36028]
+2025-06-06 21:09:22,523 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 36054]
+2025-06-06 21:09:22,524 WARNING log Not Found: /dash/img/user.jpg
+2025-06-06 21:09:22,524 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 36028]
+2025-06-06 21:09:22,525 DEBUG http_protocol HTTP close for ['127.0.0.1', 36028]
+2025-06-06 21:09:22,525 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36028]
+2025-06-06 21:09:22,525 WARNING runserver [33mHTTP GET /dash/img/user.jpg 404 [0.03, 127.0.0.1:36028][0m
+2025-06-06 21:09:22,526 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36054]
+2025-06-06 21:09:22,526 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36054]
+2025-06-06 21:09:22,526 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 36054]
+2025-06-06 21:09:22,526 DEBUG http_protocol HTTP close for ['127.0.0.1', 36054]
+2025-06-06 21:09:22,527 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36054]
+2025-06-06 21:09:22,527 INFO runserver [mHTTP GET /media/user.jpg 200 [0.03, 127.0.0.1:36054][0m
+2025-06-06 21:09:23,247 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 36054]
+2025-06-06 21:09:23,258 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 36054]
+2025-06-06 21:09:23,259 DEBUG http_protocol HTTP close for ['127.0.0.1', 36054]
+2025-06-06 21:09:23,259 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 36054]
+2025-06-06 21:09:23,259 WARNING runserver [33mHTTP GET /static/dash/img/favicon.ico 404 [0.01, 127.0.0.1:36054][0m
+2025-06-06 21:10:55,472 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39144]
+2025-06-06 21:10:55,512 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 39144]
+2025-06-06 21:10:55,513 DEBUG http_protocol HTTP close for ['127.0.0.1', 39144]
+2025-06-06 21:10:55,513 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39144]
+2025-06-06 21:10:55,513 INFO runserver [mHTTP GET /dash/ 200 [0.04, 127.0.0.1:39144][0m
+2025-06-06 21:10:55,563 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 39144]
+2025-06-06 21:10:55,599 WARNING log Not Found: /dash/img/user.jpg
+2025-06-06 21:10:55,600 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 39144]
+2025-06-06 21:10:55,601 DEBUG http_protocol HTTP close for ['127.0.0.1', 39144]
+2025-06-06 21:10:55,601 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 39144]
+2025-06-06 21:10:55,601 WARNING runserver [33mHTTP GET /dash/img/user.jpg 404 [0.04, 127.0.0.1:39144][0m
+2025-06-06 21:13:23,937 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 40418]
+2025-06-06 21:13:23,963 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 40418]
+2025-06-06 21:13:23,964 DEBUG http_protocol HTTP close for ['127.0.0.1', 40418]
+2025-06-06 21:13:23,964 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 40418]
+2025-06-06 21:13:23,964 INFO runserver [mHTTP GET /dash/ 200 [0.03, 127.0.0.1:40418][0m
+2025-06-06 21:13:24,014 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 40418]
+2025-06-06 21:13:24,041 WARNING log Not Found: /dash/img/user.jpg
+2025-06-06 21:13:24,045 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 40418]
+2025-06-06 21:13:24,048 DEBUG http_protocol HTTP close for ['127.0.0.1', 40418]
+2025-06-06 21:13:24,049 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 40418]
+2025-06-06 21:13:24,050 WARNING runserver [33mHTTP GET /dash/img/user.jpg 404 [0.04, 127.0.0.1:40418][0m
+2025-06-06 21:13:28,242 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,281 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,282 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,282 DEBUG http_protocol HTTP close for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,282 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,283 INFO runserver [mHTTP GET /konnekt/profile/ 200 [0.04, 127.0.0.1:40418][0m
+2025-06-06 21:13:28,344 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,347 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,353 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,356 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,361 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,361 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,362 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,362 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,362 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,362 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,363 DEBUG http_protocol HTTP close for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,363 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,363 INFO runserver [mHTTP GET /static/konnekt/css/bundle.css 200 [0.02, 127.0.0.1:49784][0m
+2025-06-06 21:13:28,366 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,367 DEBUG http_protocol HTTP close for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,367 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,370 INFO runserver [mHTTP GET /static/konnekt/css/app.css 200 [0.02, 127.0.0.1:40418][0m
+2025-06-06 21:13:28,374 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49788]
+2025-06-06 21:13:28,374 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,376 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,388 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,389 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,390 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,485 WARNING log Not Found: /konnekt/profile/images/avatar/3.jpg
+2025-06-06 21:13:28,485 WARNING log Not Found: /konnekt/profile/images/avatar/6.jpg
+2025-06-06 21:13:28,489 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,489 WARNING log Not Found: /konnekt/profile/images/avatar/2.jpg
+2025-06-06 21:13:28,490 WARNING log Not Found: /konnekt/profile/images/avatar/1.jpg
+2025-06-06 21:13:28,490 DEBUG http_protocol HTTP close for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,491 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,491 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/3.jpg 404 [0.10, 127.0.0.1:49792][0m
+2025-06-06 21:13:28,491 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,491 DEBUG http_protocol HTTP close for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,492 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,492 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/6.jpg 404 [0.12, 127.0.0.1:49784][0m
+2025-06-06 21:13:28,493 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,496 DEBUG http_protocol HTTP close for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,497 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,494 WARNING log Not Found: /konnekt/profile/images/avatar/5.jpg
+2025-06-06 21:13:28,497 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/2.jpg 404 [0.12, 127.0.0.1:40418][0m
+2025-06-06 21:13:28,501 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49788]
+2025-06-06 21:13:28,502 DEBUG http_protocol HTTP close for ['127.0.0.1', 49788]
+2025-06-06 21:13:28,503 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49788]
+2025-06-06 21:13:28,503 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/1.jpg 404 [0.13, 127.0.0.1:49788][0m
+2025-06-06 21:13:28,504 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,504 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,510 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,511 DEBUG http_protocol HTTP close for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,511 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,511 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/5.jpg 404 [0.12, 127.0.0.1:49820][0m
+2025-06-06 21:13:28,512 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,513 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49788]
+2025-06-06 21:13:28,520 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,524 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,528 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,536 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,539 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,541 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,542 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,542 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,543 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,543 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,543 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,543 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,544 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,544 DEBUG http_protocol HTTP close for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,544 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,545 INFO runserver [mHTTP GET /media/cover.jpg 200 [0.16, 127.0.0.1:49806][0m
+2025-06-06 21:13:28,545 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,545 DEBUG http_protocol HTTP close for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,546 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,546 INFO runserver [mHTTP GET /static/konnekt/js/sockets.js 200 [0.04, 127.0.0.1:49792][0m
+2025-06-06 21:13:28,546 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,547 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,548 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,548 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,548 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,549 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,549 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,549 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,549 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,549 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,549 DEBUG http_protocol HTTP close for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,549 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,550 INFO runserver [mHTTP GET /static/konnekt/js/bundle.js 200 [0.05, 127.0.0.1:49784][0m
+2025-06-06 21:13:28,553 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,554 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,554 DEBUG http_protocol HTTP close for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,555 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,555 INFO runserver [mHTTP GET /static/konnekt/fonts/Poppins-Regular.woff 200 [0.03, 127.0.0.1:49820][0m
+2025-06-06 21:13:28,555 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,556 DEBUG http_protocol HTTP close for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,556 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,556 INFO runserver [mHTTP GET /static/konnekt/js/app.js 200 [0.04, 127.0.0.1:40418][0m
+2025-06-06 21:13:28,557 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,566 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,567 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,569 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,574 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,596 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,598 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,599 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,600 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,600 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,600 DEBUG http_protocol HTTP close for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,601 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,602 INFO runserver [mHTTP GET /static/konnekt/fonts/Poppins-Medium.woff 200 [0.04, 127.0.0.1:40418][0m
+2025-06-06 21:13:28,606 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,606 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,610 DEBUG http_protocol HTTP close for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,611 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49792]
+2025-06-06 21:13:28,612 INFO runserver [mHTTP GET /static/konnekt/fonts/Poppins-SemiBold.woff 200 [0.05, 127.0.0.1:49792][0m
+2025-06-06 21:13:28,613 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,613 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,614 DEBUG http_protocol HTTP close for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,614 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49820]
+2025-06-06 21:13:28,616 INFO runserver [mHTTP GET /static/konnekt/fonts/Poppins-Bold.woff 200 [0.05, 127.0.0.1:49820][0m
+2025-06-06 21:13:28,617 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,663 WARNING log Not Found: /konnekt/profile/images/cover/1.jpg
+2025-06-06 21:13:28,677 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49788]
+2025-06-06 21:13:28,679 DEBUG http_protocol HTTP close for ['127.0.0.1', 49788]
+2025-06-06 21:13:28,679 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49788]
+2025-06-06 21:13:28,682 WARNING runserver [33mHTTP GET /konnekt/profile/images/cover/1.jpg 404 [0.17, 127.0.0.1:49788][0m
+2025-06-06 21:13:28,716 WARNING log Not Found: /konnekt/profile/images/v-cover/1.jpg
+2025-06-06 21:13:28,726 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,726 WARNING log Not Found: /konnekt/profile/images/avatar/4.jpg
+2025-06-06 21:13:28,729 DEBUG http_protocol HTTP close for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,729 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49806]
+2025-06-06 21:13:28,729 WARNING runserver [33mHTTP GET /konnekt/profile/images/v-cover/1.jpg 404 [0.16, 127.0.0.1:49806][0m
+2025-06-06 21:13:28,733 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,733 DEBUG http_protocol HTTP close for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,734 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,734 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/4.jpg 404 [0.16, 127.0.0.1:49784][0m
+2025-06-06 21:13:28,739 WARNING log Not Found: /konnekt/profile/images/v-cover/2.jpg
+2025-06-06 21:13:28,740 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,740 DEBUG http_protocol HTTP close for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,741 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 40418]
+2025-06-06 21:13:28,742 WARNING runserver [33mHTTP GET /konnekt/profile/images/v-cover/2.jpg 404 [0.12, 127.0.0.1:40418][0m
+2025-06-06 21:13:28,751 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,766 WARNING log Not Found: /favicon.ico
+2025-06-06 21:13:28,766 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,766 DEBUG http_protocol HTTP close for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,767 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49784]
+2025-06-06 21:13:28,767 WARNING runserver [33mHTTP GET /favicon.ico 404 [0.02, 127.0.0.1:49784][0m
+2025-06-06 21:29:14,575 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,605 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,605 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,605 DEBUG http_protocol HTTP close for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,606 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,606 INFO runserver [mHTTP GET /konnekt/profile/ 200 [0.03, 127.0.0.1:60642][0m
+2025-06-06 21:29:14,692 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,695 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60654]
+2025-06-06 21:29:14,700 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60662]
+2025-06-06 21:29:14,704 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60672]
+2025-06-06 21:29:14,705 DEBUG http_protocol HTTP 304 response started for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,706 DEBUG http_protocol HTTP close for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,706 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,707 INFO runserver [36mHTTP GET /static/konnekt/js/sockets.js 304 [0.01, 127.0.0.1:60642][0m
+2025-06-06 21:29:14,714 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60688]
+2025-06-06 21:29:14,715 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60696]
+2025-06-06 21:29:14,722 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,806 WARNING log Not Found: /konnekt/profile/images/avatar/4.jpg
+2025-06-06 21:29:14,808 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60688]
+2025-06-06 21:29:14,807 WARNING log Not Found: /konnekt/profile/images/avatar/6.jpg
+2025-06-06 21:29:14,807 WARNING log Not Found: /konnekt/profile/images/avatar/1.jpg
+2025-06-06 21:29:14,814 DEBUG http_protocol HTTP close for ['127.0.0.1', 60688]
+2025-06-06 21:29:14,816 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60688]
+2025-06-06 21:29:14,816 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/4.jpg 404 [0.10, 127.0.0.1:60688][0m
+2025-06-06 21:29:14,818 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,820 DEBUG http_protocol HTTP close for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,821 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,821 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/6.jpg 404 [0.10, 127.0.0.1:60642][0m
+2025-06-06 21:29:14,822 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60654]
+2025-06-06 21:29:14,823 DEBUG http_protocol HTTP close for ['127.0.0.1', 60654]
+2025-06-06 21:29:14,823 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60654]
+2025-06-06 21:29:14,825 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/1.jpg 404 [0.13, 127.0.0.1:60654][0m
+2025-06-06 21:29:14,827 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60688]
+2025-06-06 21:29:14,827 WARNING log Not Found: /konnekt/profile/images/avatar/3.jpg
+2025-06-06 21:29:14,832 WARNING log Not Found: /konnekt/profile/images/avatar/2.jpg
+2025-06-06 21:29:14,833 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,834 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60654]
+2025-06-06 21:29:14,835 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60672]
+2025-06-06 21:29:14,835 WARNING log Not Found: /konnekt/profile/images/avatar/5.jpg
+2025-06-06 21:29:14,835 DEBUG http_protocol HTTP close for ['127.0.0.1', 60672]
+2025-06-06 21:29:14,838 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60672]
+2025-06-06 21:29:14,838 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/3.jpg 404 [0.13, 127.0.0.1:60672][0m
+2025-06-06 21:29:14,839 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60662]
+2025-06-06 21:29:14,839 DEBUG http_protocol HTTP close for ['127.0.0.1', 60662]
+2025-06-06 21:29:14,839 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60662]
+2025-06-06 21:29:14,840 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/2.jpg 404 [0.14, 127.0.0.1:60662][0m
+2025-06-06 21:29:14,843 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60696]
+2025-06-06 21:29:14,846 DEBUG http_protocol HTTP close for ['127.0.0.1', 60696]
+2025-06-06 21:29:14,846 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60696]
+2025-06-06 21:29:14,847 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/5.jpg 404 [0.13, 127.0.0.1:60696][0m
+2025-06-06 21:29:14,882 WARNING log Not Found: /konnekt/profile/images/cover/1.jpg
+2025-06-06 21:29:14,883 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60688]
+2025-06-06 21:29:14,883 WARNING log Not Found: /konnekt/profile/images/v-cover/1.jpg
+2025-06-06 21:29:14,884 DEBUG http_protocol HTTP close for ['127.0.0.1', 60688]
+2025-06-06 21:29:14,884 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60688]
+2025-06-06 21:29:14,884 WARNING runserver [33mHTTP GET /konnekt/profile/images/cover/1.jpg 404 [0.06, 127.0.0.1:60688][0m
+2025-06-06 21:29:14,884 WARNING log Not Found: /konnekt/profile/images/v-cover/2.jpg
+2025-06-06 21:29:14,885 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,886 DEBUG http_protocol HTTP close for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,886 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60642]
+2025-06-06 21:29:14,886 WARNING runserver [33mHTTP GET /konnekt/profile/images/v-cover/1.jpg 404 [0.05, 127.0.0.1:60642][0m
+2025-06-06 21:29:14,887 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60654]
+2025-06-06 21:29:14,887 DEBUG http_protocol HTTP close for ['127.0.0.1', 60654]
+2025-06-06 21:29:14,887 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60654]
+2025-06-06 21:29:14,887 WARNING runserver [33mHTTP GET /konnekt/profile/images/v-cover/2.jpg 404 [0.05, 127.0.0.1:60654][0m
+2025-06-06 21:29:14,897 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60654]
+2025-06-06 21:29:14,898 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 60654]
+2025-06-06 21:29:23,347 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60642]
+2025-06-06 21:29:23,418 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 60642]
+2025-06-06 21:29:23,418 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 60642]
+2025-06-06 21:29:23,419 DEBUG http_protocol HTTP close for ['127.0.0.1', 60642]
+2025-06-06 21:29:23,419 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60642]
+2025-06-06 21:29:23,420 INFO runserver [mHTTP GET /konnekt/profile/ 200 [0.07, 127.0.0.1:60642][0m
+2025-06-06 21:29:23,474 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60672]
+2025-06-06 21:29:23,475 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60662]
+2025-06-06 21:29:23,481 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60696]
+2025-06-06 21:29:23,483 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60688]
+2025-06-06 21:29:23,485 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60642]
+2025-06-06 21:29:23,488 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 47550]
+2025-06-06 21:29:23,566 WARNING log Not Found: /konnekt/profile/images/avatar/3.jpg
+2025-06-06 21:29:23,571 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60662]
+2025-06-06 21:29:23,572 DEBUG http_protocol HTTP close for ['127.0.0.1', 60662]
+2025-06-06 21:29:23,567 WARNING log Not Found: /konnekt/profile/images/avatar/2.jpg
+2025-06-06 21:29:23,573 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60662]
+2025-06-06 21:29:23,574 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/3.jpg 404 [0.10, 127.0.0.1:60662][0m
+2025-06-06 21:29:23,576 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60672]
+2025-06-06 21:29:23,576 WARNING log Not Found: /konnekt/profile/images/v-cover/1.jpg
+2025-06-06 21:29:23,577 DEBUG http_protocol HTTP close for ['127.0.0.1', 60672]
+2025-06-06 21:29:23,577 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60672]
+2025-06-06 21:29:23,577 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/2.jpg 404 [0.10, 127.0.0.1:60672][0m
+2025-06-06 21:29:23,578 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60662]
+2025-06-06 21:29:23,581 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60688]
+2025-06-06 21:29:23,581 WARNING log Not Found: /konnekt/profile/images/avatar/4.jpg
+2025-06-06 21:29:23,581 WARNING log Not Found: /konnekt/profile/images/avatar/1.jpg
+2025-06-06 21:29:23,581 WARNING log Not Found: /konnekt/profile/images/v-cover/2.jpg
+2025-06-06 21:29:23,581 DEBUG http_protocol HTTP close for ['127.0.0.1', 60688]
+2025-06-06 21:29:23,582 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60688]
+2025-06-06 21:29:23,582 WARNING runserver [33mHTTP GET /konnekt/profile/images/v-cover/1.jpg 404 [0.10, 127.0.0.1:60688][0m
+2025-06-06 21:29:23,583 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60672]
+2025-06-06 21:29:23,585 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 47550]
+2025-06-06 21:29:23,586 DEBUG http_protocol HTTP close for ['127.0.0.1', 47550]
+2025-06-06 21:29:23,586 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 47550]
+2025-06-06 21:29:23,586 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/4.jpg 404 [0.10, 127.0.0.1:47550][0m
+2025-06-06 21:29:23,586 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60696]
+2025-06-06 21:29:23,587 DEBUG http_protocol HTTP close for ['127.0.0.1', 60696]
+2025-06-06 21:29:23,587 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60696]
+2025-06-06 21:29:23,587 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/1.jpg 404 [0.11, 127.0.0.1:60696][0m
+2025-06-06 21:29:23,587 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60642]
+2025-06-06 21:29:23,587 DEBUG http_protocol HTTP close for ['127.0.0.1', 60642]
+2025-06-06 21:29:23,587 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60642]
+2025-06-06 21:29:23,588 WARNING runserver [33mHTTP GET /konnekt/profile/images/v-cover/2.jpg 404 [0.10, 127.0.0.1:60642][0m
+2025-06-06 21:29:23,588 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60688]
+2025-06-06 21:29:23,632 WARNING log Not Found: /konnekt/profile/images/avatar/5.jpg
+2025-06-06 21:29:23,633 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60662]
+2025-06-06 21:29:23,633 DEBUG http_protocol HTTP close for ['127.0.0.1', 60662]
+2025-06-06 21:29:23,633 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60662]
+2025-06-06 21:29:23,633 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/5.jpg 404 [0.06, 127.0.0.1:60662][0m
+2025-06-06 21:29:23,634 WARNING log Not Found: /konnekt/profile/images/avatar/6.jpg
+2025-06-06 21:29:23,635 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60672]
+2025-06-06 21:29:23,635 DEBUG http_protocol HTTP close for ['127.0.0.1', 60672]
+2025-06-06 21:29:23,636 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60672]
+2025-06-06 21:29:23,636 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/6.jpg 404 [0.05, 127.0.0.1:60672][0m
+2025-06-06 21:29:23,637 WARNING log Not Found: /konnekt/profile/images/cover/1.jpg
+2025-06-06 21:29:23,638 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60688]
+2025-06-06 21:29:23,639 DEBUG http_protocol HTTP close for ['127.0.0.1', 60688]
+2025-06-06 21:29:23,639 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60688]
+2025-06-06 21:29:23,639 WARNING runserver [33mHTTP GET /konnekt/profile/images/cover/1.jpg 404 [0.05, 127.0.0.1:60688][0m
+2025-06-06 21:30:00,413 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60642]
+2025-06-06 21:30:00,435 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 60642]
+2025-06-06 21:30:00,436 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 60642]
+2025-06-06 21:30:00,436 DEBUG http_protocol HTTP close for ['127.0.0.1', 60642]
+2025-06-06 21:30:00,436 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60642]
+2025-06-06 21:30:00,436 INFO runserver [mHTTP GET /konnekt/profile/ 200 [0.02, 127.0.0.1:60642][0m
+2025-06-06 21:30:00,498 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60688]
+2025-06-06 21:30:00,501 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60696]
+2025-06-06 21:30:00,516 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 47550]
+2025-06-06 21:30:00,519 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60662]
+2025-06-06 21:30:00,519 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60672]
+2025-06-06 21:30:00,520 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60642]
+2025-06-06 21:30:00,555 WARNING log Not Found: /konnekt/profile/images/avatar/2.jpg
+2025-06-06 21:30:00,556 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60688]
+2025-06-06 21:30:00,589 DEBUG http_protocol HTTP close for ['127.0.0.1', 60688]
+2025-06-06 21:30:00,589 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60688]
+2025-06-06 21:30:00,593 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/2.jpg 404 [0.10, 127.0.0.1:60688][0m
+2025-06-06 21:30:00,595 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60688]
+2025-06-06 21:30:00,602 WARNING log Not Found: /konnekt/profile/images/avatar/4.jpg
+2025-06-06 21:30:00,605 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60696]
+2025-06-06 21:30:00,606 DEBUG http_protocol HTTP close for ['127.0.0.1', 60696]
+2025-06-06 21:30:00,607 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60696]
+2025-06-06 21:30:00,607 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/4.jpg 404 [0.11, 127.0.0.1:60696][0m
+2025-06-06 21:30:00,609 WARNING log Not Found: /konnekt/profile/images/v-cover/2.jpg
+2025-06-06 21:30:00,610 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60696]
+2025-06-06 21:30:00,609 WARNING log Not Found: /konnekt/profile/images/avatar/1.jpg
+2025-06-06 21:30:00,612 WARNING log Not Found: /konnekt/profile/images/avatar/3.jpg
+2025-06-06 21:30:00,612 WARNING log Not Found: /konnekt/profile/images/v-cover/1.jpg
+2025-06-06 21:30:00,614 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60662]
+2025-06-06 21:30:00,614 DEBUG http_protocol HTTP close for ['127.0.0.1', 60662]
+2025-06-06 21:30:00,614 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60662]
+2025-06-06 21:30:00,614 WARNING runserver [33mHTTP GET /konnekt/profile/images/v-cover/2.jpg 404 [0.10, 127.0.0.1:60662][0m
+2025-06-06 21:30:00,615 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60672]
+2025-06-06 21:30:00,616 DEBUG http_protocol HTTP close for ['127.0.0.1', 60672]
+2025-06-06 21:30:00,616 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60672]
+2025-06-06 21:30:00,616 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/1.jpg 404 [0.10, 127.0.0.1:60672][0m
+2025-06-06 21:30:00,617 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60642]
+2025-06-06 21:30:00,617 DEBUG http_protocol HTTP close for ['127.0.0.1', 60642]
+2025-06-06 21:30:00,618 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60642]
+2025-06-06 21:30:00,618 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/3.jpg 404 [0.10, 127.0.0.1:60642][0m
+2025-06-06 21:30:00,618 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 47550]
+2025-06-06 21:30:00,618 DEBUG http_protocol HTTP close for ['127.0.0.1', 47550]
+2025-06-06 21:30:00,619 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 47550]
+2025-06-06 21:30:00,619 WARNING runserver [33mHTTP GET /konnekt/profile/images/v-cover/1.jpg 404 [0.10, 127.0.0.1:47550][0m
+2025-06-06 21:30:00,620 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60662]
+2025-06-06 21:30:00,646 WARNING log Not Found: /konnekt/profile/images/avatar/5.jpg
+2025-06-06 21:30:00,664 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60688]
+2025-06-06 21:30:00,665 DEBUG http_protocol HTTP close for ['127.0.0.1', 60688]
+2025-06-06 21:30:00,665 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60688]
+2025-06-06 21:30:00,665 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/5.jpg 404 [0.07, 127.0.0.1:60688][0m
+2025-06-06 21:30:00,670 WARNING log Not Found: /konnekt/profile/images/cover/1.jpg
+2025-06-06 21:30:00,671 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60662]
+2025-06-06 21:30:00,673 DEBUG http_protocol HTTP close for ['127.0.0.1', 60662]
+2025-06-06 21:30:00,673 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60662]
+2025-06-06 21:30:00,673 WARNING runserver [33mHTTP GET /konnekt/profile/images/cover/1.jpg 404 [0.05, 127.0.0.1:60662][0m
+2025-06-06 21:30:00,675 WARNING log Not Found: /konnekt/profile/images/avatar/6.jpg
+2025-06-06 21:30:00,676 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60696]
+2025-06-06 21:30:00,676 DEBUG http_protocol HTTP close for ['127.0.0.1', 60696]
+2025-06-06 21:30:00,676 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60696]
+2025-06-06 21:30:00,676 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/6.jpg 404 [0.07, 127.0.0.1:60696][0m
+2025-06-06 21:30:04,657 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 60642]
+2025-06-06 21:30:04,677 WARNING log Not Found: /konnekt/profile/contacts.html
+2025-06-06 21:30:04,678 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 60642]
+2025-06-06 21:30:04,679 DEBUG http_protocol HTTP close for ['127.0.0.1', 60642]
+2025-06-06 21:30:04,679 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 60642]
+2025-06-06 21:30:04,680 WARNING runserver [33mHTTP GET /konnekt/profile/contacts.html 404 [0.02, 127.0.0.1:60642][0m
+2025-06-06 21:32:02,320 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49684]
+2025-06-06 21:32:02,344 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 49684]
+2025-06-06 21:32:02,344 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49684]
+2025-06-06 21:32:02,345 DEBUG http_protocol HTTP close for ['127.0.0.1', 49684]
+2025-06-06 21:32:02,345 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49684]
+2025-06-06 21:32:02,345 INFO runserver [mHTTP GET /konnekt/profile/ 200 [0.02, 127.0.0.1:49684][0m
+2025-06-06 21:32:02,418 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49684]
+2025-06-06 21:32:02,426 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49696]
+2025-06-06 21:32:02,427 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49706]
+2025-06-06 21:32:02,429 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49710]
+2025-06-06 21:32:02,430 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49712]
+2025-06-06 21:32:02,431 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49724]
+2025-06-06 21:32:02,517 WARNING log Not Found: /konnekt/profile/images/avatar/1.jpg
+2025-06-06 21:32:02,518 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49684]
+2025-06-06 21:32:02,519 DEBUG http_protocol HTTP close for ['127.0.0.1', 49684]
+2025-06-06 21:32:02,519 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49684]
+2025-06-06 21:32:02,520 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/1.jpg 404 [0.10, 127.0.0.1:49684][0m
+2025-06-06 21:32:02,521 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49684]
+2025-06-06 21:32:02,521 WARNING log Not Found: /konnekt/profile/images/avatar/4.jpg
+2025-06-06 21:32:02,523 WARNING log Not Found: /konnekt/profile/images/avatar/3.jpg
+2025-06-06 21:32:02,523 WARNING log Not Found: /konnekt/profile/images/avatar/2.jpg
+2025-06-06 21:32:02,526 WARNING log Not Found: /konnekt/profile/images/avatar/5.jpg
+2025-06-06 21:32:02,527 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49696]
+2025-06-06 21:32:02,528 WARNING log Not Found: /konnekt/profile/images/avatar/6.jpg
+2025-06-06 21:32:02,529 DEBUG http_protocol HTTP close for ['127.0.0.1', 49696]
+2025-06-06 21:32:02,529 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49696]
+2025-06-06 21:32:02,530 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/4.jpg 404 [0.10, 127.0.0.1:49696][0m
+2025-06-06 21:32:02,530 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49706]
+2025-06-06 21:32:02,530 DEBUG http_protocol HTTP close for ['127.0.0.1', 49706]
+2025-06-06 21:32:02,530 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49706]
+2025-06-06 21:32:02,530 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/3.jpg 404 [0.10, 127.0.0.1:49706][0m
+2025-06-06 21:32:02,531 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49710]
+2025-06-06 21:32:02,531 DEBUG http_protocol HTTP close for ['127.0.0.1', 49710]
+2025-06-06 21:32:02,531 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49710]
+2025-06-06 21:32:02,531 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/2.jpg 404 [0.10, 127.0.0.1:49710][0m
+2025-06-06 21:32:02,533 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49696]
+2025-06-06 21:32:02,534 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49712]
+2025-06-06 21:32:02,534 DEBUG http_protocol HTTP close for ['127.0.0.1', 49712]
+2025-06-06 21:32:02,535 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49712]
+2025-06-06 21:32:02,535 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/5.jpg 404 [0.11, 127.0.0.1:49712][0m
+2025-06-06 21:32:02,536 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49724]
+2025-06-06 21:32:02,536 DEBUG http_protocol HTTP close for ['127.0.0.1', 49724]
+2025-06-06 21:32:02,536 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49724]
+2025-06-06 21:32:02,536 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/6.jpg 404 [0.11, 127.0.0.1:49724][0m
+2025-06-06 21:32:02,537 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49710]
+2025-06-06 21:32:02,584 WARNING log Not Found: /konnekt/profile/images/cover/1.jpg
+2025-06-06 21:32:02,584 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49684]
+2025-06-06 21:32:02,584 DEBUG http_protocol HTTP close for ['127.0.0.1', 49684]
+2025-06-06 21:32:02,585 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49684]
+2025-06-06 21:32:02,585 WARNING runserver [33mHTTP GET /konnekt/profile/images/cover/1.jpg 404 [0.06, 127.0.0.1:49684][0m
+2025-06-06 21:32:02,586 WARNING log Not Found: /konnekt/profile/images/v-cover/1.jpg
+2025-06-06 21:32:02,587 WARNING log Not Found: /konnekt/profile/images/v-cover/2.jpg
+2025-06-06 21:32:02,587 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49696]
+2025-06-06 21:32:02,588 DEBUG http_protocol HTTP close for ['127.0.0.1', 49696]
+2025-06-06 21:32:02,588 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49696]
+2025-06-06 21:32:02,588 WARNING runserver [33mHTTP GET /konnekt/profile/images/v-cover/1.jpg 404 [0.06, 127.0.0.1:49696][0m
+2025-06-06 21:32:02,588 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49710]
+2025-06-06 21:32:02,588 DEBUG http_protocol HTTP close for ['127.0.0.1', 49710]
+2025-06-06 21:32:02,588 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49710]
+2025-06-06 21:32:02,589 WARNING runserver [33mHTTP GET /konnekt/profile/images/v-cover/2.jpg 404 [0.05, 127.0.0.1:49710][0m
+2025-06-06 21:32:04,492 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49684]
+2025-06-06 21:32:04,520 DEBUG http_protocol HTTP 200 response started for ['127.0.0.1', 49684]
+2025-06-06 21:32:04,520 DEBUG http_protocol HTTP response chunk for ['127.0.0.1', 49684]
+2025-06-06 21:32:04,521 DEBUG http_protocol HTTP close for ['127.0.0.1', 49684]
+2025-06-06 21:32:04,521 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49684]
+2025-06-06 21:32:04,522 INFO runserver [mHTTP GET /konnekt/profile/ 200 [0.03, 127.0.0.1:49684][0m
+2025-06-06 21:32:04,584 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49696]
+2025-06-06 21:32:04,590 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49710]
+2025-06-06 21:32:04,591 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49706]
+2025-06-06 21:32:04,591 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49724]
+2025-06-06 21:32:04,593 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49712]
+2025-06-06 21:32:04,595 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49684]
+2025-06-06 21:32:04,688 WARNING log Not Found: /konnekt/profile/images/avatar/6.jpg
+2025-06-06 21:32:04,689 WARNING log Not Found: /konnekt/profile/images/avatar/1.jpg
+2025-06-06 21:32:04,690 WARNING log Not Found: /konnekt/profile/images/avatar/4.jpg
+2025-06-06 21:32:04,690 WARNING log Not Found: /konnekt/profile/images/avatar/3.jpg
+2025-06-06 21:32:04,691 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49712]
+2025-06-06 21:32:04,691 WARNING log Not Found: /konnekt/profile/images/avatar/2.jpg
+2025-06-06 21:32:04,691 WARNING log Not Found: /konnekt/profile/images/avatar/5.jpg
+2025-06-06 21:32:04,692 DEBUG http_protocol HTTP close for ['127.0.0.1', 49712]
+2025-06-06 21:32:04,693 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49712]
+2025-06-06 21:32:04,693 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/6.jpg 404 [0.10, 127.0.0.1:49712][0m
+2025-06-06 21:32:04,694 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49706]
+2025-06-06 21:32:04,694 DEBUG http_protocol HTTP close for ['127.0.0.1', 49706]
+2025-06-06 21:32:04,694 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49706]
+2025-06-06 21:32:04,694 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/1.jpg 404 [0.10, 127.0.0.1:49706][0m
+2025-06-06 21:32:04,695 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49710]
+2025-06-06 21:32:04,695 DEBUG http_protocol HTTP close for ['127.0.0.1', 49710]
+2025-06-06 21:32:04,695 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49710]
+2025-06-06 21:32:04,695 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/4.jpg 404 [0.11, 127.0.0.1:49710][0m
+2025-06-06 21:32:04,696 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49684]
+2025-06-06 21:32:04,696 DEBUG http_protocol HTTP close for ['127.0.0.1', 49684]
+2025-06-06 21:32:04,696 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49684]
+2025-06-06 21:32:04,696 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/3.jpg 404 [0.10, 127.0.0.1:49684][0m
+2025-06-06 21:32:04,696 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49696]
+2025-06-06 21:32:04,697 DEBUG http_protocol HTTP close for ['127.0.0.1', 49696]
+2025-06-06 21:32:04,697 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49696]
+2025-06-06 21:32:04,697 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/2.jpg 404 [0.11, 127.0.0.1:49696][0m
+2025-06-06 21:32:04,697 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49724]
+2025-06-06 21:32:04,697 DEBUG http_protocol HTTP close for ['127.0.0.1', 49724]
+2025-06-06 21:32:04,697 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49724]
+2025-06-06 21:32:04,697 WARNING runserver [33mHTTP GET /konnekt/profile/images/avatar/5.jpg 404 [0.11, 127.0.0.1:49724][0m
+2025-06-06 21:32:04,698 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49712]
+2025-06-06 21:32:04,701 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49706]
+2025-06-06 21:32:04,702 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49684]
+2025-06-06 21:32:04,738 WARNING log Not Found: /konnekt/profile/images/v-cover/2.jpg
+2025-06-06 21:32:04,741 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49684]
+2025-06-06 21:32:04,742 DEBUG http_protocol HTTP close for ['127.0.0.1', 49684]
+2025-06-06 21:32:04,742 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49684]
+2025-06-06 21:32:04,742 WARNING runserver [33mHTTP GET /konnekt/profile/images/v-cover/2.jpg 404 [0.04, 127.0.0.1:49684][0m
+2025-06-06 21:32:04,744 WARNING log Not Found: /konnekt/profile/images/v-cover/1.jpg
+2025-06-06 21:32:04,745 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49706]
+2025-06-06 21:32:04,744 WARNING log Not Found: /konnekt/profile/images/cover/1.jpg
+2025-06-06 21:32:04,745 DEBUG http_protocol HTTP close for ['127.0.0.1', 49706]
+2025-06-06 21:32:04,746 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49706]
+2025-06-06 21:32:04,746 WARNING runserver [33mHTTP GET /konnekt/profile/images/v-cover/1.jpg 404 [0.05, 127.0.0.1:49706][0m
+2025-06-06 21:32:04,747 DEBUG http_protocol HTTP 404 response started for ['127.0.0.1', 49712]
+2025-06-06 21:32:04,747 DEBUG http_protocol HTTP close for ['127.0.0.1', 49712]
+2025-06-06 21:32:04,747 DEBUG http_protocol HTTP response complete for ['127.0.0.1', 49712]
+2025-06-06 21:32:04,748 WARNING runserver [33mHTTP GET /konnekt/profile/images/cover/1.jpg 404 [0.05, 127.0.0.1:49712][0m
+2025-06-06 21:32:04,753 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49710]
+2025-06-06 21:32:04,754 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 49710]
