@@ -22867,3 +22867,27 @@ django.contrib.auth.models.User.profile.RelatedObjectDoesNotExist: User has no p
 2025-06-07 02:57:05,482 INFO server HTTP/2 support not enabled (install the http2 and tls Twisted extras)
 2025-06-07 02:57:05,482 INFO server Configuring endpoint tcp:port=43000:interface=127.0.0.1
 2025-06-07 02:57:05,484 INFO server Listening on TCP address 127.0.0.1:43000
+2025-06-07 03:00:14,340 INFO autoreload /home/pluto/jango/makeja/makeja/asgi.py changed, reloading.
+2025-06-07 03:00:15,009 DEBUG selector_events Using selector: EpollSelector
+2025-06-07 03:00:15,166 INFO autoreload Watching for file changes with StatReloader
+2025-06-07 03:00:15,370 INFO server HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2025-06-07 03:00:15,370 INFO server Configuring endpoint tcp:port=43000:interface=127.0.0.1
+2025-06-07 03:00:15,372 INFO server Listening on TCP address 127.0.0.1:43000
+2025-06-07 03:34:31,960 INFO autoreload /home/pluto/jango/makeja/konnekt/models.py changed, reloading.
+2025-06-07 03:34:32,609 DEBUG selector_events Using selector: EpollSelector
+2025-06-07 03:34:32,766 INFO autoreload Watching for file changes with StatReloader
+2025-06-07 03:34:32,922 INFO server HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2025-06-07 03:34:32,923 INFO server Configuring endpoint tcp:port=43000:interface=127.0.0.1
+2025-06-07 03:34:32,924 INFO server Listening on TCP address 127.0.0.1:43000
+2025-06-07 03:35:16,335 INFO autoreload /home/pluto/jango/makeja/konnekt/consumers.py changed, reloading.
+2025-06-07 03:35:17,041 DEBUG selector_events Using selector: EpollSelector
+2025-06-07 03:35:17,196 INFO autoreload Watching for file changes with StatReloader
+2025-06-07 03:35:17,367 INFO server HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2025-06-07 03:35:17,368 INFO server Configuring endpoint tcp:port=43000:interface=127.0.0.1
+2025-06-07 03:35:17,368 INFO server Listening on TCP address 127.0.0.1:43000
+2025-06-07 03:35:44,190 INFO autoreload /home/pluto/jango/makeja/konnekt/models.py changed, reloading.
+2025-06-07 03:35:44,875 DEBUG selector_events Using selector: EpollSelector
+2025-06-07 03:35:45,031 INFO autoreload Watching for file changes with StatReloader
+2025-06-07 03:35:45,244 INFO server HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2025-06-07 03:35:45,244 INFO server Configuring endpoint tcp:port=43000:interface=127.0.0.1
+2025-06-07 03:35:45,246 INFO server Listening on TCP address 127.0.0.1:43000
