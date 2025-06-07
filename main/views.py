@@ -26,7 +26,7 @@ def create_notification(request, message, n_type, target):
 
 
 def index_view(request):
-    listings = Listing.objects.all().annotate(
+    listings = Listing.objects.filter(is_deleted=False).annotate(
         auth_likes=Count('like', filter=Q(like__liked=True), distinct=True),
         guest_likes=Count('guestlike', filter=Q(guestlike__liked=True), distinct=True),
     ).annotate(

@@ -22897,3 +22897,9 @@ django.contrib.auth.models.User.profile.RelatedObjectDoesNotExist: User has no p
 2025-06-07 03:41:33,072 INFO server HTTP/2 support not enabled (install the http2 and tls Twisted extras)
 2025-06-07 03:41:33,073 INFO server Configuring endpoint tcp:port=43000:interface=127.0.0.1
 2025-06-07 03:41:33,074 INFO server Listening on TCP address 127.0.0.1:43000
+2025-06-07 04:43:11,006 INFO autoreload /home/pluto/jango/makeja/main/views.py changed, reloading.
+2025-06-07 04:43:11,670 DEBUG selector_events Using selector: EpollSelector
+2025-06-07 04:43:11,832 INFO autoreload Watching for file changes with StatReloader
+2025-06-07 04:43:11,995 INFO server HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2025-06-07 04:43:11,995 INFO server Configuring endpoint tcp:port=43000:interface=127.0.0.1
+2025-06-07 04:43:11,996 INFO server Listening on TCP address 127.0.0.1:43000
