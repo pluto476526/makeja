@@ -22861,3 +22861,9 @@ django.contrib.auth.models.User.profile.RelatedObjectDoesNotExist: User has no p
 2025-06-06 21:32:04,748 WARNING runserver [33mHTTP GET /konnekt/profile/images/cover/1.jpg 404 [0.05, 127.0.0.1:49712][0m
 2025-06-06 21:32:04,753 DEBUG http_protocol HTTP b'GET' request for ['127.0.0.1', 49710]
 2025-06-06 21:32:04,754 DEBUG http_protocol HTTP disconnect for ['127.0.0.1', 49710]
+2025-06-07 02:57:04,420 INFO autoreload /home/pluto/jango/makeja/makeja/asgi.py changed, reloading.
+2025-06-07 02:57:05,111 DEBUG selector_events Using selector: EpollSelector
+2025-06-07 02:57:05,280 INFO autoreload Watching for file changes with StatReloader
+2025-06-07 02:57:05,482 INFO server HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2025-06-07 02:57:05,482 INFO server Configuring endpoint tcp:port=43000:interface=127.0.0.1
+2025-06-07 02:57:05,484 INFO server Listening on TCP address 127.0.0.1:43000
