@@ -148,18 +148,18 @@
           
           <!-- Profile & Chats Links (Small screen only) -->
           <li class="nav-item item-small-screen">
-            <a class="nav-link fs-5 me-4" href="" aria-label="View Profile" title="View your Profile">
+            <a class="nav-link fs-5 me-4" href="{% url 'my_profile' %}" aria-label="View Profile" title="View your Profile">
               <i class="fas fa-user me-2"></i>PROFILE
             </a>
           </li>
           <li class="nav-item item-small-screen">
-            <a class="nav-link fs-5 me-4" href="" aria-label="Open Chats" title="Open Chats">
-              <i class="fas fa-comment-alt me-2"></i>CHATS
+            <a class="nav-link fs-5 me-4" href="{% url 'chats' %}" aria-label="Open Chats" title="Open Chats">
+              <i class="fas fa-comment-alt me-2"></i>KONNEKT
             </a>
           </li>
           <li class="nav-item item-small-screen">
             <a class="nav-link fs-5 me-4" href="{% url 'signout' %}" aria-label="Sign out of your account">
-              <i class="fas fa-sign-out-alt me-2"></i>SIGN OUT
+              <i class="fas fa-sign-out-alt me-2"></i>LOG OUT
             </a>
           </li>
           {% else %}
@@ -185,13 +185,13 @@
             </div>
             <h4 class="py-3 link-secondary text-center">{{ request.user.username }}</h4>
             <a class="nav-link border-top" href="{% url 'dash' %}">Dashboard</a>
-            <a class="nav-link border-top" href="">My Profile</a>
-            <a class="nav-link border-top" href="">Messages</a>
-            <a class="nav-link border-top border-bottom" href="{% url 'signout' %}">Sign Out</a>
+            <a class="nav-link border-top" href="{% url 'chats' %}">Konnekt</a>
+            <a class="nav-link border-top" href="{% url 'my_profile' %}">Profile</a>
+            <a class="nav-link border-top border-bottom" href="{% url 'signout' %}">Log Out</a>
           </ul>
           <!--====== End - Dropdown ======-->
-      </li>
-      {% endif %}
+        </li>
+        {% endif %}
 
       </div>
     </div>

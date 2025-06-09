@@ -155,7 +155,7 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-LOGIN_URL = '/signin/'
+LOGIN_URL = '/sign-in/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 

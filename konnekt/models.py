@@ -38,7 +38,7 @@ class ConversationItem(models.Model):
     is_deleted = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ["timestamp"]
+        ordering = ["-timestamp"]
 
 
 class ConversationReadStatus(models.Model):

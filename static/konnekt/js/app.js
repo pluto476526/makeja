@@ -258,7 +258,7 @@
     TynApp.Custom.init = function(){
       TynApp.Chat.reply.search();
       TynApp.Chat.reply.scroll();
-      TynApp.Chat.reply.input();
+      //TynApp.Chat.reply.input();
       TynApp.Chat.item();
       TynApp.Chat.mute();
       TynApp.Chat.aside();
