@@ -1,15 +1,18 @@
 # /konnekt/consumers.py
+# pluto, makeja
 
 from channels.generic.websocket import AsyncWebsocketConsumer
 from channels.db import database_sync_to_async
 from django.contrib.auth import get_user_model
-from konnekt.models import Conversation, ConversationItem, ConversationReadStatus
+from konnekt.models import Conversation, ConversationItem, Contact
 from datetime import datetime
-import json, logging
+import json, logging, redis
 
 
 logger = logging.getLogger(__name__)
 User = get_user_model()
+redis_conn = redis.StrictRedis(host='localhost', port=6379, db=1)
+
 
 
 class RecentChatsConsumer(AsyncWebsocketConsumer):
@@ -56,20 +59,8 @@ class RecentChatsConsumer(AsyncWebsocketConsumer):
         recent_chats = []
 
         for c in conversations:
-            try:
-                read_status = c.read_statuses.get(user=self.user)
-                last_read_at = read_status.last_read_at
-            except Exception as e:
-                logger.debug(e)
-                last_read_at = None
-
-            if last_read_at:
-                unread_messages = c.messages.filter(timestamp__gt=last_read_at).exclude(sender=self.user.id)
-                unread_count = unread_messages.count()
-            else:
-                unread_messages = c.messages.all()
-                unread_count = unread_messages.count()
-
+            unread_messages = c.messages.filter(is_read=False).exclude(sender=self.user)
+            unread_count = unread_messages.count()
             last_message = c.messages.order_by("-timestamp").first()
             lm_sender = c.participants.exclude(id=self.user_id).first()
 
@@ -152,26 +143,25 @@ class ChatConsumer(AsyncWebsocketConsumer):
             
             for p in participants:
                 await self.channel_layer.group_send(
-                    f"r_chats_{self.user.id}",
+                    f"r_chats_{p.id}",
                     {"type": "updated_chats"},
                 )
         
-        if data.get("type") == "read_status":
+        if data.get("type") == "text_read_status":
             txt_id = data["t_id"]
             user_id = data["u_id"]
-            timestamp = data["timestamp"]
 
-            await self.update_read_status(user_id)
+            await self.update_text_read_status(txt_id, user_id)
 
             await self.channel_layer.group_send(
                 self.room_group_name,
                 {
-                    "type": "send_read_status",
+                    "type": "send_text_read_status",
                     "txt_id": txt_id,
                     "user_id": user_id,
-                    "timestamp": timestamp,
                 }
             )
+
 
     # Handler for type "send_text_messages"
     async def send_text_message(self, event):
@@ -184,12 +174,11 @@ class ChatConsumer(AsyncWebsocketConsumer):
         }))
 
     # Handler for type "send_read_status"
-    async def send_read_status(self, event):
+    async def send_text_read_status(self, event):
         await self.send(text_data=json.dumps({
-            "type": "read_status",
+            "type": "text_read_status",
             "txt_id": event["txt_id"],
             "user_id": event["user_id"],
-            "timestamp": event["timestamp"],
         }))
 
 
@@ -214,15 +203,130 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
 
     @database_sync_to_async
-    def update_read_status(self, user_id):
-        user = User.objects.get(id=user_id)
-        convo = Conversation.objects.get(c_id=self.c_id)
-        r_status, _ = ConversationReadStatus.objects.get_or_create(
-            conversation=convo,
-            user=user,
+    def update_text_read_status(self, text_id, user_id):
+        text = ConversationItem.objects.get(id=text_id)
+
+        if int(user_id) != int(text.sender.id) and not text.is_read:
+            text.is_read = True
+            text.save()
+
+
+
+class OnlineStatusConsumer(AsyncWebsocketConsumer):
+    async def connect(self):
+        self.user_id = self.scope["url_route"]["kwargs"]["user_id"]
+        self.user = await self.get_user(self.user_id)
+        
+        if self.user.is_anonymous:
+            await self.close()
+            return
+
+        await self.channel_layer.group_add(f"status", self.channel_name)
+        await self.accept()
+        await self.set_user_online()
+        await self.broadcast_status("online")
+
+        # ids = await self.get_user_ids()
+        # statuses = await self.get_statuses(ids)
+
+        # for s in statuses:
+        #     await self.send(text_data=json.dumps(s))
+
+    async def disconnect(self, close_code):
+        await self.set_user_offline()
+        await self.broadcast_status("offline")
+        await self.channel_layer.group_discard(f"status", self.channel_name)
+
+
+    async def receive(self, text_data):
+        data = json.loads(text_data)
+
+        if data.get("type") == "get_initial_statuses":
+            ids = await self.get_user_ids()
+            statuses = await self.get_statuses(ids)
+            
+            await self.send(text_data=json.dumps({
+                "type": "initial_statuses",
+                "statuses": statuses,
+            }))
+
+
+    async def broadcast_status(self, status):
+        await self.channel_layer.group_send(
+            f"status",
+            {
+                "type": "user_status",
+                "event_type": "status_update",
+                "user_id": self.user.id,
+                "status": status,
+                "last_seen": datetime.now().isoformat(),
+            }
         )
-        r_status.last_read_at = datetime.now()
-        r_status.save()
+
+    async def user_status(self, event):
+        await self.send(text_data=json.dumps({
+            "type": event["event_type"],
+            "user_id": event["user_id"],
+            "status": event["status"],
+            "last_seen": event["last_seen"],
+        }))
+
+
+    @database_sync_to_async
+    def get_user_ids(self):
+        ids = list(User.objects.all().values_list("id", flat=True))
+        return ids
+
+    @database_sync_to_async
+    def get_statuses(self, ids):
+        statuses = []
+
+        for i in ids:
+            key = f"user:{i}"
+            data = redis_conn.hgetall(key)
+            statuses.append({
+                "user_id": i,
+                "status": data.get("status", "offline"),
+                "last_seen": data.get("last_seen"),
+            })
+
+        return statuses
+
+    @database_sync_to_async
+    def set_user_online(self):
+        redis_conn.hset(f"user:{self.user.id}", mapping={
+            "status": "online",
+            "last_seen": datetime.now().isoformat(),
+        })
+
+    @database_sync_to_async
+    def set_user_offline(self):
+        redis_conn.hset(f"user:{self.user.id}", mapping={
+            "status": "offline",
+            "last_seen": datetime.now().isoformat(),
+        })
+
+    @database_sync_to_async
+    def get_user(self, user_id):
+        return User.objects.get(id=user_id)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

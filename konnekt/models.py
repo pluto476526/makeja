@@ -10,7 +10,6 @@ class Conversation(models.Model):
     title = models.CharField(max_length=255, blank=True) # group titles
     participants = models.ManyToManyField("auth.User", related_name="conversations")
     timestamp = models.DateTimeField(auto_now_add=True)
-    is_read = models.BooleanField(default=False)
     is_deleted = models.BooleanField(default=False)
 
     class Meta:
@@ -35,20 +34,11 @@ class ConversationItem(models.Model):
     attachment_type = models.CharField(max_length=10, blank=True)
     timestamp = models.DateTimeField(auto_now_add=True)
     time_edited = models.DateTimeField(auto_now=True)
+    is_read = models.BooleanField(default=False)
     is_deleted = models.BooleanField(default=False)
 
     class Meta:
         ordering = ["-timestamp"]
-
-
-class ConversationReadStatus(models.Model):
-    conversation = models.ForeignKey(Conversation, on_delete=models.CASCADE, related_name="read_statuses")
-    user = models.ForeignKey("auth.User", on_delete=models.CASCADE)
-    last_read_at = models.DateTimeField(blank=True, null=True)
-
-    class Meta:
-        unique_together = ("conversation", "user")
-
 
 
 class Contact(models.Model):

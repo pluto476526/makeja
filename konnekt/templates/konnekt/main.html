@@ -329,6 +329,7 @@
     <script>
         window.currentUserID = "{{ request.user.id }}";
         window.convoID = "{{ convo.c_id }}";
+        window.senderID = "{{ sender.id }}";
         window.senderAvatar = "{{ sender.profile.avatar.url }}";
     </script>
     <script src="{% static 'konnekt/js/sockets.js' %}"></script>

@@ -1,145 +1,17 @@
-// // /konnekt/sockets.js
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     const currentUserID = window.currentUserID;
-//     const wsProtocol = window.location.protocol === "https:" ? "wss" : "ws";
-//     const RECONNECT_DELAY = 5000; // Delay for reconnection attempts
-//     let recentChatsSocket = null;
-//     let recentChatsReconnectTimeout = null;
-
-//     const recentChatsList = document.getElementById("recent-chats-list");
-
-//     // Function to format time in a human-readable way
-//     const naturalTime = (dateString) => {
-//         if (!dateString) return "Never";
-        
-//         try {
-//             const date = new Date(dateString);
-//             const now = new Date();
-//             const delta = (now - date) / 1000;
-
-//             if (delta < 60) return "Just now";
-//             if (delta < 3600) return `${Math.floor(delta / 60)} min ago`;
-//             if (delta < 86400) return `${Math.floor(delta / 3600)} hrs ago`;
-//             if (delta < 172800) return "Yesterday";
-            
-//             return date.toLocaleDateString();
-//         } catch {
-//             return dateString; // Return original string if parsing fails
-//         }
-//     };
-
-//     // Function to render recent chats in the UI
-//     const renderRecentChats = (chats) => {
-//         const recentChatsList = document.getElementById("recent-chats-list");
-//         if (!recentChatsList) return;
-
-//         recentChatsList.innerHTML = chats.map(chat => {
-//             const isGroup = chat.is_group;
-//             const friend = chat.participants[0];
-//             const avatar = friend.avatar_url;
-//             const title = chat.title || friend.username;
-//             const chatID = chat.c_id;
-//             const lastMessage = chat.last_message || "No message yet";
-//             const time = naturalTime(chat.timestamp) || "Just now";
-
-//             return `
-//             <li class="tyn-aside-item js-toggle-main">
-//                 <a href="/konnekt/${chatID}/" class="tyn-media-group">
-//                     <div class="tyn-media tyn-size-lg">
-//                         <img src="${avatar}" alt="">
-//                     </div>
-//                     <div class="tyn-media-col">
-//                         <div class="tyn-media-row">
-//                             <h6 class="name">${title}</h6>
-//                             <div class="indicator varified">
-//                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-//                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-//                                 </svg>
-//                             </div>
-//                         </div>
-//                         <div class="tyn-media-row has-dot-sap">
-//                             <p class="content">${lastMessage}</p>
-//                             <span class="meta">${time}</span>
-//                         </div>
-//                     </div>
-//                     <div class="tyn-media-option tyn-aside-item-option">
-//                         <ul class="tyn-media-option-list">
-//                             <li class="dropdown">
-//                                 <button class="btn btn-icon btn-white btn-pill dropdown-toggle" data-bs-toggle="dropdown" data-bs-offset="0,0" data-bs-auto-close="outside">
-//                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-//                                         <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-//                                     </svg>
-//                                 </button>
-//                                 <div class="dropdown-menu dropdown-menu-end">
-//                                     <ul class="tyn-list-links">
-//                                         <li><a href="#"><span>Mark as Read</span></a></li>
-//                                         <li><a href="#"><span>Mute Notifications</span></a></li>
-//                                         <li><a href="contacts.html"><span>View Profile</span></a></li>
-//                                         <li class="dropdown-divider"></li>
-//                                         <li><a href="#"><span>Archive</span></a></li>
-//                                         <li><a href="#deleteChat" data-bs-toggle="modal"><span>Delete</span></a></li>
-//                                         <li><a href="#"><span>Report</span></a></li>
-//                                     </ul>
-//                                 </div>
-//                             </li>
-//                         </ul>
-//                     </div>
-//                 </a>
-//             </li>
-//             `;
-//         }).join('');
-//     };
-
-
-//     // Function to connect to the recent chats WebSocket
-//     const connectRecentChatsSocket = () => {
-//         // Close existing socket if it exists
-//         if (recentChatsSocket) {
-//             recentChatsSocket.close();
-//             clearTimeout(recentChatsReconnectTimeout);
-//         }
-
-//         const wsUrl = `${wsProtocol}://${window.location.host}/ws/konnekt/recent-chats/${currentUserID}/`;
-//         recentChatsSocket = new WebSocket(wsUrl);
-
-//         recentChatsSocket.onopen = () => {
-//             console.log("Recent chats socket open.");
-//         };
-
-//         recentChatsSocket.onmessage = (event) => {
-//             console.log("Message received:", event.data);
-//             const chats = JSON.parse(event.data);
-//             renderRecentChats(chats.recent_chats);
-//         };
-
-//         recentChatsSocket.onclose = (event) => {
-//             console.log("Recent chats socket closed:", event);
-//             recentChatsReconnectTimeout = setTimeout(connectRecentChatsSocket, RECONNECT_DELAY);
-//         };
-
-//         recentChatsSocket.onerror = (error) => {
-//             console.error("WebSocket error:", error);
-//         };
-//     };
-
-//     connectRecentChatsSocket();
-// });
-
-
-
-
-
+// konnekt/sockets.js
 
 document.addEventListener("DOMContentLoaded", () => {
     const currentUserID = window.currentUserID;
+    const senderID = window.senderID;
     const convoID = window.convoID;
     const wsProtocol = window.location.protocol === "https:" ? "wss" : "ws";
     const RECONNECT_DELAY = 5000;
     const MAX_RECONNECT_DELAY = 60000;
+    const readMessages = new Set();
 
     let recentChatsSocket = null;
     let chatSocket = null;
+    let onlineStatusSocket = null;
     let reconnectAttempts = 0;
     let reconnectTimeout = null;
 
@@ -150,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         sendBtn: document.getElementById("sendBtn"),
         chatItem: document.querySelectorAll(".tyn-reply-item"),
         chatBody: document.getElementById("tynChatBody"),
+        statusBox: document.querySelector(`.online-status`),
     };
 
     // --- Utility Functions ---
@@ -179,22 +52,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const exponentialBackoff = (attempts) =>
         Math.min(RECONNECT_DELAY * 2 ** attempts, MAX_RECONNECT_DELAY);
+    
+
+    function getInitialStatuses() {
+        if (onlineStatusSocket.readyState !== WebSocket.OPEN) return;
+        const data = {type: "get_initial_statuses"};
+        onlineStatusSocket.send(JSON.stringify(data));
+    }
+
 
     function markAsRead(txtID, userID) {
+        if (readMessages.has(txtID)) return;
         if (chatSocket.readyState !== WebSocket.OPEN) return;
 
-        data = {
-            type: "read_status",
+        const data = {
+            type: "text_read_status",
             t_id: txtID,
             u_id: userID,
             timestamp: Date.now(),
-        }
+        };
 
         chatSocket.send(JSON.stringify(data));
-        console.log("msg: ", txtID);
-        console.log("read by", userID);
+        readMessages.add(txtID);
     }
-
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -204,16 +84,69 @@ document.addEventListener("DOMContentLoaded", () => {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 1.0 });
+    }, { threshold: 0.1 });
+
 
     function observeMessages() {
-        elements.chatItem.forEach(msg => {
-            observer.observe(msg);
+        document.querySelectorAll('.tyn-reply-item').forEach(msg => {
+            if (!msg.dataset.observed) {
+                observer.observe(msg);
+                msg.dataset.observed = 'true';
+
+                const rect = msg.getBoundingClientRect();
+                const fullyVisible = (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+
+                if (fullyVisible) {
+                    const msgID = msg.dataset.textId;
+                    markAsRead(msgID, currentUserID);
+                    observer.unobserve(msg);
+                }
+            }
         });
     }
 
+    function showReadMark(data) {
+        if (data.user_id === currentUserID) return;
+        const msg = document.querySelector(`.tyn-reply-item.outgoing[data-text-id="${data.txt_id}"]`);
+        if (msg) {
+            const tick = msg.querySelector(".tick");
+            if (tick) tick.style.display = "inline";
+        }
+    }
 
-    // --- UI Rendering ---
+    function updateOnlineStatus(data) {
+        data.statuses.forEach(d => {
+            if (d.user_id != senderID) return; 
+            if (d.status == "online") {
+                elements.statusBox.innerHTML = "Active";
+            } else {
+                elements.statusBox.innerHTML = "Offline";
+            }
+        });
+    }
+
+    
+    function statusUpdate(data) {
+        if (data.user_id != senderID) return;
+
+        const stBox = document.getElementById(`status-${data.user_id}`);
+        
+        if (data.status == "online") {
+            console.log("user updating status: ", data.user_id);
+            elements.statusBox.innerHTML = "Active";
+            stBox.style.display = "flex";
+
+        } else {
+            elements.statusBox.innerHTML = `last seen ${naturalTime(data.last_seen)}`;
+        }
+
+    }
+
 
     const renderRecentChats = (chats) => {
         const list = elements.recentChatsList;
@@ -238,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="tyn-media-col">
                             <div class="tyn-media-row">
                                 <h6 class="name">${title}</h6>
-                                <div class="indicator varified">
+                                <div class="indicator varified" id="status-${friend.userID}" style="display: none;">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-check-circle-fill" viewBox="0 0 16 16">
                                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 
@@ -300,7 +233,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="tyn-reply-item outgoing" data-text-id="${data.text_id}">
                     <div class="tyn-reply-group">
                         <div class="tyn-reply-bubble">
-                            <div class="tyn-reply-text"> ${text} </div><!-- tyn-reply-text -->
+                            <div class="tyn-reply-text">
+                                <div class="d-flex justify-content-between align-items-center ticks">
+                                    <small class="">${time}</small>&nbsp;
+                                    <div class="indicator varified tick" style="display: none;">
+                                        <!-- check-circle-fill -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-check-circle-fill" viewbox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                ${text} </div><!-- tyn-reply-text -->
                             <ul class="tyn-reply-tools">
                                 <li>
                                     <button class="btn btn-icon btn-sm btn-transparent btn-pill">
@@ -359,15 +302,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="tyn-reply-group">
                         <div class="tyn-reply-bubble">
                             <div class="tyn-reply-text">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">${time}</small>
-                                    <div class="indicator varified px-3">
-                                        <!-- check-circle-fill -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-check-circle-fill" viewbox="0 0 16 16">
-                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                                        </svg>
-                                    </div>
-                                </div>
+                                <div>
+                                    <small class="">${time}</small>
+                                </div> 
                                  ${text} </div>
                             <ul class="tyn-reply-tools">
                                 <li>
@@ -428,9 +365,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (recentChatsSocket) recentChatsSocket.close();
         clearTimeout(reconnectTimeout);
 
-        const wsUrl = `${wsProtocol}://${location.host}/ws/konnekt/recent-chats/${currentUserID}/`;
-        elements.recentChatsList.innerHTML = `<li class="text-center text-muted py-3">Loading recent chats...</li>`;
+        const wsUrl = `${wsProtocol}://${location.host}/ws/konnekt/r-chats/${currentUserID}/`;
         recentChatsSocket = new WebSocket(wsUrl);
+
+        elements.recentChatsList.innerHTML = `<li class="text-center text-muted py-3">Fetching Conversations...</li>`;
 
         recentChatsSocket.onopen = () => {
             console.log("[RecentChats] Connected");
@@ -439,7 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         recentChatsSocket.onmessage = (event) => {
             const data = JSON.parse(event.data);
-            console.log("rc: ", data);
+            console.log("data: ", data)
             if (data.type === "recent_chats") renderRecentChats(data.recent_chats);
         };
 
@@ -469,9 +407,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         chatSocket.onmessage = (event) => {
             const data = JSON.parse(event.data);
-            console.log("new message: ", data);
-
             if (data.type === "text_message") renderText(data);
+            if (data.type === "text_read_status") showReadMark(data);
         };
 
         chatSocket.onclose = () => {
@@ -484,7 +421,37 @@ document.addEventListener("DOMContentLoaded", () => {
             // console.error("[Chat] websocket error: ", error);
         }
 
-        // Add chatSocket message and close handlers here as needed
+    };
+
+    const connectOnlineStatusSocket = () => {
+        if (onlineStatusSocket) onlineStatusSocket.close();
+        clearTimeout(reconnectTimeout);
+
+        const wsUrl = `${wsProtocol}://${location.host}/ws/konnekt/status/${currentUserID}/`;
+        onlineStatusSocket = new WebSocket(wsUrl);
+
+        onlineStatusSocket.onopen = () => {
+            getInitialStatuses();
+            reconnectAttempts = 0;
+        };
+
+        onlineStatusSocket.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            console.log("statuses: ", data);
+            if (data.type === "initial_statuses") updateOnlineStatus(data);
+            if (data.type === "status_update") statusUpdate(data);
+        };
+
+        onlineStatusSocket.onclose = () => {
+            reconnectAttempts++;
+            const delay = exponentialBackoff(reconnectAttempts);
+            reconnectTimeout = setTimeout(connectOnlineStatusSocket, delay);
+        };
+
+        onlineStatusSocket.onerror = (error) => {
+            console.error("[Status] websocket error: ", error);
+        }
+
     };
 
     if (elements.sendBtn) {
@@ -518,7 +485,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // --- Init ---
-    connectChatSocket();
     connectRecentChatsSocket();
+    connectOnlineStatusSocket();
+    connectChatSocket();
     observeMessages();
 });
