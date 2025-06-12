@@ -45,7 +45,7 @@ def index_view(request):
     }
     return render(request, "konnekt/index.html", context)
 
-
+@decorators.login_required
 def conversation_view(request, c_id):
     convo = Conversation.objects.get(c_id=c_id)
     texts = ConversationItem.objects.filter(conversation=convo, is_deleted=False)
@@ -61,15 +61,18 @@ def conversation_view(request, c_id):
         "convo": convo,
         "texts": texts,
         "sender": sender,
+        "timestamps": list(texts),
     }
     return render(request, "konnekt/conversation.html", context)
 
 
+@decorators.login_required
 def my_profile_view(request):
     context = {}
     return render(request, "konnekt/my_profile.html", context)
 
 
+@decorators.login_required
 def user_profile_view(request, userID):
     profile = Profile.objects.get(userID=userID)
     context = {

@@ -5,9 +5,6 @@ from django.utils.timezone import is_naive, make_aware, now
 register = template.Library()
 
 @register.filter
-
-
-
 def natural_time_format(value):
     # If value is a string, try converting it to datetime
     if isinstance(value, str):

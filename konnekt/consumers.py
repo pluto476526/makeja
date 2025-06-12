@@ -4,6 +4,7 @@
 from channels.generic.websocket import AsyncWebsocketConsumer
 from channels.db import database_sync_to_async
 from django.contrib.auth import get_user_model
+from django.utils.timezone import now
 from konnekt.models import Conversation, ConversationItem, Contact
 from datetime import datetime
 import json, logging, redis
@@ -226,12 +227,6 @@ class OnlineStatusConsumer(AsyncWebsocketConsumer):
         await self.set_user_online()
         await self.broadcast_status("online")
 
-        # ids = await self.get_user_ids()
-        # statuses = await self.get_statuses(ids)
-
-        # for s in statuses:
-        #     await self.send(text_data=json.dumps(s))
-
     async def disconnect(self, close_code):
         await self.set_user_offline()
         await self.broadcast_status("offline")
@@ -252,6 +247,8 @@ class OnlineStatusConsumer(AsyncWebsocketConsumer):
 
 
     async def broadcast_status(self, status):
+        logger.debug(f">>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+        logger.debug(f"bdcasting for :{self.user_id} status :{status}")
         await self.channel_layer.group_send(
             f"status",
             {
@@ -259,7 +256,7 @@ class OnlineStatusConsumer(AsyncWebsocketConsumer):
                 "event_type": "status_update",
                 "user_id": self.user.id,
                 "status": status,
-                "last_seen": datetime.now().isoformat(),
+                "last_seen": now().isoformat(),
             }
         )
 
@@ -283,7 +280,8 @@ class OnlineStatusConsumer(AsyncWebsocketConsumer):
 
         for i in ids:
             key = f"user:{i}"
-            data = redis_conn.hgetall(key)
+            data = {k.decode(): v.decode() for k, v in redis_conn.hgetall(key).items()}
+
             statuses.append({
                 "user_id": i,
                 "status": data.get("status", "offline"),
@@ -296,15 +294,19 @@ class OnlineStatusConsumer(AsyncWebsocketConsumer):
     def set_user_online(self):
         redis_conn.hset(f"user:{self.user.id}", mapping={
             "status": "online",
-            "last_seen": datetime.now().isoformat(),
+            "last_seen": now().isoformat(),
         })
+        redis_conn.expire(f"user:{self.user.id}", 300)
+
 
     @database_sync_to_async
     def set_user_offline(self):
         redis_conn.hset(f"user:{self.user.id}", mapping={
             "status": "offline",
-            "last_seen": datetime.now().isoformat(),
+            "last_seen": now().isoformat(),
         })
+        redis_conn.expire(f"user:{self.user.id}", 300)
+
 
     @database_sync_to_async
     def get_user(self, user_id):
